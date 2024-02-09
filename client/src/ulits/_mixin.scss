@@ -1,0 +1,27 @@
+@mixin flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+@mixin main-padding {
+  padding-inline: $main-paddings;
+}
+
+@mixin phone {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin stub {
+  @media screen and (max-width:  #{$mobile-width}) {
+    @content;
+  }
+}

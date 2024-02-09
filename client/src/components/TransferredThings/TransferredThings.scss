@@ -1,0 +1,50 @@
+.transferred-things {
+  margin-top: 10%;
+  margin-bottom: -5%;
+  padding: 0 12%;
+  font-family: $font-montserrat;
+
+  &__title {
+    font-size: 3vw;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__description {
+    margin-top: 6%;
+    font-size: 1.5vw;
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  &__items {
+    padding: 0 10%;
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 12%;
+  }
+
+  &__item {
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1db2be;
+    padding: 2%;
+    border-radius: 15px;
+  }
+
+  &__item-name {
+    font-size: 1.4vw;
+  }
+
+  &__item-quantity {
+    font-size: 1.3vw;
+    font-weight: bold;
+    background-color: rgb(57, 196, 189);
+    color: #000;
+    padding: 2% 4%;
+    border-radius: 4px;
+  }
+}

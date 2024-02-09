@@ -1,0 +1,105 @@
+/* SliderComponent.css using BEM methodology */
+.slider {
+    position: relative;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .slider__list {
+    overflow: hidden;
+  }
+  
+  .slider__slide {
+    display: none;
+  }
+  
+  .slider__slide--active {
+    display: block;
+  }
+  
+  .slider__image {
+    width: 100%;
+    display: block;
+  }
+  
+  .slider__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .slider__arrow {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
+  
+  .slider__arrow--left {
+    left: 25px;
+    z-index: 1;
+  }
+  
+  .slider__arrow--right {
+    right: 25px;
+    z-index: 1;
+  }
+  
+  .slider__arrow:before {
+    font-family: 'slick';
+    font-size: 24px;
+    line-height: 1;
+    color: black;
+    opacity: 0.75;
+  }
+  
+  .slider__arrow--left:before {
+    content: '<'; /* Left arrow */
+  }
+  
+  .slider__arrow--right:before {
+    content: '>'; /* Right arrow */
+  }
+  
+  .slider__dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .slider__dot {
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .slider__dot button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    background: 0 0;
+    color: transparent;
+    border-radius: 50%;
+  }
+  
+  /* ... rest of your CSS */
+  

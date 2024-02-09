@@ -1,0 +1,41 @@
+.gallery {
+  margin-top: 5%;
+  display: grid;
+  grid-gap: 2%;
+  grid-template-areas:
+    "a a b b b c c f f"
+    "a a d d e e e f f";
+  padding-inline: 10%;
+
+  &__container {
+    @include flex-container;
+  }
+
+  &__first-photo {
+    grid-area: a;
+  }
+
+  &__second-photo {
+    grid-area: b;
+  }
+
+  &__third-photo {
+    grid-area: c;
+  }
+
+  &__fourth-photo {
+    grid-area: d;
+  }
+
+  &__fifth-photo {
+    grid-area: e;
+  }
+  &__sixth-photo {
+    grid-area: f;
+  }
+
+  &__img {
+    width: 70%;
+    height: auto;
+  }
+}

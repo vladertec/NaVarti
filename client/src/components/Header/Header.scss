@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  @include flex-container;
+  justify-content: space-between;
+  padding: 4% 20%;
+  background-color: white;
+  color: black;
+  gap: 10%;
+
+  &__nav {
+    @include flex-container;
+    justify-content: space-between;
+    width: 65%;
+  }
+
+  &__nav-item {
+    font-size: 1.5vw;
+    cursor: pointer;
+    font-family: sans-serif "Montserrat";
+    &:hover {
+      color: black;
+      padding-bottom: 3px;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__socials {
+    width: 25%;
+    display: flex;
+    color: #3566a9;
+    @include flex-container;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__socials-item {
+    font-size: 1.5vw;
+    cursor: pointer;
+    &:hover {
+      color: black;
+    }
+  }
+}

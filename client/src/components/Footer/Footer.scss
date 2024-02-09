@@ -1,0 +1,54 @@
+.footer {
+  margin: 7% 0;
+  font-family: $font-montserrat;
+  padding-inline: 5%;
+  @include flex-container;
+
+  &__menu-container {
+    @include flex-container;
+  }
+
+  &__logo-container {
+  }
+
+  &__logo-img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  &__logo-text {
+    font-weight: bold;
+    font-size: 1.2vw;
+  }
+
+  &__socials-container {
+    @include flex-container;
+    flex-direction: column;
+  }
+
+  &__socials-link {
+  }
+
+  &__info-container {
+  }
+  &__info-title {
+    font-size: 1.3vw;
+  }
+  &__info-text {
+    font-size: 1.3vw;
+    font-weight: bold;
+  }
+
+  &__menu-container {
+  }
+
+  &__menu-item {
+  }
+  &__qr-container {
+  }
+
+  &__qr-code {
+    max-width: 60%;
+    height: auto;
+  }
+}

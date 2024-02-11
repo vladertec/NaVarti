@@ -19,25 +19,25 @@ function Header() {
           className="header__socials-item"
           href="https://www.instagram.com/na_varty_zyttya?igsh=MWF5OWNyNzI2ZTk0eg=="
         >
-          <InstagramIcon />
+          <InstagramIcon className="header__social-icon" />
         </a>
         <a
           className="header__socials-item"
           href="https://www.facebook.com/profile.php?id=61554088658276"
         >
-          <FacebookIcon />
+          <FacebookIcon className="header__social-icon" />
         </a>
         <a
           className="header__socials-item"
           href="https://www.facebook.com/profile.php?id=61554088658276"
         >
-          <TelegramIcon />
+          <TelegramIcon className="header__social-icon" />
         </a>
         <a
           className="header__socials-item"
           href="https://www.facebook.com/profile.php?id=61554088658276"
         >
-          <TelegramIcon />
+          <TelegramIcon className="header__social-icon" />
         </a>
       </div>
     </header>

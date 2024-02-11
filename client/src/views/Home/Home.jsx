@@ -2,11 +2,12 @@ import CurrentFees from "../../components/CurrentFees/CurrentFees"
 import DonationDetails from "../../components/DonationDetails/DonationDetails"
 import MainTitle from "../../components/MainTitle/MainTitle"
 import TransferredThings from "../../components/TransferredThings/TransferredThings"
-import OurTeam from "../../components/OurTeam/OurTeam"
 import Question from "../../components/Question/Question"
 import FeeCard from "../../components/FeeCard/FeeCard"
 import Line from "../../components/Line/Line"
 import Gallery from "../../components/Gallery/Gallery"
+import OurTeam from "../../components/OurTeam/OurTeam"
+import MakeRequest from "../../components/MakeRequest/MakeRequest"
 
 const Home = () => {
   const slideItems = [
@@ -97,6 +98,50 @@ const Home = () => {
     },
   ]
 
+  const PositionItems = [
+    {
+      src: "/img/logo.jpg",
+      title: "Підзаголовок",
+      position: "Boss",
+      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
+    },
+    {
+      src: "/img/logo.jpg",
+      title: "Підзаголовок",
+      position: "Boss",
+      text: "Текст 1Текст1 Текст1Текст 1Текст1 Текст1Текс т1Текст1Т екст1Текст1Текст1 Текст1Текст1Т екст1Текст1Т екст1Текст1Тек ст1Текст1Текст1",
+    },
+    {
+      src: "/img/logo.jpg",
+      title: "Підзаголовок",
+      position: "Boss",
+      text: "Текст 1Текст1 Текст1Текст 1Текст1 Текст1Текс т1Текст1Т екст1Текст1Текст1 Текст1Текст1Т екст1Текст1Т екст1Текст1Тек ст1Текст1Текст1",
+    },
+  ]
+
+  const RequestItems = [
+    {
+      src: "/img/logo.jpg",
+      title: "Підзаголовок",
+      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
+    },
+    {
+      src: "/img/logo.jpg",
+      title: "Підзаголовок",
+      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
+    },
+    {
+      src: "/img/logo.jpg",
+      title: "Підзаголовок",
+      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
+    },
+    {
+      src: "/img/logo.jpg",
+      title: "Підзаголовок",
+      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
+    },
+  ]
+
   const photos = [
     { src: "path_to_photo_1.jpg", alt: "Опис фото 1" },
     { src: "path_to_photo_2.jpg", alt: "Опис фото 2" },
@@ -109,6 +154,10 @@ const Home = () => {
   return (
     <div className="home">
       <MainTitle />
+      <OurTeam PositionItems={PositionItems} />
+      <Line />
+      <MakeRequest RequestItems={RequestItems} />
+      <Line />
       <TransferredThings items={inventoryItems} />
       <CurrentFees feeData={feeData} />
       <Line />
@@ -116,9 +165,6 @@ const Home = () => {
       <Line />
       <Gallery photos={photos} />
       <Question faq={faqData} />
-
-      {/* <FeeCard  /> */}
-      {/* <OurTeam items={slideItems} /> */}
     </div>
   )
 }

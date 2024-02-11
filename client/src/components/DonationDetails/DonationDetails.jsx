@@ -38,7 +38,8 @@ const DonationDetails = ({ details }) => {
                     </span>
                   ) : (
                     <p>
-                      Скопіювати <ContentCopyIcon />
+                      Скопіювати
+                      {/* Скопіювати <ContentCopyIcon /> */}
                     </p>
                   )}
                 </button>

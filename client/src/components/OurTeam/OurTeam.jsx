@@ -1,30 +1,18 @@
-import React from "react"
-import Slider from "react-slick"
-
-const items = {
-
-}
-
-const OurTeam = ({ items }) => {
-    
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }
-
+const OurTeam = ({ PositionItems }) => {
   return (
-    <div className="slider-component">
-      <Slider {...settings}>
-        {items.map((item, index) => (
-          <div key={index} className="slide">
-            <img src={item.image} alt={item.altText} />
-            <div className="slide-caption">{item.caption}</div>
+    <div className="our-team">
+      <p className="our-team__title">Наша команда</p>
+      <div className="our-team__card-container">
+        {PositionItems.map((item, index) => (
+          <div className="our-team__card" key={index}>
+            <img className="our-team__card-img" src={item.src} alt={item.src} />
+            <h2 className="our-team__card-name">{item.title}</h2>
+            <p className="our-team__card-position">{item.position}</p>
+            <p className="our-team__card-text">{item.text}</p>
           </div>
         ))}
-      </Slider>
+      </div>
+      <button className="our-team__btn">ЗРОБИТИ ВНЕСОК</button>
     </div>
   )
 }

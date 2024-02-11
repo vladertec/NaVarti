@@ -1,27 +1,32 @@
-.our-team {
+.make-request {
   margin: 8% 0 3% 0;
   @include main-padding;
   @include flex-container;
   flex-direction: column;
   font-family: $font-montserrat;
 
-  &__title {
-    font-size: 2.5vw;
-    font-weight: bold;
-  }
-
-  &__card-container {
-    margin-top: 6%;
-    display: flex;
+  &__container {
     background-color: $grey-color;
-    padding: 2% 2%;
-    justify-content: center;
     border-radius: 20px;
   }
 
+  &__title {
+    margin-top: 4%;
+    font-size: 2.5vw;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2% 5%;
+  }
+
   &__card {
-    width: 33%;
-    padding: 2% 3%;
+    width: 50%;
+    padding: 4% 9%;
   }
 
   &__card-img {
@@ -48,8 +53,8 @@
   }
 
   &__btn {
-    margin-top: 3%;
-    width: 40%;
+    margin-top: 5%;
+    width: 100%;
     font-size: 1.7vw;
     padding: 1% 0;
     border-radius: 15px;

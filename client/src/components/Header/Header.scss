@@ -34,10 +34,15 @@
   }
 
   &__socials-item {
-    font-size: 1.5vw;
     cursor: pointer;
+
     &:hover {
       color: black;
     }
+  }
+
+  &__social-icon {
+    height: auto;
+    max-height: 100%;
   }
 }

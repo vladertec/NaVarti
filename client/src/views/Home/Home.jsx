@@ -1,13 +1,13 @@
-import CurrentFees from "../../components/CurrentFees/CurrentFees"
 import DonationDetails from "../../components/DonationDetails/DonationDetails"
 import MainTitle from "../../components/MainTitle/MainTitle"
 import TransferredThings from "../../components/TransferredThings/TransferredThings"
 import Question from "../../components/Question/Question"
-import FeeCard from "../../components/FeeCard/FeeCard"
 import Line from "../../components/Line/Line"
 import Gallery from "../../components/Gallery/Gallery"
 import OurTeam from "../../components/OurTeam/OurTeam"
 import MakeRequest from "../../components/MakeRequest/MakeRequest"
+import CurrentReport from "../../components/CurrentReport/CurrentReport"
+import CurrentFee from "../../components/CurrentFee/CurrentFee"
 
 const Home = () => {
   const slideItems = [
@@ -154,12 +154,14 @@ const Home = () => {
   return (
     <div className="home">
       <MainTitle />
+      <CurrentFee feeData={feeData} /> 
+      <CurrentReport />
+      <Line />
       <OurTeam PositionItems={PositionItems} />
       <Line />
       <MakeRequest RequestItems={RequestItems} />
       <Line />
       <TransferredThings items={inventoryItems} />
-      <CurrentFees feeData={feeData} />
       <Line />
       <DonationDetails details={donationDetails} />
       <Line />

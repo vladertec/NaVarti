@@ -41,8 +41,6 @@ const registration = async (req, res) => {
       username,
       password: hashPassword,
       roles: [userRole.value],
-      // name: "",
-      // surname: ""
     })
     user.save()
     return res.json({ message: "User saved successfully" })

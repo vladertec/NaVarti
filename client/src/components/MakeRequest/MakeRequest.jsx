@@ -8,8 +8,8 @@ const MakeRequest = ({ RequestItems }) => {
             <div className="make-request__card" key={index}>
               <img
                 className="make-request__card-img"
-                src={item.src}
-                alt={item.src}
+                src={item.photoUrl}
+                alt={item.photoUrl}
               />
               <h2 className="make-request__card-name">{item.title}</h2>
               <p className="make-request__card-position">{item.position}</p>

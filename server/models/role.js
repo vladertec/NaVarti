@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const roleSchema = new mongoose.Schema(
   {
-    value: { type: String, unique: true, default: "user" },
+    value: { type: String, unique: true },
   },
   { versionKey: false }
 )
@@ -10,3 +10,4 @@ const roleSchema = new mongoose.Schema(
 const Role = mongoose.model("role", roleSchema)
 
 export default Role
+

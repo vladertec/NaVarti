@@ -1,27 +1,30 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { registerUser } from "../../api/userStatus"
 import CustomErrorMessage from "../../components/CustomErrorMessage/CustomErrorMessage"
-import { loginUser } from "../../api/userStatus"
 
-const Login = () => {
+const Registration = () => {
   const navigate = useNavigate()
-  const [login, setLogin] = useState({ username: "", password: "" })
+
+  const [login, setLogin] = useState({
+    username: "",
+    password: "",
+    role: "ADMIN",
+  })
   const [error, setError] = useState({ statusError: false, message: "" })
 
-  const loginClick = async (event) => {
+  const registerClick = async (event) => {
     event.preventDefault()
     setError({
       ...error,
       statusError: false,
       message: "",
     })
-    navigate("/login/adminPage")
-    const token = await loginUser(login)
-    if (token.status === 200) {
-      localStorage.setItem("accessToken", token.data.token)
-      navigate("*")
+    const result = await registerUser(login)
+    if (result.status === 200) {
+      navigate("/registration/success")
     } else {
-      const errorMessage = token.response.data.message
+      const errorMessage = result.response.data.message
       setError({
         ...error,
         statusError: true,
@@ -29,25 +32,32 @@ const Login = () => {
       })
     }
   }
+
   return (
-    <div className="login">
-      <p className="login__text">Будь ласка, увійдіть в акаунт.</p>
-      <div className="login__login-container">
+    <div className="registration">
+      <p className="registration__text">
+        Don't have an account? Please, register.
+      </p>
+      <div className="registration__registration-container">
         <img
-          className="login__img"
-          src="/img/logo.jpg"
+          className="registration__img"
+          src="./img/Logo.png"
           alt="Business view - Reports"
         />
-        <div>
-          <div className="login__input-group">
-            <label className="login__input-name" htmlFor="username">
-              Логін
+        <form
+          className="registration__form"
+          onSubmit={registerClick}
+          autoComplete="on"
+        >
+          <div className="registration__input-group">
+            <label className="registration__input-name" htmlFor="username">
+              Username
             </label>
             <input
-              className="login__input"
-              id="username"
+              className="registration__input"
               type="text"
               name="login"
+              id="username"
               value={login.username}
               onInput={(e) =>
                 setLogin({
@@ -57,12 +67,12 @@ const Login = () => {
               }
             />
           </div>
-          <div className="login__input-group">
-            <label className="login__input-name" htmlFor="password">
-              Пароль
+          <div className="registration__input-group">
+            <label className="registration__input-name" htmlFor="password">
+              Password
             </label>
             <input
-              className="login__input"
+              className="registration__input"
               type="text"
               name="password"
               id="password"
@@ -75,12 +85,10 @@ const Login = () => {
               }
             />
           </div>
-          <button className="login__btn" onClick={(event) => loginClick(event)}>
-            Увійти
-          </button>
-        </div>
+          <button className="registration__btn">Register</button>
+        </form>
         {error && (
-          <div className="login__error-message">
+          <div className="registration__error-message">
             <CustomErrorMessage name={error.message} />
           </div>
         )}
@@ -89,4 +97,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Registration

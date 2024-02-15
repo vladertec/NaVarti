@@ -9,56 +9,56 @@ const CurrentReport = () => {
       title: "Текст1текст",
       content:
         "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1",
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
     },
     {
       positionNumber: 2,
       title: "Текст1текст",
       content:
         "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
     },
     {
       positionNumber: 3,
       title: "Текст1текст",
       content:
         "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
     },
     {
       positionNumber: 4,
       title: "Текст1текст",
       content:
         "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
     },
     {
       positionNumber: 5,
       title: "Текст1текст",
       content:
         "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
     },
     {
       positionNumber: 6,
       title: "Текст1текст",
       content:
         "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
     },
     {
       positionNumber: 7,
       title: "Текст1текст",
       content:
         "Текст 1Текст1 Текст1 ТТекс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
     },
     {
       positionNumber: 8,
       title: "Текст1текст",
       content:
         "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Твровараовпва1",
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
     },
   ]
 
@@ -98,16 +98,16 @@ const CurrentReport = () => {
                   </div>
                   <img
                     className="report-card__img"
-                    src={object.src}
-                    alt="Image"
+                    src={object.photoUrl}
+                    alt={object.photoUrl}
                   />
                 </div>
               ) : (
                 <div className="current-report__card report-card">
                   <img
                     className="report-card__img"
-                    src={object.src}
-                    alt="Image"
+                    src={object.photoUrl}
+                    alt={object.photoUrl}
                   />
                   <div className="report-card__info-container">
                     <div className="report-card__text-container">

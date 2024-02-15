@@ -111,19 +111,19 @@ const Home = () => {
 
   const PositionItems = [
     {
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
       title: "Підзаголовок",
       position: "Boss",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },
     {
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
       title: "Підзаголовок",
       position: "Boss",
       text: "Текст 1Текст1 Текст1Текст 1Текст1 Текст1Текс т1Текст1Т екст1Текст1Текст1 Текст1Текст1Т екст1Текст1Т екст1Текст1Тек ст1Текст1Текст1",
     },
     {
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
       title: "Підзаголовок",
       position: "Boss",
       text: "Текст 1Текст1 Текст1Текст 1Текст1 Текст1Текс т1Текст1Т екст1Текст1Текст1 Текст1Текст1Т екст1Текст1Т екст1Текст1Тек ст1Текст1Текст1",
@@ -132,34 +132,34 @@ const Home = () => {
 
   const RequestItems = [
     {
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
       title: "Підзаголовок",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },
     {
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
       title: "Підзаголовок",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },
     {
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
       title: "Підзаголовок",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },
     {
-      src: "/img/logo.jpg",
+      photoUrl: "/img/logo.jpg",
       title: "Підзаголовок",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },
   ]
 
   const photos = [
-    { src: "path_to_photo_1.jpg", alt: "Опис фото 1" },
-    { src: "path_to_photo_2.jpg", alt: "Опис фото 2" },
-    { src: "path_to_photo_3.jpg", alt: "Опис фото 3" },
-    { src: "path_to_photo_3.jpg", alt: "Опис фото 3" },
-    { src: "path_to_photo_3.jpg", alt: "Опис фото 3" },
-    { src: "path_to_photo_N.jpg", alt: "Опис фото N" },
+    { photoUrl: "path_to_photo_1.jpg", alt: "Опис фото 1" },
+    { photoUrl: "path_to_photo_2.jpg", alt: "Опис фото 2" },
+    { photoUrl: "path_to_photo_3.jpg", alt: "Опис фото 3" },
+    { photoUrl: "path_to_photo_3.jpg", alt: "Опис фото 3" },
+    { photoUrl: "path_to_photo_3.jpg", alt: "Опис фото 3" },
+    { photoUrl: "path_to_photo_N.jpg", alt: "Опис фото N" },
   ]
 
   return (

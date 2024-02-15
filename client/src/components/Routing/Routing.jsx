@@ -4,6 +4,7 @@ import Error from "../../views/Error/Error"
 import Login from "../../views/Login/Login"
 import AdminPage from "../../views/AdminPage/AdminPage"
 import Question from "../Question/Question"
+import Registration from "../../views/Registration/Registration"
 
 function Routing() {
   const isAdminLoggedIn = localStorage.getItem("adminToken")
@@ -13,6 +14,7 @@ function Routing() {
       <Route path="/" element={<Home />} />
       <Route path="*" element={<Error />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/registration" element={<Registration />} />
       {isAdminLoggedIn ? (
         <Route path="/login/adminPage" element={<AdminPage />}>
           {/* <Route path="currentFee" element={<CurrentFee />} />

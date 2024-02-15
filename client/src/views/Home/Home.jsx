@@ -71,30 +71,41 @@ const Home = () => {
     { name: "Аптечка", quantity: "70 шт." },
   ]
 
-  const feeData = [
+  const cards = [
     {
-      title: "Підзаголовок",
-      text: "Текст1Текст1Текст1Текст1Текст1Текст1Текст1Текст1Текст1Текст1",
+      title: "Карточка 1",
+      description: "Описание карточки 1",
+      numberPosition: 1,
     },
     {
-      title: "Підзаголовок",
-      text: "Текст2Текст2Текст2Текст2Текст2Текст2Текст2Текст2Текст2Текст2",
+      title: "Карточка 2",
+      description: "Описание карточки 2",
+      numberPosition: 2,
     },
     {
-      title: "Підзаголовок",
-      text: "Текст3Текст3Текст3Текст3Текст3Текст3Текст3Текст3Текст3Текст3",
+      title: "Карточка 3",
+      description: "Описание карточки 3",
+      numberPosition: 3,
     },
     {
-      title: "Підзаголовок",
-      text: "Текст1Текст1Текст1Текст1Текст1Текст1Текст1Текст1Текст1Текст1",
+      title: "Карточка 4",
+      description: "Описание карточки 4",
+      numberPosition: 4,
     },
     {
-      title: "Підзаголовок",
-      text: "Текст2Текст2Текст2Текст2Текст2Текст2Текст2Текст2Текст2Текст2",
+      title: "Карточка 5",
+      description: "Описание карточки 5",
+      numberPosition: 5,
     },
     {
-      title: "Підзаголовок",
-      text: "Текст3Текст3Текст3Текст3Текст3Текст3Текст3Текст3Текст3Текст3",
+      title: "Карточка 6",
+      description: "Описание карточки 6",
+      numberPosition: 6,
+    },
+    {
+      title: "Карточка 7",
+      description: "Описание карточки 7",
+      numberPosition: 7,
     },
   ]
 
@@ -154,7 +165,7 @@ const Home = () => {
   return (
     <div className="home">
       <MainTitle />
-      <CurrentFee feeData={feeData} /> 
+      <CurrentFee cards={cards} />
       <CurrentReport />
       <Line />
       <OurTeam PositionItems={PositionItems} />

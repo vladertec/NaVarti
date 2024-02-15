@@ -1,4 +1,43 @@
-.current-fee{
-    margin-top: 5%;
-    @include flex-container;
+.current-fee {
+  width: 100%;
+  margin: 10% 0 5% 0;
+  overflow: hidden;
+  position: relative;
+
+  &__cards-container {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+
+    &::-webkit-scrollbar {
+      width: 8px; /* Safari and Chrome */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); /* Safari and Chrome */
+      border-radius: 4px;
+    }
+  }
+}
+
+.card {
+  min-width: 20%;
+  flex: 0 0 auto;
+  margin-left: 3%;
+  padding: 20px 40px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.selected {
+  transform: scale(1.1);
 }

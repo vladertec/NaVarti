@@ -1,5 +1,69 @@
+import { useNavigate } from "react-router-dom"
+
 const AdminPage = () => {
-  return <div className="admin-page">admin</div>
+  const navigate = useNavigate()
+
+  const handleButtonClick = (destination) => {
+    navigate(destination)
+  }
+
+  return (
+    <div className="admin-page">
+      <h2 className="admin-page__title">Редаагувати дані в компоненті:</h2>
+      <div className="admin-page__container">
+        <button
+          className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/adminPage/currentFee")}
+        >
+          Збори
+        </button>
+        <button
+          className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/adminPage/ourTeam")}
+        >
+          Команда
+        </button>
+        <button
+          className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/adminPage/currentReport")}
+        >
+          Звіти
+        </button>
+        <button
+          className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/makeRequest")}
+        >
+          Запити
+        </button>
+        <button
+          className="admin-page__btn"
+          onClick={() =>
+            handleButtonClick("/login/adminPage/transferredThings")
+          }
+        >
+          Передане
+        </button>
+        <button
+          className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/adminPage/donationDetails")}
+        >
+          Реквізити
+        </button>
+        <button
+          className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/adminPage/gallery")}
+        >
+          Галерея
+        </button>
+        <button
+          className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/adminPage/question")}
+        >
+          Відповіді
+        </button>
+      </div>
+    </div>
+  )
 }
 
 export default AdminPage

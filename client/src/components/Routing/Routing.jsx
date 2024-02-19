@@ -5,30 +5,28 @@ import Login from "../../views/Login/Login"
 import AdminPage from "../../views/AdminPage/AdminPage"
 import Question from "../Question/Question"
 import Registration from "../../views/Registration/Registration"
+import EditOurTeam from "../../views/EditOurTeam/EditOurTeam"
 
 function Routing() {
-  const isAdminLoggedIn = localStorage.getItem("adminToken")
+  const isAdminLoggedIn = localStorage.getItem("accessToken")
 
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="*" element={<Error />} />
-      <Route path="/login" element={<Login />} />
       <Route path="/registration" element={<Registration />} />
-      {isAdminLoggedIn ? (
-        <Route path="/login/adminPage" element={<AdminPage />}>
-          {/* <Route path="currentFee" element={<CurrentFee />} />
-          <Route path="ourTeam" element={<OurTeam />} />
-          <Route path="currentReport" element={<CurrentReport />} />
-          <Route path="makeRequest" element={<MakeRequest />} />
-          <Route path="transferredThings" element={<TransferredThings />} />
-          <Route path="donationDetails" element={<DonationDetails />} />
-          <Route path="gallery" element={<Gallery />} /> */}
-          <Route path="question" element={<Question />} />
-        </Route>
-      ) : (
-        <Route path="/login" element={<Navigate to="/login" />} />
-      )}
+      <Route path="/login" element={<Login />} />
+   
+      <Route
+        path="/login/adminPage"
+        element={isAdminLoggedIn ? <AdminPage /> : <Navigate to="/login" />}
+      />
+      <Route
+        path="/login/adminPage/ourTeam"
+        element={isAdminLoggedIn ? <EditOurTeam /> : <Navigate to="/login" />}
+      />
+      {/* <Route path="/login/adminPage/currentReport" element={isAdminLoggedIn ? <CurrentReport /> : <Navigate to="/login" />} />
+    <Route path="/login/adminPage/makeRequest" element={isAdminLoggedIn ? <EditMakeRequest /> : <Navigate to="/login" />} /> */}
+      <Route path="*" element={<Error />} />
     </Routes>
   )
 }

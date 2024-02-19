@@ -22,7 +22,7 @@ const Registration = () => {
     })
     const result = await registerUser(login)
     if (result.status === 200) {
-      navigate("/registration/success")
+      navigate("/login")
     } else {
       const errorMessage = result.response.data.message
       setError({

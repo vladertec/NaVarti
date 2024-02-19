@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import TelegramIcon from "@mui/icons-material/Telegram"
+import { Link } from "react-scroll"
 
 const Footer = () => {
   return (
@@ -54,10 +54,38 @@ const Footer = () => {
         <p className="footer__info-text">sarnavsk2001@gmail.com</p>
       </div>
       <div className="footer__menu-container">
-        <Link className="footer__menu-item">реквізити</Link>
-        <Link className="footer__menu-item">звіти</Link>
-        <Link className="footer__menu-item">контакти</Link>
-        <Link className="footer__menu-item">відповіді</Link>
+        <Link
+          to="donation-details"
+          spy={true}
+          smooth={true}
+          className="header__nav-item"
+        >
+          реквізити
+        </Link>
+        <Link
+          to="current-report"
+          spy={true}
+          smooth={true}
+          className="header__nav-item"
+        >
+          звіти
+        </Link>
+        <Link
+          to="our-team"
+          spy={true}
+          smooth={true}
+          className="header__nav-item"
+        >
+          контакти
+        </Link>
+        <Link
+          to="question"
+          spy={true}
+          smooth={true}
+          className="header__nav-item"
+        >
+          відповіді
+        </Link>
       </div>
       <div className="footer__qr-container">
         <img className="footer__qr-code" src="/img/qr-code.png" alt="qr-code" />

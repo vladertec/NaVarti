@@ -7,6 +7,14 @@ const AdminPage = () => {
     navigate(destination)
   }
 
+  const logoutClick = async (event) => {
+    event.preventDefault()
+    if (localStorage.getItem("accessToken").length > 0) {
+      localStorage.setItem("accessToken", [])
+    }
+    navigate("/login")
+  }
+
   return (
     <div className="admin-page">
       <h2 className="admin-page__title">Редаагувати дані в компоненті:</h2>
@@ -62,6 +70,13 @@ const AdminPage = () => {
           Відповіді
         </button>
       </div>
+
+      <button
+        className="admin-page__btn"
+        onClick={(event) => logoutClick(event)}
+      >
+        Вийти з аккаунту
+      </button>
     </div>
   )
 }

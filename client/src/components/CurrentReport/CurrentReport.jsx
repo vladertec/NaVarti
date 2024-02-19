@@ -62,7 +62,7 @@ const CurrentReport = () => {
     },
   ]
 
-  const itemsPerPage = 4
+  const itemsPerPage = 3
 
   const sortedObjects = objects.sort(
     (a, b) => a.positionNumber - b.positionNumber

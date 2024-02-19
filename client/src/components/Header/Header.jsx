@@ -1,17 +1,45 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link } from "react-scroll"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import TelegramIcon from "@mui/icons-material/Telegram"
 
-function Header() {
+const Header = () => {
   return (
     <header className="header">
       <nav className="header__nav">
-        <Link className="header__nav-item">реквізити</Link>
-        <Link className="header__nav-item">звіти</Link>
-        <Link className="header__nav-item">контакти</Link>
-        <Link className="header__nav-item">відповіді</Link>
+        <Link
+          to="donation-details"
+          spy={true}
+          smooth={true}
+          className="header__nav-item"
+        >
+          реквізити
+        </Link>
+        <Link
+          to="current-report"
+          spy={true}
+          smooth={true}
+          className="header__nav-item"
+        >
+          звіти
+        </Link>
+        <Link
+          to="our-team"
+          spy={true}
+          smooth={true}
+          className="header__nav-item"
+        >
+          контакти
+        </Link>
+        <Link
+          to="question"
+          spy={true}
+          smooth={true}
+          className="header__nav-item"
+        >
+          відповіді
+        </Link>
       </nav>
 
       <div className="header__socials">

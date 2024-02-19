@@ -1,35 +1,38 @@
 import axios from "axios"
 
-export const getOurTeamCards = async () => {
+export const getOurTeamCards = async (token) => {
   try {
-    const { data } = await axios.get(`/api/ourTeams`)
+    const { data } = await axios.get(`/api/ourTeams`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
   }
 }
 
-export const addNewOurTeamCard = async (ourTeam) => {
+export const addNewOurTeamCard = async (token, ourTeam) => {
   try {
-    const { data } = await axios.post("/api/ourTeam", ourTeam)
+    const { data } = await axios.post("/api/ourTeam", ourTeam, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
   }
 }
 
-export const updateOurTeamCard = async (ourTeam, id) => {
+export const deleteOurTeamCard = async (token, id) => {
   try {
-    const { data } = await axios.put(`/api/ourTeam/${id}`, ourTeam)
-    return data
-  } catch (err) {
-    return err
-  }
-}
-
-export const deleteOurTeamCard = async (id) => {
-  try {
-    const { data } = await axios.delete(`/api/ourTeam/${id}`)
+    const { data } = await axios.delete(`/api/ourTeam/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err

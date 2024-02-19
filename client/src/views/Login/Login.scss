@@ -13,7 +13,6 @@
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
     max-width: 35%;
     margin: 4% 0;
-
     text-align: center;
     width: 90%;
   }
@@ -79,11 +78,12 @@
     background: #3566a9;
 
     &:hover {
-      background-color: #7b5d20;
+      background-color: #263e61;
     }
   }
 
   &__error-message {
-    margin-top: 4%;
+    margin: 4% 0;
+    color: red;
   }
 }

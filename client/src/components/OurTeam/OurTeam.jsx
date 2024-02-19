@@ -8,7 +8,7 @@ const OurTeam = ({ PositionItems }) => {
             <img
               className="our-team__card-img"
               src={item.photoUrl}
-              alt={item.Url}
+              alt={item.photoUrl}
             />
             <h2 className="our-team__card-name">{item.title}</h2>
             <p className="our-team__card-position">{item.position}</p>

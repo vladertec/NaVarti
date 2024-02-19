@@ -1,11 +1,15 @@
 .footer {
-  margin: 7% 0;
+  margin-top: 7%;
+  padding-bottom: 3%;
   font-family: $font-montserrat;
   padding-inline: 5%;
   @include flex-container;
   justify-content: space-between;
   width: 100%;
   gap: 4%;
+  background-image: url("../../../public/img/footer.png");
+  background-size: 100% auto;
+  background-position: center top -30px; // Це
 
   &__logo-container {
     width: 20%;

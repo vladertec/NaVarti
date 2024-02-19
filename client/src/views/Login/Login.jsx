@@ -15,11 +15,10 @@ const Login = () => {
       statusError: false,
       message: "",
     })
-    navigate("/login/adminPage")
     const token = await loginUser(login)
     if (token.status === 200) {
       localStorage.setItem("accessToken", token.data.token)
-      navigate("*")
+      navigate("/login/adminPage")
     } else {
       const errorMessage = token.response.data.message
       setError({

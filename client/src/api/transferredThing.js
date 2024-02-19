@@ -9,20 +9,16 @@ export const getTransferredThingCards = async () => {
   }
 }
 
-export const addNewTransferredThingCard = async (transferredThing) => {
+export const addNewTransferredThingCard = async (token, transferredThing) => {
   try {
-    const { data } = await axios.post("/api/transferredThing", transferredThing)
-    return data
-  } catch (err) {
-    return err
-  }
-}
-
-export const updateTransferredThingCard = async (transferredThing, id) => {
-  try {
-    const { data } = await axios.put(
-      `/api/transferredThing/${id}`,
-      transferredThing
+    const { data } = await axios.post(
+      "/api/transferredThing",
+      transferredThing,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
     )
     return data
   } catch (err) {
@@ -30,9 +26,13 @@ export const updateTransferredThingCard = async (transferredThing, id) => {
   }
 }
 
-export const deleteTransferredThingCard = async (id) => {
+export const deleteTransferredThingCard = async (token, id) => {
   try {
-    const { data } = await axios.delete(`/api/transferredThing/${id}`)
+    const { data } = await axios.delete(`/api/transferredThing/${id}`,  {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err

@@ -1,0 +1,113 @@
+.edit-team {
+  .team-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 1% auto;
+    font-family: $font-montserrat;
+    border: 1px solid #3566a9;
+    padding: 2% 2%;
+    border-radius: 10px;
+
+    &__title {
+      margin-bottom: 8%;
+      font-size: 2vw;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &__group {
+      margin-top: 3%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__label {
+      margin-bottom: 2%;
+    }
+
+    .team-form__input,
+    .team-form__textarea {
+      font-size: 2vw;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #444444;
+      background-color: white;
+      border-radius: 10px;
+
+      font-size: 1.5vw;
+    }
+
+    &__error {
+      color: #ff0000;
+      margin-top: -8px;
+      margin-bottom: 16px;
+    }
+
+    &__btn {
+      margin-top: 4%;
+      font-family: $font-montserrat;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.5vw;
+      font-weight: bold;
+      letter-spacing: 1px;
+      outline: 0;
+      padding: 4% 0;
+      background: #3566a9;
+
+      &:hover {
+        background: #263e61;
+      }
+    }
+  }
+
+  .cards-container {
+    @include flex-container;
+    flex-direction: column;
+    margin-top: 4%;
+
+    &__title {
+      margin-bottom: 4%;
+      font-size: 2vw;
+      font-weight: bold;
+    }
+
+    &__card {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__card-img {
+    }
+
+    &__card-name {
+    }
+
+    &__card-position {
+    }
+
+    &__card-text {
+    }
+
+    &__card-btn {
+      font-family: $font-montserrat;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1vw;
+      font-weight: bold;
+      letter-spacing: 1px;
+      outline: 0;
+      padding: 2% 0;
+      background: #3566a9;
+
+      &:hover {
+        background: #263e61;
+      }
+    }
+  }
+}

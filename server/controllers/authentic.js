@@ -12,7 +12,7 @@ const generateAccessToken = async (id, roles) => {
     id,
     roles,
   }
-  return jwt.sign(payload, process.env.JWT_ACCESS_KEY, { expiresIn: "24h" })
+  return jwt.sign(payload, process.env.JWT_ACCESS_KEY, { expiresIn: "6h" })
 }
 
 const removeFromTokenStore = async (token) => {
@@ -81,7 +81,6 @@ const logout = async (req, res) => {
       return res.status(401).json({ message: "No token provided" })
     }
 
-    // Инвалидируем токен, удаляя его из хранилища
     removeFromTokenStore(token)
 
     res.json({ message: "Logout successful" })

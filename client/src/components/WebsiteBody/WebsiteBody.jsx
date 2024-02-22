@@ -28,19 +28,11 @@ function WebsiteBody() {
 
   return (
     <div className="website-body">
-      <div
-        className={`website-body__header ${
-          hideHeader ? "website-body__header-hidden" : ""
-        }`}
-      >
-        <Header />
-      </div>
-      <div>
+      <Header hidden={hideHeader} />
+      <div className="website-body__content">
         <Routing />
       </div>
-      <div>
-        <Footer className="website-body__footer" />
-      </div>
+      <Footer />
       <ScrollToTop
         smooth
         style={{

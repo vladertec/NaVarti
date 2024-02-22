@@ -67,7 +67,7 @@ const AdminPage = () => {
           className="admin-page__btn"
           onClick={() => handleButtonClick("/login/adminPage/question")}
         >
-          Відповіді
+          Питання
         </button>
       </div>
 

@@ -1,48 +1,65 @@
 .header {
   width: 100%;
-  @include flex-container;
-  justify-content: space-between;
-  padding: 4% 20%;
+  display: flex;
+  padding: 1.5% 15%;
   background-color: white;
   color: black;
-  gap: 10%;
+  gap: 2%;
 
-  &__nav {
-    @include flex-container;
-    justify-content: space-between;
-    width: 65%;
-  }
+  .logo-container {
+    width: 19%;
 
-  &__nav-item {
-    font-size: 1.5vw;
-    cursor: pointer;
-    font-family: sans-serif "Montserrat";
-    &:hover {
-      color: black;
-      padding-bottom: 3px;
-      border-bottom: 1px solid black;
+    &__logo-img {
+      max-width: 100%;
+      height: auto;
     }
   }
 
-  &__socials {
-    width: 25%;
-    display: flex;
-    color: #3566a9;
-    @include flex-container;
-    justify-content: space-between;
-    cursor: pointer;
-  }
+  .info-container {
+    width: 80%;
+    margin-top: 3%;
 
-  &__socials-item {
-    cursor: pointer;
-
-    &:hover {
-      color: black;
+    &__center {
+      @include flex-container;
+      gap: 7%;
     }
-  }
 
-  &__social-icon {
-    height: auto;
-    max-height: 100%;
+    &__nav {
+      @include flex-container;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 70%;
+    }
+
+    &__nav-item {
+      font-size: 1.3vw;
+      font-weight: 300;
+      cursor: pointer;
+      font-family: $font-montserrat;
+      &:hover {
+        padding-bottom: 3px;
+        color: #3566a9;
+        border-bottom: 1px solid #3566a9;
+      }
+    }
+
+    &__socials {
+      width: 30%;
+      @include flex-container;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    &__socials-item {
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    &__social-icon {
+      font-size: 2.1vw;
+      &:hover {
+        color: #3566a9;
+      }
+    }
   }
 }

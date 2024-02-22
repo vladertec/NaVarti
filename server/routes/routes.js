@@ -87,7 +87,7 @@ router.post(
 )
 
 router.delete(
-  "/donationDetails/:donationDetailId",
+  "/donationDetail/:donationDetailId",
   authenticMiddleware,
   roleMiddleware(["ADMIN"]),
   DonationDetailController.deleteOne

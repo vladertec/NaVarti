@@ -1,17 +1,25 @@
 import axios from "axios"
 
-export const getDonationDetailCards = async () => {
+export const getDonationDetailCards = async (token) => {
   try {
-    const { data } = await axios.get(`/api/donationDetails`)
+    const { data } = await axios.get(`/api/donationDetails`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
   }
 }
 
-export const addNewDonationDetailCard = async (donationDetail) => {
+export const addNewDonationDetailCard = async (token, donationDetail) => {
   try {
-    const { data } = await axios.post("/api/donationDetail", donationDetail)
+    const { data } = await axios.post("/api/donationDetail", donationDetail, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
@@ -30,9 +38,13 @@ export const updateDonationDetailCard = async (donationDetail, id) => {
   }
 }
 
-export const deleteDonationDetailCard = async (id) => {
+export const deleteDonationDetailCard = async (token, id) => {
   try {
-    const { data } = await axios.delete(`/api/donationDetail/${id}`)
+    const { data } = await axios.delete(`/api/donationDetail/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err

@@ -1,35 +1,38 @@
 import axios from "axios"
 
-export const getQuestionCards = async () => {
+export const getQuestionCards = async (token) => {
   try {
-    const { data } = await axios.get(`/api/questions`)
+    const { data } = await axios.get(`/api/questions`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
   }
 }
 
-export const addNewQuestionCard = async (question) => {
+export const addNewQuestionCard = async (token, question) => {
   try {
-    const { data } = await axios.post("/api/question", question)
+    const { data } = await axios.post("/api/question", question, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
   }
 }
 
-export const updateQuestionCard = async (question, id) => {
+export const deleteQuestionCard = async (token, id) => {
   try {
-    const { data } = await axios.put(`/api/question/${id}`, question)
-    return data
-  } catch (err) {
-    return err
-  }
-}
-
-export const deleteQuestionCard = async (id) => {
-  try {
-    const { data } = await axios.delete(`/api/question/${id}`)
+    const { data } = await axios.delete(`/api/question/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err

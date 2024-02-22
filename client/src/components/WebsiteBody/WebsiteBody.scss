@@ -4,18 +4,20 @@
   min-height: 100vh;
   width: 100%;
   background-color: white;
+}
 
-  &__main {
-    flex: 1;
-  }
+.website-body__content {
+  flex: 1; /* Этот блок будет занимать все доступное пространство между header и footer */
+}
 
-  &__footer {
-    margin-top: auto;
-    width: 100%;
-  }
+/* Стили для футера */
+.footer {
+  margin-top: auto;
+}
 
-  &__header-hidden {
-    transform: translateY(-100%);
-    transition: transform 1.3s ease-in-out;
-  }
+
+/* Стили для скрытия хедера */
+.website-body__header-hidden {
+  transform: translateY(-100%);
+  transition: transform 1.3s ease-in-out;
 }

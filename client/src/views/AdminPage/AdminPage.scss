@@ -5,15 +5,13 @@
   margin: 3% 0;
 
   &__title {
-    font-size: 2.2vw;
-    font-weight: bold;
+    font-size: 2.3vw;
+    font-weight: 600;
   }
 
   &__container {
     margin-top: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-container;
     flex-wrap: wrap;
     font-family: $font-montserrat;
     width: 100%;
@@ -37,8 +35,29 @@
 
     &:hover {
       background: #263e61;
-      font-size: 1.6vw;
-      border: 1px solid;
+    }
+  }
+
+  @include phone {
+    &__title {
+      font-size: 2.8vw;
+      margin-top: 2%;
+      font-weight: bold;
+    }
+
+    &__container {
+      margin-top: 4%;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+
+    &__btn {
+      width: 40%;
+      margin-top: 8%;
+
+      font-size: 2vw;
+
+      padding: 2% 0;
     }
   }
 }

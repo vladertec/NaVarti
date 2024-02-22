@@ -20,28 +20,28 @@ const Footer = () => {
 
       <div className="footer__socials-container">
         <a
-          className="footer__socials-link"
+          className="footer__socials-item"
           href="https://www.instagram.com/na_varty_zyttya?igsh=MWF5OWNyNzI2ZTk0eg=="
         >
-          <InstagramIcon />
+          <InstagramIcon className="footer__social-icon" />
         </a>
         <a
-          className="footer__socials-link"
+          className="footer__socials-item"
           href="https://www.facebook.com/profile.php?id=61554088658276"
         >
-          <FacebookIcon />
+          <FacebookIcon className="footer__social-icon" />
         </a>
         <a
-          className="footer__socials-link"
+          className="footer__socials-item"
           href="https://www.facebook.com/profile.php?id=61554088658276"
         >
-          <TelegramIcon />
+          <TelegramIcon className="footer__social-icon" />
         </a>
         <a
-          className="footer__socials-link"
+          className="footer__socials-item"
           href="https://www.facebook.com/profile.php?id=61554088658276"
         >
-          <TelegramIcon />
+          <TelegramIcon className="footer__social-icon" />
         </a>
       </div>
       <div className="footer__info-container">
@@ -58,7 +58,7 @@ const Footer = () => {
           to="donation-details"
           spy={true}
           smooth={true}
-          className="header__nav-item"
+          className="footer__nav-item"
         >
           реквізити
         </Link>
@@ -66,7 +66,7 @@ const Footer = () => {
           to="current-report"
           spy={true}
           smooth={true}
-          className="header__nav-item"
+          className="footer__nav-item"
         >
           звіти
         </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
           to="our-team"
           spy={true}
           smooth={true}
-          className="header__nav-item"
+          className="footer__nav-item"
         >
           контакти
         </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
           to="question"
           spy={true}
           smooth={true}
-          className="header__nav-item"
+          className="footer__nav-item"
         >
           відповіді
         </Link>

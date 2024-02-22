@@ -11,8 +11,8 @@ import Error from "../Error/Error"
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required("Введіть імʼя"),
-  position: Yup.string().required("Введите посаду"),
-  text: Yup.string().required("Введите опис"),
+  position: Yup.string().required("Введіть посаду"),
+  text: Yup.string().required("Введіть опис"),
   photoUrl: Yup.string().required("Введіть посилання на фото"),
   // .url("Введите коректне посилання"),
 })
@@ -50,17 +50,18 @@ const EditOurTeam = () => {
       localStorage.getItem("accessToken"),
       id
     )
-    if (result.status === 200) {
+    console.log(result)
+    if (result === "OK") {
       setRefreshPage(true)
     } else {
-      <Error />
+      ;<Error />
     }
   }
 
   const handleSubmit = async (values) => {
     console.log(values)
     await addNewOurTeamCard(localStorage.getItem("accessToken"), values)
-    navigate("/success")
+    navigate("/login/adminPage")
   }
   return (
     <div className="edit-team">
@@ -70,7 +71,7 @@ const EditOurTeam = () => {
         onSubmit={handleSubmit}
       >
         <Form className="edit-team__form team-form">
-          <p className="team-form__title">Введіть дані учасника</p>
+          <p className="team-form__title">Додавання учасників команди</p>
 
           <div className="team-form__group">
             <label htmlFor="photoUrl" className="team-form__label">
@@ -151,16 +152,13 @@ const EditOurTeam = () => {
       </Formik>
 
       <div className="edit-team__cards-wrapper cards-container">
-        <p className="cards-container__title">Список діючих учасників</p>
+        <p className="cards-container__title">
+          Список діючих учасників команди
+        </p>
         {teamCards.map((item, index) => (
           <div className="cards-container__card" key={index}>
-            <img
-              className="cards-container__card-img"
-              src={item.photoUrl}
-              alt={item.photoUrl}
-            />
-            <h2 className="cards-container__card-name">{item.title}</h2>
-            <p className="cards-container__card-position">{item.position}</p>
+            <h2 className="cards-container__card-text">{item.title}</h2>
+            <p className="cards-container__card-text">{item.position}</p>
             <p className="cards-container__card-text">{item.text}</p>
             <button
               className="cards-container__card-btn"

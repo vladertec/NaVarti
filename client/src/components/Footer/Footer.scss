@@ -26,6 +26,9 @@
     font-size: 1vw;
     text-align: justify;
     line-height: 1.1;
+    &:hover {
+      color: #3566a9;
+    }
   }
 
   &__socials-container {
@@ -34,8 +37,17 @@
     flex-direction: column;
   }
 
-  &__socials-link {
-    padding: 5% 0;
+  &__socials-item {
+    padding: 7% 0;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  &__social-icon {
+    font-size: 2.7vw !important;
+    &:hover {
+      color: #3566a9;
+    }
   }
 
   &__info-container {
@@ -51,6 +63,9 @@
     font-size: 1.3vw;
     padding: 3% 0;
     font-weight: bold;
+    &:hover {
+      color: #3566a9;
+    }
   }
 
   &__menu-container {
@@ -58,12 +73,16 @@
     @include grid-container;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 10px;
+    grid-row-gap: 100%;
   }
 
-  &__menu-item {
+  &__nav-item {
     font-size: 1.3vw;
+    cursor: pointer;
     font-weight: bold;
+    &:hover {
+      color: #3566a9;
+    }
   }
 
   &__qr-container {

@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin: 1% auto;
+    margin: 3% auto;
     font-family: $font-montserrat;
-    border: 1px solid #3566a9;
+    border: 2px solid #3566a9;
     padding: 2% 2%;
     border-radius: 10px;
 
@@ -23,25 +23,25 @@
     }
 
     &__label {
-      margin-bottom: 2%;
+      font-size: 2vw;
     }
 
     .team-form__input,
     .team-form__textarea {
       font-size: 2vw;
       padding: 8px;
-      margin-bottom: 16px;
+      margin: 3% 0;
       border: 1px solid #444444;
       background-color: white;
       border-radius: 10px;
-
       font-size: 1.5vw;
     }
 
     &__error {
       color: #ff0000;
-      margin-top: -8px;
-      margin-bottom: 16px;
+      margin: 0 0 5% 4%;
+      font-size: 1.2vw;
+      font-weight: bold;
     }
 
     &__btn {
@@ -67,29 +67,32 @@
   .cards-container {
     @include flex-container;
     flex-direction: column;
-    margin-top: 4%;
+    margin: 6% 0;
 
     &__title {
-      margin-bottom: 4%;
-      font-size: 2vw;
+      font-size: 2.1vw;
       font-weight: bold;
     }
 
     &__card {
-      display: flex;
+      margin-top: 3%;
+      width: 60%;
+      @include flex-container;
       justify-content: space-between;
+      border-radius: 10px;
+      border: 2px solid #3566a9;
+      padding: 2% 2%;
+      gap: 2%;
     }
 
     &__card-img {
-    }
-
-    &__card-name {
-    }
-
-    &__card-position {
+      max-width: 20%;
+      height: auto;
     }
 
     &__card-text {
+      font-size: 1.5vw;
+      text-align: center;
     }
 
     &__card-btn {
@@ -100,13 +103,43 @@
       cursor: pointer;
       font-size: 1vw;
       font-weight: bold;
-      letter-spacing: 1px;
-      outline: 0;
-      padding: 2% 0;
+      padding: 2% 2%;
       background: #3566a9;
 
       &:hover {
         background: #263e61;
+      }
+    }
+  }
+
+  @include phone {
+    .team-form {
+      width: 45%;
+      margin: 8% auto;
+
+      &__title {
+        font-size: 2.3vw;
+      }
+    }
+
+    .cards-container {
+      margin: 12% 0;
+
+      &__title {
+        font-size: 2.5vw;
+      }
+
+      &__card {
+        margin-top: 5%;
+        width: 65%;
+      }
+
+      &__card-text {
+        font-size: 1.8vw;
+      }
+      &__card-btn {
+        font-size: 1.4vw;
+        padding: 3% 3%;
       }
     }
   }

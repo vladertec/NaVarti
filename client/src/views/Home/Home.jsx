@@ -165,10 +165,10 @@ const Home = () => {
   return (
     <div className="home">
       <MainTitle />
-      <CurrentFee cards={cards} />
-      <CurrentReport />
-      <Line />
+      {/* <CurrentFee cards={cards} /> */}
       <OurTeam PositionItems={PositionItems} />
+      <Line />
+      <CurrentReport />
       <Line />
       <MakeRequest RequestItems={RequestItems} />
       <Line />

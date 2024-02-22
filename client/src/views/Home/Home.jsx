@@ -74,36 +74,43 @@ const Home = () => {
   const cards = [
     {
       title: "Карточка 1",
+      photoUrl: "/img/logo.jpg",
       description: "Описание карточки 1",
       numberPosition: 1,
     },
     {
       title: "Карточка 2",
+      photoUrl: "/img/logo.jpg",
       description: "Описание карточки 2",
       numberPosition: 2,
     },
     {
       title: "Карточка 3",
+      photoUrl: "/img/logo.jpg",
       description: "Описание карточки 3",
       numberPosition: 3,
     },
     {
       title: "Карточка 4",
+      photoUrl: "/img/logo.jpg",
       description: "Описание карточки 4",
       numberPosition: 4,
     },
     {
       title: "Карточка 5",
+      photoUrl: "/img/logo.jpg",
       description: "Описание карточки 5",
       numberPosition: 5,
     },
     {
       title: "Карточка 6",
+      photoUrl: "/img/logo.jpg",
       description: "Описание карточки 6",
       numberPosition: 6,
     },
     {
       title: "Карточка 7",
+      photoUrl: "/img/logo.jpg",
       description: "Описание карточки 7",
       numberPosition: 7,
     },

@@ -5,6 +5,7 @@ const currentFeeSchema = new mongoose.Schema(
     photoUrl: String,
     title: String,
     description: String,
+    positionNumber: Number,
   },
   { versionKey: false }
 )

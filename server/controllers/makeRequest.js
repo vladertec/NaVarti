@@ -2,12 +2,11 @@ import mongoose from "mongoose"
 import MakeRequest from "../models/makeRequest.js"
 
 const addOne = async (req, res) => {
-  const { photoUrl, positionNumber, title, content } = req.body
+  const { photoUrl, title, text } = req.body
   const makeRequest = await MakeRequest.create({
     photoUrl,
-    positionNumber,
     title,
-    content,
+    text,
   })
   res.json(makeRequest)
 }

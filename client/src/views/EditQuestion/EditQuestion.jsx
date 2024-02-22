@@ -49,7 +49,7 @@ const EditOurTeam = () => {
     if (result === "OK") {
       setRefreshPage(true)
     } else {
-      <Error />
+      ;<Error />
     }
   }
 
@@ -58,13 +58,13 @@ const EditOurTeam = () => {
     navigate("/login/adminPage")
   }
   return (
-    <div className="edit-team">
+    <div className="edit-information">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="edit-team__form team-form">
+        <Form className="edit-information__form team-form">
           <p className="team-form__title">Додавання питання та відповіді</p>
 
           <div className="team-form__group">
@@ -109,7 +109,7 @@ const EditOurTeam = () => {
         </Form>
       </Formik>
 
-      <div className="edit-team__cards-wrapper cards-container">
+      <div className="edit-information__cards-wrapper cards-container">
         <p className="cards-container__title">
           Список діючих питань та відповідей:
         </p>

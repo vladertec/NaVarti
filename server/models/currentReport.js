@@ -4,7 +4,7 @@ const currentReportSchema = new mongoose.Schema(
   {
     positionNumber: Number,
     title: String,
-    content: String,
+    text: String,
     photoUrl: String,
   },
   { versionKey: false }

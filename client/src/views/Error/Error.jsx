@@ -1,15 +1,16 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Error = () => {
+  const navigate = useNavigate()
   return (
     <div className="error">
+      <img className="error__img" alt="error" src="/img/error.png" />
       <div className="error__message-container">
         <h2 className="error__message">Ooops! Page not found...</h2>
-        <Link to="/" >
-          <button className="error__btn">Homepage</button>
-        </Link>
+        <button className="error__btn" onClick={() => navigate("/")}>
+          Homepage
+        </button>
       </div>
-      <img className="error__img" alt="error" src="/img/error.png" />
     </div>
   )
 }

@@ -1,17 +1,25 @@
 import axios from "axios"
 
-export const getMakeRequestCards = async () => {
+export const getMakeRequestCards = async (token) => {
   try {
-    const { data } = await axios.get(`/api/makeRequests`)
+    const { data } = await axios.get(`/api/makeRequests`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
   }
 }
 
-export const addNewMakeRequestCard = async (makeRequest) => {
+export const addNewMakeRequestCard = async (token, makeRequest) => {
   try {
-    const { data } = await axios.post("/api/makeRequest", makeRequest)
+    const { data } = await axios.post("/api/makeRequest", makeRequest, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
@@ -27,9 +35,13 @@ export const updateMakeRequestCard = async (makeRequest, id) => {
   }
 }
 
-export const deleteMakeRequestCard = async (id) => {
+export const deleteMakeRequestCard = async (token, id) => {
   try {
-    const { data } = await axios.delete(`/api/makeRequest/${id}`)
+    const { data } = await axios.delete(`/api/makeRequest/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err

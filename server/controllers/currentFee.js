@@ -2,8 +2,13 @@ import mongoose from "mongoose"
 import CurrentFee from "../models/currentFee.js"
 
 const addOne = async (req, res) => {
-  const { photoUrl, title, description } = req.body
-  const currentFee = await CurrentFee.create({ photoUrl, title, description })
+  const { photoUrl, title, description, positionNumber } = req.body
+  const currentFee = await CurrentFee.create({
+    photoUrl,
+    title,
+    description,
+    positionNumber,
+  })
   res.json(currentFee)
 }
 

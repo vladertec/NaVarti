@@ -2,12 +2,12 @@ import mongoose from "mongoose"
 import CurrentReport from "../models/currentReport.js"
 
 const addOne = async (req, res) => {
-  const { photoUrl, positionNumber, title, content } = req.body
+  const { photoUrl, positionNumber, title, text } = req.body
   const currentReport = await CurrentReport.create({
     photoUrl,
     positionNumber,
     title,
-    content,
+    text,
   })
   res.json(currentReport)
 }

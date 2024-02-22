@@ -7,6 +7,10 @@ import Registration from "../../views/Registration/Registration"
 import EditOurTeam from "../../views/EditOurTeam/EditOurTeam"
 import EditQuestion from "../../views/EditQuestion/EditQuestion"
 import EditDonationDetails from "../../views/EditDonationDetails/EditDonationDetails"
+import EditCurrentReport from "../../views/EditCurrentReport/EditCurrentReport"
+import EditCurrentFee from "../../views/EditCurrentFee/EditCurrentFee"
+import EditTransferredThings from "../../views/EditTransferredThings/EditTransferredThings"
+import EditMakeRequest from "../../views/EditMakeRequest/EditMakeRequest"
 
 const Routing = () => {
   const isAdminLoggedIn = localStorage.getItem("accessToken")
@@ -15,29 +19,41 @@ const Routing = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/registration" element={<Registration />} />
-      <Route path="/login" element={<Login />} />
-
       <Route
-        path="/login/adminPage"
-        element={isAdminLoggedIn ? <AdminPage /> : <Navigate to="/login" />}
-      />
-      <Route
-        path="/login/adminPage/ourTeam"
-        element={isAdminLoggedIn ? <EditOurTeam /> : <Navigate to="/login" />}
-      />
-      <Route
-        path="/login/adminPage/question"
-        element={isAdminLoggedIn ? <EditQuestion /> : <Navigate to="/login" />}
-      />
-
-      <Route
-        path="/login/adminPage/donationDetails"
+        path="/login"
         element={
-          isAdminLoggedIn ? <EditDonationDetails /> : <Navigate to="/login" />
+          isAdminLoggedIn ? <Navigate to="/login/adminPage" /> : <Login />
         }
       />
-      {/* <Route path="/login/adminPage/currentReport" element={isAdminLoggedIn ? <CurrentReport /> : <Navigate to="/login" />} />
-    <Route path="/login/adminPage/makeRequest" element={isAdminLoggedIn ? <EditMakeRequest /> : <Navigate to="/login" />} /> */}
+      {isAdminLoggedIn ? (
+        <>
+          <Route path="/login/adminPage" element={<AdminPage />} />
+          <Route path="/login/adminPage/ourTeam" element={<EditOurTeam />} />
+          <Route path="/login/adminPage/question" element={<EditQuestion />} />
+          <Route
+            path="/login/adminPage/donationDetails"
+            element={<EditDonationDetails />}
+          />
+          <Route
+            path="/login/adminPage/currentReport"
+            element={<EditCurrentReport />}
+          />
+          <Route
+            path="/login/adminPage/currentFee"
+            element={<EditCurrentFee />}
+          />
+          <Route
+            path="/login/adminPage/transferredThings"
+            element={<EditTransferredThings />}
+          />
+          <Route
+            path="/login/adminPage/makeRequest"
+            element={<EditMakeRequest />}
+          />
+        </>
+      ) : (
+        <Navigate to="/login" />
+      )}
       <Route path="*" element={<Error />} />
     </Routes>
   )

@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const makeRequestSchema = new mongoose.Schema(
   {
-    positionNumber: Number,
+    photoUrl: String,
     title: String,
     text: String,
   },

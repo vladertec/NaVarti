@@ -65,7 +65,7 @@ router.post(
 )
 
 router.delete(
-  "/currentFee/:currentReportId",
+  "/currentReport/:currentReportId",
   authenticMiddleware,
   roleMiddleware(["ADMIN"]),
   CurrentReportController.deleteOne

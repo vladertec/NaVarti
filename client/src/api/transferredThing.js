@@ -1,8 +1,12 @@
 import axios from "axios"
 
-export const getTransferredThingCards = async () => {
+export const getTransferredThingCards = async (token) => {
   try {
-    const { data } = await axios.get(`/api/transferredThings`)
+    const { data } = await axios.get(`/api/transferredThings`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
     return data
   } catch (err) {
     return err
@@ -28,7 +32,7 @@ export const addNewTransferredThingCard = async (token, transferredThing) => {
 
 export const deleteTransferredThingCard = async (token, id) => {
   try {
-    const { data } = await axios.delete(`/api/transferredThing/${id}`,  {
+    const { data } = await axios.delete(`/api/transferredThing/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

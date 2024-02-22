@@ -39,7 +39,7 @@ const AdminPage = () => {
         </button>
         <button
           className="admin-page__btn"
-          onClick={() => handleButtonClick("/login/makeRequest")}
+          onClick={() => handleButtonClick("/login/adminPage/makeRequest")}
         >
           Запити
         </button>

@@ -86,6 +86,7 @@ const CurrentReport = () => {
                     <div className="report-card__text-container">
                       <h2 className="report-card__name">{object.title}</h2>
                       <p className="report-card__text">{object.text}</p>
+                      <button className="report-card__btn">Детальніше</button>
                     </div>
                   </div>
                   <img
@@ -105,6 +106,7 @@ const CurrentReport = () => {
                     <div className="report-card__text-container">
                       <h2 className="report-card__name">{object.title}</h2>
                       <p className="report-card__text">{object.text}</p>
+                      <button className="report-card__btn">Детальніше</button>
                     </div>
                   </div>
                 </div>

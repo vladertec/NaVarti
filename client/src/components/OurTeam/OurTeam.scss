@@ -60,5 +60,11 @@
     background-color: black;
     color: white;
     font-weight: bold;
+    @include flex-container;
+  }
+
+  &__btn-icon {
+    margin-left: 2%;
+    font-size: 1.5vw !important;
   }
 }

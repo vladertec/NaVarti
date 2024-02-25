@@ -10,13 +10,12 @@
   }
 
   &__title {
-    font-size: 2.3vw;
-    font-weight: bold;
+    font-size: 2.5vw;
+    font-weight: 500;
   }
 
   &__text {
-    margin-bottom: 8%;
-    margin-top: 6%;
+    margin: 6% 0;
     font-size: 1.5vw;
     line-height: 1.4;
     text-align: justify;
@@ -37,8 +36,9 @@
     outline: none;
     cursor: pointer;
     font-size: 1.4vw;
-    font-weight: bold;
+    font-weight: 520;
     transition: background-color 0.3s ease;
+    font-family: $font-namum;
     &:hover {
       background-color: #696969;
     }

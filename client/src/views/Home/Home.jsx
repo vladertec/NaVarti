@@ -8,6 +8,7 @@ import OurTeam from "../../components/OurTeam/OurTeam"
 import MakeRequest from "../../components/MakeRequest/MakeRequest"
 import CurrentReport from "../../components/CurrentReport/CurrentReport"
 import CurrentFee from "../../components/CurrentFee/CurrentFee"
+import Partners from "../../components/Partners/Partners"
 
 const Home = () => {
   const slideItems = [
@@ -172,7 +173,7 @@ const Home = () => {
   return (
     <div className="home">
       <MainTitle />
-      {/* <CurrentFee cards={cards} /> */}
+      <CurrentFee cards={cards} />
       <OurTeam PositionItems={PositionItems} />
       <Line />
       <CurrentReport />
@@ -185,6 +186,7 @@ const Home = () => {
       <Line />
       <Gallery photos={photos} />
       <Question faq={faqData} />
+      <Partners />
     </div>
   )
 }

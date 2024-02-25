@@ -1,43 +1,37 @@
 .current-fee {
-  width: 100%;
-  margin: 10% 0 5% 0;
-  overflow: hidden;
-  position: relative;
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
 
-  &__cards-container {
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+  .title {
+    font-size: 2.3vw;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-    &::-webkit-scrollbar {
-      width: 8px; /* Safari and Chrome */
+  .slick-slider {
+    .slick-slide {
+      padding: 0 15px;
+      box-sizing: border-box;
     }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.2); /* Safari and Chrome */
-      border-radius: 4px;
+    .slick-track {
+      display: flex;
+      align-items: center;
     }
   }
-}
 
-.card {
-  min-width: 20%;
-  flex: 0 0 auto;
-  margin-left: 3%;
-  padding: 20px 40px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card.selected {
-  transform: scale(1.1);
+  .card {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

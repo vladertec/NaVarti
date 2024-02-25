@@ -1,3 +1,5 @@
+import TollIcon from "@mui/icons-material/Toll"
+
 const OurTeam = ({ PositionItems }) => {
   return (
     <div className="our-team">
@@ -16,7 +18,9 @@ const OurTeam = ({ PositionItems }) => {
           </div>
         ))}
       </div>
-      <button className="our-team__btn">ЗРОБИТИ ВНЕСОК</button>
+      <button className="our-team__btn">
+        ЗРОБИТИ ВНЕСОК <TollIcon className="our-team__btn-icon" />
+      </button>
     </div>
   )
 }

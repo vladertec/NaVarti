@@ -38,6 +38,12 @@ function WebsiteBody() {
         style={{
           backgroundColor: "rgb(73, 155, 193)",
           borderRadius: "10px",
+          width: "5vw",
+          height: "5vw",
+          minWidth: "40px", // Мінімальна ширина
+          minHeight: "40px", // Мінімальна висота
+          maxWidth: "100px", // Максимальна ширина
+          maxHeight: "100px", // Максимальна висота
         }}
       />
     </div>

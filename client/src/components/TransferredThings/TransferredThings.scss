@@ -1,12 +1,12 @@
 .transferred-things {
-  margin: 10% 0 3% 0;
+  margin: 8% 0 3% 0;
   padding: 0 12%;
   font-family: $font-montserrat;
 
   &__title {
-    font-size: 2.5vw;
     text-align: center;
-    font-weight: bold;
+    font-size: 2.4vw;
+    font-weight: 600;
   }
 
   &__description {
@@ -29,21 +29,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
     background-color: #1db2be;
-    padding: 2%;
+    padding: 2% 4%;
     border-radius: 15px;
   }
 
   &__item-name {
-    font-size: 1.4vw;
+    font-size: 1.5vw;
+    font-weight: 700;
+    font-style: italic;
   }
 
   &__item-quantity {
-    font-size: 1.3vw;
-    font-weight: bold;
-    background-color: rgb(57, 196, 189);
-    color: #000;
-    padding: 2% 4%;
+    font-size: 1.4vw;
+    font-weight: 700;
+    color: white;
+    padding: 2% 2%;
     border-radius: 4px;
   }
 }

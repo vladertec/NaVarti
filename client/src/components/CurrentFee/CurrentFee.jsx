@@ -1,32 +1,33 @@
-import React, { useState } from "react"
+import React from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
-const CurrentFee = ({ cards }) => {
-  const [selectedCardIndex, setSelectedCardIndex] = useState(0)
-
-  const handleCardClick = (index) => {
-    setSelectedCardIndex(index)
-  }
-
-  const centerCardIndex = cards.findIndex((card) => card.numberPosition === 1)
-
-  return (
-    <div className="current-fee">
-      <div className="current-fee__cards-container">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className={`card ${index === centerCardIndex ? "center" : ""} ${
-              index === selectedCardIndex ? "selected" : ""
-            }`}
-            onClick={() => handleCardClick(index)}
-          >
-            <h2>{card.title}</h2>
-            <p>{card.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  draggable: true,
+  variableWidth: true,
+  arrows: false,
+  centerMode: true,
 }
+
+const CurrentFee = ({ cards }) => (
+  <div className="current-fee">
+    <p className="title">Актуальні збори</p>
+    <Slider {...settings}>
+      {cards.map((card, index) => (
+        <div key={index} className="card" style={{ width: 300 }}>
+          <h2>{card.title}</h2>
+          <p>{card.description}</p>
+        </div>
+      ))}
+    </Slider>
+  </div>
+)
 
 export default CurrentFee

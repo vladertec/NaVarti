@@ -1,4 +1,6 @@
-import ContentCopyIcon from "@mui/icons-material/ContentCopy"
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward"
+import CheckIcon from '@mui/icons-material/Check';
+import LinkIcon from "@mui/icons-material/Link"
 import React, { useState } from "react"
 
 const DonationDetails = ({ details }) => {
@@ -34,17 +36,17 @@ const DonationDetails = ({ details }) => {
                 >
                   {copiedIndex === index ? (
                     <span className="donation-container__copied">
-                      Скопійовано ✓
+                      Скопійовано <CheckIcon className="donation-container__copy-icon"/>
                     </span>
                   ) : (
-                    <p>
+                    <p className="donation-container__copy">
                       Скопіювати
-                      {/* Скопіювати <ContentCopyIcon /> */}
+                      <LinkIcon className="donation-container__copy-icon" />
                     </p>
                   )}
                 </button>
                 <button className="donation-container__information-btn">
-                  Детальніше
+                  Детальніше <ArrowOutwardIcon className="donation-container__copy-icon"/>
                 </button>
               </div>
             </div>

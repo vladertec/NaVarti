@@ -1,3 +1,5 @@
+import ModeEditIcon from "@mui/icons-material/ModeEdit"
+
 const MakeRequest = ({ RequestItems }) => {
   return (
     <div className="make-request">
@@ -14,7 +16,10 @@ const MakeRequest = ({ RequestItems }) => {
               <h2 className="make-request__card-name">{item.title}</h2>
               <p className="make-request__card-position">{item.position}</p>
               <p className="make-request__card-text">{item.text}</p>
-              <button className="make-request__btn">Заповнити форму</button>
+              <button className="make-request__btn">
+                Заповнити форму{" "}
+                <ModeEditIcon className="make-request__btn-icon" />{" "}
+              </button>
             </div>
           ))}
         </div>

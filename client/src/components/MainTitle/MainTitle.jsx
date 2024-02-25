@@ -1,3 +1,5 @@
+import TollIcon from "@mui/icons-material/Toll"
+
 const MainTitle = () => {
   return (
     <div className="title">
@@ -9,8 +11,12 @@ const MainTitle = () => {
             вас долучитися до нашої «Варти»
           </p>
           <div className="title__btn-container">
-            <button className="title__btn title__donate-btn">ЗРОБИТИ ВНЕСОК</button>
-            <button className="title__btn title__help-btn">ЗАПИТ ПРО ДОПОМОГУ</button>
+            <button className="title__btn title__donate-btn">
+              ЗРОБИТИ ВНЕСОК <TollIcon className="our-team__btn-icon" />
+            </button>
+            <button className="title__btn title__help-btn">
+              ЗАПИТ ПРО ДОПОМОГУ
+            </button>
           </div>
         </div>
         <div className="title__img-container">

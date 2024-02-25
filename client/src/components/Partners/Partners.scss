@@ -1,0 +1,35 @@
+.partners-carousel {
+  margin-top: 12%;
+  font-family: $font-montserrat;
+
+  &__title {
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: 2.2vw;
+    font-weight: 500;
+  }
+
+  .partner-slide {
+    padding: 10%;
+    @include flex-container;
+    gap: 20%;
+
+    .partner-card {
+      padding: 3%;
+      background-color: white; // Приклад заднього фону
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Приклад тіні
+      border-radius: 100%; // Закруглені краї
+      overflow: hidden; // Забезпечує, що всі внутрішні елементи відповідають закругленню
+
+      .partner-logo {
+        border-radius: 100%;
+        max-width: 100%; // Забезпечує, що логотип не виходить за межі карточки
+        height: auto;
+      }
+    }
+  }
+}
+
+.partners-carousel {
+  overflow-x: hidden;
+}

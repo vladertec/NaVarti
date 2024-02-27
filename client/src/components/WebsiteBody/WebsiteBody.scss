@@ -4,19 +4,21 @@
   min-height: 100vh;
   width: 100%;
   background-color: white;
+
+  &__content {
+    flex: 1;
+  }
+  @include phone {
+    &__scroll-top {
+      display: none;
+    }
+  }
 }
 
-.website-body__content {
-  flex: 1; /* Этот блок будет занимать все доступное пространство между header и footer */
-}
-
-/* Стили для футера */
 .footer {
   margin-top: auto;
 }
 
-
-/* Стили для скрытия хедера */
 .website-body__header-hidden {
   transform: translateY(-100%);
   transition: transform 1.3s ease-in-out;

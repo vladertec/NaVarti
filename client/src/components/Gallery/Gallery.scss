@@ -1,11 +1,14 @@
 .gallery {
-  margin-top: 5%;
+  padding: 8% 10% 5% 10%;
   display: grid;
   grid-gap: 2%;
   grid-template-areas:
     "a a b b b c c f f"
     "a a d d e e e f f";
   padding-inline: 10%;
+  background-image: url("../../../public/img/desktopBackground/gallery.png");
+  background-size: 100% auto;
+  background-position: center top -30px;
 
   &__container {
     @include flex-container;

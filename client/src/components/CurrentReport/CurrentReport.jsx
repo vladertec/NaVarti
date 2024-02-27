@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward"
 
 const CurrentReport = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -86,7 +87,9 @@ const CurrentReport = () => {
                     <div className="report-card__text-container">
                       <h2 className="report-card__name">{object.title}</h2>
                       <p className="report-card__text">{object.text}</p>
-                      <button className="report-card__btn">Детальніше</button>
+                      <button className="report-card__btn">
+                        ДЕТАЛЬНІШЕ <ArrowOutwardIcon className="report-card__btn-icon"/>
+                      </button>
                     </div>
                   </div>
                   <img
@@ -106,7 +109,9 @@ const CurrentReport = () => {
                     <div className="report-card__text-container">
                       <h2 className="report-card__name">{object.title}</h2>
                       <p className="report-card__text">{object.text}</p>
-                      <button className="report-card__btn">Детальніше</button>
+                      <button className="report-card__btn">
+                        ДЕТАЛЬНІШЕ <ArrowOutwardIcon className="report-card__btn-icon"/>
+                      </button>
                     </div>
                   </div>
                 </div>

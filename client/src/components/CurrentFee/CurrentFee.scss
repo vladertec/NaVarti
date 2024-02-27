@@ -1,37 +1,87 @@
-.current-fee {
-  margin-top: 6%;
-  margin-left: auto;
-  margin-right: auto;
+.current-fee-carousel {
+  padding: 2% 0 3% 0;
+  font-family: $font-montserrat;
+  overflow-x: hidden;
 
-  .title {
-    font-size: 2.3vw;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
+  &__title {
+    margin-bottom: 4%;
     text-align: center;
-    margin-bottom: 2rem;
+    font-size: 2.2vw;
+    font-weight: 500;
   }
 
-  .slick-slider {
-    .slick-slide {
-      padding: 0 15px;
-      box-sizing: border-box;
+  &__container {
+  }
+
+  .current-fee-slide {
+    padding: 5%;
+    @include flex-container;
+    gap: 20%;
+
+    &__card {
+      border-radius: 2vw;
+      padding: 5%;
+      overflow: hidden;
+      background-color: $grey-color;
     }
 
-    .slick-track {
-      display: flex;
-      align-items: center;
+    &__logo {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      margin-top: 5%;
+      font-size: 2vw;
+      font-weight: 500;
+    }
+
+    &__text {
+      margin-top: 6%;
+      font-size: 1.4vw;
+      align-items: justify;
+    }
+
+    &__btn {
+      margin-top: 5%;
+      border-radius: 30px;
+      padding: 2.5% 4%;
+      cursor: pointer;
+      font-weight: 600;
+      border: none;
+      font-size: 1vw;
+      background-color: black;
+      color: white;
+      transition: background-color 0.3s;
+      width: 100%;
+      font-family: $font-montserrat;
+    }
+
+    &__btn--information {
+      margin-top: 3%;
+      @include flex-container;
+      background-color: white;
+      color: black;
+    }
+
+    &__btn-icon {
+      font-size: 1.4vw;
+      margin-left: 6%;
     }
   }
 
-  .card {
-    width: 100%;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .slick-dots {
+    position: static;
+    padding: 1%;
+    li {
+      margin: 0;
+      padding: 2%;
+      button {
+        &::before {
+          margin-top: 5%;
+          font-size: 1.5vw;
+        }
+      }
+    }
   }
 }

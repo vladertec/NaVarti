@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "react-scroll"
+import { Link as ScrollLink } from "react-scroll"
+import { Link as RouterLink } from "react-router-dom"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import TelegramIcon from "@mui/icons-material/Telegram"
@@ -7,49 +8,49 @@ import TelegramIcon from "@mui/icons-material/Telegram"
 const Header = () => {
   return (
     <header className="header">
-      <div className="header__logo-wrapper logo-container">
+      <RouterLink to="/" className="header__logo-wrapper logo-container">
         <img
           className="logo-container__logo-img"
           src="/img/logoWeb.jpg"
           alt=""
         />
-      </div>
+      </RouterLink>
 
       <div className="header__info-wrapper info-container">
         <div className="info-container__center">
           <nav className="info-container__nav">
-            <Link
+            <ScrollLink
               to="donation-details"
               spy={true}
               smooth={true}
               className="info-container__nav-item"
             >
               РЕКВІЗИТИ
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               to="current-report"
               spy={true}
               smooth={true}
               className="info-container__nav-item"
             >
               ЗВІТИ
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               to="our-team"
               spy={true}
               smooth={true}
               className="info-container__nav-item"
             >
               КОНТАКТИ
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               to="question"
               spy={true}
               smooth={true}
               className="info-container__nav-item"
             >
               ВІДПОВІДІ
-            </Link>
+            </ScrollLink>
           </nav>
 
           <div className="info-container__socials">

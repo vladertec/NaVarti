@@ -1,7 +1,9 @@
 .transferred-things {
-  margin: 8% 0 3% 0;
-  padding: 0 12%;
+  padding: 8% 12% 5% 12%;
   font-family: $font-montserrat;
+  background-image: url("../../../public/img/desktopBackground/transferredThings.png");
+  background-size: 100% auto;
+  background-position: center top -30px;
 
   &__title {
     text-align: center;

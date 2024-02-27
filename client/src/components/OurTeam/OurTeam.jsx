@@ -18,9 +18,6 @@ const OurTeam = ({ PositionItems }) => {
           </div>
         ))}
       </div>
-      <button className="our-team__btn">
-        ЗРОБИТИ ВНЕСОК <TollIcon className="our-team__btn-icon" />
-      </button>
     </div>
   )
 }

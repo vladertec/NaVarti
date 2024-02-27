@@ -16,14 +16,14 @@
 
     .partner-card {
       padding: 3%;
-      background-color: white; // Приклад заднього фону
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Приклад тіні
-      border-radius: 100%; // Закруглені краї
-      overflow: hidden; // Забезпечує, що всі внутрішні елементи відповідають закругленню
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 100%;
+      overflow: hidden;
 
       .partner-logo {
         border-radius: 100%;
-        max-width: 100%; // Забезпечує, що логотип не виходить за межі карточки
+        max-width: 100%;
         height: auto;
       }
     }

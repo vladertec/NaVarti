@@ -2,7 +2,9 @@ import React from "react"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import TelegramIcon from "@mui/icons-material/Telegram"
-import { Link } from "react-scroll"
+import { Link as ScrollLink } from "react-scroll"
+import { Link as RouterLink } from "react-router-dom"
+import { useNavigate } from "react-router"
 
 const Footer = () => {
   return (
@@ -11,7 +13,7 @@ const Footer = () => {
         <div className="footer__logo-container">
           <img
             className="footer__logo-img"
-            src="/img/logoBackground.png"
+            src="/img/logo.jpg"
             alt="footer-logo"
           />
           <a className="footer__logo-text">
@@ -55,38 +57,38 @@ const Footer = () => {
           <p className="footer__info-text">sarnavsk2001@gmail.com</p>
         </div>
         <div className="footer__menu-container">
-          <Link
+          <ScrollLink
             to="donation-details"
             spy={true}
             smooth={true}
             className="footer__nav-item"
           >
             реквізити
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="current-report"
             spy={true}
             smooth={true}
             className="footer__nav-item"
           >
             звіти
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="our-team"
             spy={true}
             smooth={true}
             className="footer__nav-item"
           >
             контакти
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="question"
             spy={true}
             smooth={true}
             className="footer__nav-item"
           >
             відповіді
-          </Link>
+          </ScrollLink>
         </div>
         <div className="footer__qr-container">
           <img
@@ -96,9 +98,11 @@ const Footer = () => {
           />
         </div>
       </div>
-      <p className="footer__policy">
-        © 2023-2024 «На Варті Життя». Всі права захищені.
-      </p>
+      <RouterLink to="/login">
+        <p className="footer__policy">
+          © 2023-2024 «На Варті Життя». Всі права захищені.
+        </p>
+      </RouterLink>
     </footer>
   )
 }

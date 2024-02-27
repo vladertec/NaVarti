@@ -1,7 +1,10 @@
 .question {
-  margin-top: 10%;
+  margin-top: 8%;
   @include main-padding;
   font-family: $font-montserrat;
+  background-image: url("../../../public/img/desktopBackground/question.png");
+  background-size: 100% auto;
+  background-position: center top -30px;
 
   &__container {
     background-color: $grey-color;

@@ -45,7 +45,7 @@ const Login = () => {
             <input
               className="login__input"
               id="username"
-              type="text"
+              type="login"
               name="login"
               value={login.username}
               onInput={(e) =>
@@ -62,7 +62,7 @@ const Login = () => {
             </label>
             <input
               className="login__input"
-              type="text"
+              type="password"
               name="password"
               id="password"
               value={login.password}

@@ -1,8 +1,11 @@
 .title {
-  margin-top: 6%;
+  padding: 6% 0;
   @include flex-container;
   @include main-padding;
   color: black;
+  background-image: url("../../../public/img/desktopBackground/mainTitle.jpeg");
+  background-size: 100% auto;
+  background-position: center top;
 
   &__container {
     display: flex;
@@ -56,7 +59,7 @@
     color: white;
   }
 
-  &__btn-icon{
+  &__btn-icon {
     font-size: 1vw !important;
     margin-left: 2%;
   }

@@ -1,9 +1,12 @@
 .make-request {
-  margin: 5% 0 3% 0;
+  padding: 5% 0 3% 0;
   @include main-padding;
   @include flex-container;
   flex-direction: column;
   font-family: $font-montserrat;
+  background-image: url("../../../public/img/desktopBackground/makeRequest.png");
+  background-size: 100% auto;
+  background-position: center top;
 
   &__container {
     background-color: $grey-color;

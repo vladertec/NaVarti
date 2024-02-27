@@ -1,0 +1,85 @@
+.volunteer-carousel {
+  padding: 1% 0 3% 0;
+  font-family: $font-montserrat;
+  @include main-padding;
+  overflow-x: hidden;
+
+  &__title {
+    margin-bottom: 4%;
+    text-align: center;
+    font-size: 2.2vw;
+    font-weight: 500;
+  }
+
+  &__container {
+    background-color: $grey-color;
+    border-radius: 30px;
+  }
+
+  .volunteer-slide {
+    padding: 10%;
+    @include flex-container;
+    gap: 20%;
+
+    .volunteer-card {
+      padding: 3%;
+      overflow: hidden;
+
+      .volunteer-logo {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .volunteer-title {
+        margin-top: 5%;
+        font-size: 1.8vw;
+        font-weight: 500;
+      }
+
+      .volunteer-text {
+        margin-top: 5%;
+        font-size: 1.7vw;
+        font-weight: 600;
+      }
+    }
+  }
+  .slick-dots {
+    position: static;
+    padding: 1.5%;
+    li {
+      margin: 0;
+      padding: 2%;
+      button {
+        &::before {
+          margin-top: 5%;
+          font-size: 1.5vw;
+        }
+      }
+    }
+  }
+
+  &__btn-container {
+    @include flex-container;
+  }
+
+  &__btn {
+    margin-top: 4%;
+    border: none;
+    width: 38%;
+    font-size: 1.7vw;
+    padding: 0.8% 0;
+    border-radius: 15px;
+    font-family: $font-vietnam;
+    font-size: 1.1vw;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    @include flex-container;
+  }
+
+  &__btn-icon {
+    margin-left: 2%;
+    font-size: 1.5vw !important;
+  }
+}

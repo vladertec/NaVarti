@@ -34,6 +34,7 @@ function WebsiteBody() {
       </div>
       <Footer />
       <ScrollToTop
+        className="website-body__scroll-top"
         smooth
         style={{
           backgroundColor: "rgb(73, 155, 193)",

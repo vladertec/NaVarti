@@ -1,3 +1,4 @@
+import React from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 import Home from "../../views/Home/Home"
 import Error from "../../views/Error/Error"
@@ -19,12 +20,7 @@ const Routing = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/registration" element={<Registration />} />
-      <Route
-        path="/login"
-        element={
-          isAdminLoggedIn ? <Navigate to="/login/adminPage" /> : <Login />
-        }
-      />
+      <Route path="/login" element={<Login />} />
       {isAdminLoggedIn ? (
         <>
           <Route path="/login/adminPage" element={<AdminPage />} />
@@ -52,7 +48,7 @@ const Routing = () => {
           />
         </>
       ) : (
-        <Navigate to="/login" />
+        <Route path="/login" element={<Login />} />
       )}
       <Route path="*" element={<Error />} />
     </Routes>

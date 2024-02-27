@@ -18,36 +18,39 @@
     text-align: justify;
   }
 
-  &__items {
+  .items-container {
     padding: 0 10%;
     margin-top: 4%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 12%;
-  }
 
-  &__item {
-    margin-top: 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    background-color: #1db2be;
-    padding: 2% 4%;
-    border-radius: 15px;
-  }
+    &__item {
+      margin-top: 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      background-color: #1db2be;
+      padding: 2% 4%;
+      border-radius: 15px;
+      &:hover {
+        background-color: $mint-color;
+      }
+    }
 
-  &__item-name {
-    font-size: 1.5vw;
-    font-weight: 700;
-    font-style: italic;
-  }
+    &__item-name {
+      font-size: 1.5vw;
+      font-weight: 700;
+      font-style: italic;
+    }
 
-  &__item-quantity {
-    font-size: 1.4vw;
-    font-weight: 700;
-    color: white;
-    padding: 2% 2%;
-    border-radius: 4px;
+    &__item-quantity {
+      font-size: 1.4vw;
+      font-weight: 700;
+      color: white;
+      padding: 2% 2%;
+      border-radius: 4px;
+    }
   }
 }

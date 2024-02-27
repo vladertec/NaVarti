@@ -20,29 +20,30 @@
     padding: 10%;
     @include flex-container;
     gap: 20%;
+  }
 
-    .volunteer-card {
-      padding: 3%;
-      overflow: hidden;
+  .volunteer-card {
+    padding: 3%;
+    overflow: hidden;
 
-      .volunteer-logo {
-        max-width: 100%;
-        height: auto;
-      }
+    .volunteer-logo {
+      max-width: 100%;
+      height: auto;
+    }
 
-      .volunteer-title {
-        margin-top: 5%;
-        font-size: 1.8vw;
-        font-weight: 500;
-      }
+    .volunteer-title {
+      margin-top: 5%;
+      font-size: 1.8vw;
+      font-weight: 500;
+    }
 
-      .volunteer-text {
-        margin-top: 5%;
-        font-size: 1.7vw;
-        font-weight: 600;
-      }
+    .volunteer-text {
+      margin-top: 5%;
+      font-size: 1.7vw;
+      font-weight: 600;
     }
   }
+
   .slick-dots {
     position: static;
     padding: 1.5%;
@@ -58,28 +59,30 @@
     }
   }
 
-  &__btn-container {
+  .volunteer-btn-wrapper {
     @include flex-container;
-  }
+    &__btn {
+      margin-top: 4%;
+      border: none;
+      width: 38%;
+      font-size: 1.7vw;
+      padding: 0.8% 0;
+      border-radius: 15px;
+      font-family: $font-vietnam;
+      font-size: 1.1vw;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      @include flex-container;
+      &:hover {
+        background-color: $purple-color;
+      }
+    }
 
-  &__btn {
-    margin-top: 4%;
-    border: none;
-    width: 38%;
-    font-size: 1.7vw;
-    padding: 0.8% 0;
-    border-radius: 15px;
-    font-family: $font-vietnam;
-    font-size: 1.1vw;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    @include flex-container;
-  }
-
-  &__btn-icon {
-    margin-left: 2%;
-    font-size: 1.5vw !important;
+    &__btn-icon {
+      margin-left: 2%;
+      font-size: 1.5vw !important;
+    }
   }
 }

@@ -12,7 +12,7 @@ const Header = () => {
         <img
           className="logo-container__logo-img"
           src="/img/logoWeb.jpg"
-          alt=""
+          alt="Header logo"
         />
       </RouterLink>
 
@@ -36,7 +36,7 @@ const Header = () => {
               ЗВІТИ
             </ScrollLink>
             <ScrollLink
-              to="our-team"
+              to="footer"
               spy={true}
               smooth={true}
               className="info-container__nav-item"
@@ -53,30 +53,30 @@ const Header = () => {
             </ScrollLink>
           </nav>
 
-          <div className="info-container__socials">
+          <div className="info-container__socials social-container">
             <a
-              className="info-container__socials-item"
+              className="social-container__socials-item"
               href="https://www.instagram.com/na_varty_zyttya?igsh=MWF5OWNyNzI2ZTk0eg=="
             >
-              <InstagramIcon className="info-container__social-icon" />
+              <InstagramIcon className="social-container__social-icon" />
             </a>
             <a
-              className="info-container__socials-item"
+              className="social-container__socials-item"
               href="https://www.facebook.com/profile.php?id=61554088658276"
             >
-              <FacebookIcon className="info-container__social-icon" />
+              <FacebookIcon className="social-container__social-icon" />
             </a>
             <a
-              className="info-container__socials-item"
+              className="social-container__socials-item"
               href="https://www.facebook.com/profile.php?id=61554088658276"
             >
-              <TelegramIcon className="info-container__social-icon" />
+              <TelegramIcon className="social-container__social-icon" />
             </a>
             <a
-              className="info-container__socials-item"
+              className="social-container__socials-item"
               href="https://www.facebook.com/profile.php?id=61554088658276"
             >
-              <TelegramIcon className="info-container__social-icon" />
+              <TelegramIcon className="social-container__social-icon" />
             </a>
           </div>
         </div>

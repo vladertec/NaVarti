@@ -1,6 +1,7 @@
 .partners-carousel {
   margin-top: 12%;
   font-family: $font-montserrat;
+  overflow-x: hidden;
 
   &__title {
     margin-bottom: 4%;
@@ -26,10 +27,9 @@
         max-width: 100%;
         height: auto;
       }
+      &:hover {
+        opacity: 88%;
+      }
     }
   }
-}
-
-.partners-carousel {
-  overflow-x: hidden;
 }

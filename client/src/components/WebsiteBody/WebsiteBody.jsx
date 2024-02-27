@@ -41,10 +41,10 @@ function WebsiteBody() {
           borderRadius: "10px",
           width: "5vw",
           height: "5vw",
-          minWidth: "40px", // Мінімальна ширина
-          minHeight: "40px", // Мінімальна висота
-          maxWidth: "100px", // Максимальна ширина
-          maxHeight: "100px", // Максимальна висота
+          minWidth: "40px", 
+          minHeight: "40px", 
+          maxWidth: "100px", 
+          maxHeight: "100px", 
         }}
       />
     </div>

@@ -30,6 +30,9 @@
   &__card {
     width: 50%;
     padding: 5% 9%;
+    &:hover {
+      opacity: 88%;
+    }
   }
 
   &__card-img {
@@ -69,6 +72,9 @@
     background-color: black;
     color: white;
     font-weight: bold;
+    &:hover {
+      background-color: $purple-color;
+    }
   }
 
   &__btn-icon {

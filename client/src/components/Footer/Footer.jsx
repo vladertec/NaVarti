@@ -74,7 +74,7 @@ const Footer = () => {
             звіти
           </ScrollLink>
           <ScrollLink
-            to="our-team"
+            to="footer"
             spy={true}
             smooth={true}
             className="footer__nav-item"

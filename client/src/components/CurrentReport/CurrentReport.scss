@@ -76,6 +76,11 @@
         cursor: pointer;
         color: black;
         background-color: white;
+        &:hover{
+          background-color: $blue-color;
+          color: white;
+        }
+
       }
 
       &__btn-icon {

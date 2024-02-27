@@ -1,6 +1,5 @@
 .our-team {
-  padding: 6% 0 3% 0;
-  @include main-padding;
+  padding: 6% 15% 3% 15%;
   @include flex-container;
   flex-direction: column;
   font-family: $font-montserrat;
@@ -13,61 +12,43 @@
     font-weight: 600;
   }
 
-  &__card-container {
+  .team-card {
     margin-top: 6%;
     display: flex;
     background-color: $grey-color;
     padding: 2% 2%;
     justify-content: center;
     border-radius: 20px;
-  }
 
-  &__card {
-    width: 33%;
-    padding: 2% 3%;
-  }
+    &__card {
+      width: 33%;
+      padding: 2% 3%;
+      &:hover {
+        opacity: 88%;
+      }
+    }
 
-  &__card-img {
-    max-width: 100%;
-    height: auto;
-  }
+    &__card-img {
+      max-width: 100%;
+      height: auto;
+    }
 
-  &__card-name {
-    font-size: 1.6vw;
-    margin-top: 10%;
-    font-weight: 600;
-  }
+    &__card-name {
+      font-size: 1.6vw;
+      margin-top: 10%;
+      font-weight: 600;
+    }
 
-  &__card-position {
-    font-size: 1.5vw;
-    margin-top: 4%;
-    font-weight: bold;
-  }
+    &__card-position {
+      font-size: 1.5vw;
+      margin-top: 4%;
+      font-weight: bold;
+    }
 
-  &__card-text {
-    font-size: 1.4vw;
-    margin-top: 10%;
-    text-align: justify;
-  }
-
-  &__btn {
-    margin-top: 3%;
-    border: none;
-    width: 40%;
-    font-size: 1.7vw;
-    padding: 1% 0;
-    border-radius: 15px;
-    font-family: $font-vietnam;
-    font-size: 1.1vw;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    @include flex-container;
-  }
-
-  &__btn-icon {
-    margin-left: 2%;
-    font-size: 1.5vw !important;
+    &__card-text {
+      font-size: 1.4vw;
+      margin-top: 10%;
+      text-align: justify;
+    }
   }
 }

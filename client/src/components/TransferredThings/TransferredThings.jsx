@@ -12,11 +12,11 @@ const TransferredThings = ({ items }) => {
         fgfkjdsgdfg dfkb fdgfgdsk gkj gfdlkbfgd gfdgf kgfbkfdgs dfgb
         fsdkfdbgdbkjfbgfd sf kgfdb gds gfs
       </p>
-      <div className="transferred-things__items">
+      <div className="transferred-things__items items-container">
         {items.map((item, index) => (
-          <div key={index} className="transferred-things__item">
-            <span className="transferred-things__item-name">{item.name}</span>
-            <span className="transferred-things__item-quantity">
+          <div key={index} className="items-container__item">
+            <span className="items-container__item-name">{item.name}</span>
+            <span className="items-container__item-quantity">
               {item.quantity}
             </span>
           </div>

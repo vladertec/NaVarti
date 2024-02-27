@@ -33,6 +33,12 @@ const AdminPage = () => {
         </button>
         <button
           className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/adminPage/volunteers")}
+        >
+          Волонтери
+        </button>
+        <button
+          className="admin-page__btn"
           onClick={() => handleButtonClick("/login/adminPage/currentReport")}
         >
           Звіти
@@ -69,10 +75,17 @@ const AdminPage = () => {
         >
           Питання
         </button>
+
+        <button
+          className="admin-page__btn"
+          onClick={() => handleButtonClick("/login/adminPage/partners")}
+        >
+          Партнери
+        </button>
       </div>
 
       <button
-        className="admin-page__btn"
+        className="admin-page__btn admin-page__btn--exit"
         onClick={(event) => logoutClick(event)}
       >
         Вийти з аккаунту

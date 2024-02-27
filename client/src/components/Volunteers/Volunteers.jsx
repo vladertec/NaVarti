@@ -71,9 +71,10 @@ const Volunteers = () => {
           ))}
         </Slider>
       </div>
-      <div className="volunteer-carousel__btn-container">
-        <button className="volunteer-carousel__btn">
-          ЗРОБИТИ ВНЕСОК <TollIcon className="volunteer-carousel__btn-icon" />
+      <div className="volunteer-carousel__btn-container volunteer-btn-wrapper">
+        <button className="volunteer-btn-wrapper__btn">
+          ЗРОБИТИ ВНЕСОК{" "}
+          <TollIcon className="volunteer-btn-wrapper__btn-icon" />
         </button>
       </div>
     </div>

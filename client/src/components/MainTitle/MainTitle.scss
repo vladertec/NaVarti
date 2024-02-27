@@ -2,7 +2,6 @@
   padding: 6% 0;
   @include flex-container;
   @include main-padding;
-  color: black;
   background-image: url("../../../public/img/desktopBackground/mainTitle.jpeg");
   background-size: 100% auto;
   background-position: center top;
@@ -16,66 +15,72 @@
 
   &__text-container {
     width: 60%;
-    color: black;
     font-family: $font-montserrat;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   }
 
-  &__title {
+  .info-container {
     margin-top: 9%;
     font-size: 2.5vw;
     font-weight: 500;
-  }
 
-  &__text {
-    margin: 7% 35% 0 0;
-    font-size: 1.3vw;
-    @include flex-container;
-    text-align: justify;
-    line-height: 1.2;
-  }
+    &__text {
+      margin: 7% 35% 0 0;
+      font-size: 1.3vw;
+      @include flex-container;
+      text-align: justify;
+      line-height: 1.2;
+    }
 
-  &__btn-container {
-    margin: 20% 0 5% 0;
-    display: flex;
-    gap: 5%;
-  }
+    &__btn-container {
+      margin: 20% 0 5% 0;
+      display: flex;
+      gap: 5%;
+    }
 
-  &__btn {
-    @include flex-container;
-    margin-top: 2%;
-    width: 70%;
-    font-size: 1.7vw;
-    padding: 1.5% 0;
-    border-radius: 15px;
-    border: none;
-    font-family: $font-vietnam;
-    font-size: 1.1vw;
-    cursor: pointer;
-  }
+    &__btn {
+      @include flex-container;
+      margin-top: 2%;
+      width: 70%;
+      font-size: 1.7vw;
+      padding: 1.5% 0;
+      border-radius: 15px;
+      border: none;
+      font-family: $font-vietnam;
+      font-size: 1.1vw;
+      cursor: pointer;
+    }
 
-  &__donate-btn {
-    background-color: black;
-    color: white;
-  }
+    &__btn--donate {
+      background-color: black;
+      color: white;
+      &:hover {
+        background-color: $purple-color;
+      }
+    }
 
-  &__btn-icon {
-    font-size: 1vw !important;
-    margin-left: 2%;
-  }
+    &__btn-icon {
+      font-size: 1.3vw !important;
+      margin-left: 3%;
+    }
 
-  &__help-btn {
-    background-color: white;
-  }
+    &__btn--help {
+      background-color: white;
+      &:hover {
+        background-color: $blue-color;
+        color: white;
+      }
+    }
 
-  &__img-container {
-    width: 40%;
-    margin-left: 2%;
-    @include flex-container;
-  }
+    &__img-container {
+      width: 40%;
+      margin-left: 2%;
+      @include flex-container;
+    }
 
-  &__img {
-    max-width: 95%;
-    height: auto;
+    &__img {
+      max-width: 95%;
+      height: auto;
+    }
   }
 }

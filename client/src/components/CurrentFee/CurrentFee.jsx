@@ -54,30 +54,28 @@ const CurrentFee = () => {
   return (
     <div className="current-fee-carousel">
       <p className="current-fee-carousel__title">Актуальні збори</p>
-      <div className="current-fee-carousel__container">
-        <Slider {...settings}>
-          {RequestItems.map((slide, index) => (
-            <div key={index} className="current-fee-slide">
-              <div className="current-fee-slide__card">
-                <img
-                  src={slide.photoUrl}
-                  alt={`Current fee Logo ${index}`}
-                  className="current-fee-slide__logo"
-                />
-                <p className="current-fee-slide__title">{slide.title}</p>
-                <p className="current-fee-slide__text">{slide.text}</p>
-                <button className="current-fee-slide__btn">
-                  ПІДТРИМАТИ ЗБІР
-                </button>
-                <button className="current-fee-slide__btn current-fee-slide__btn--information">
-                  ДЕТАЛЬНІШЕ{" "}
-                  <ArrowOutwardIcon className="current-fee-slide__btn-icon" />
-                </button>
-              </div>
+      <Slider {...settings}>
+        {RequestItems.map((slide, index) => (
+          <div key={index} className="current-fee-slide">
+            <div className="current-fee-slide__card">
+              <img
+                src={slide.photoUrl}
+                alt={`Current fee Logo ${index}`}
+                className="current-fee-slide__logo"
+              />
+              <p className="current-fee-slide__title">{slide.title}</p>
+              <p className="current-fee-slide__text">{slide.text}</p>
+              <button className="current-fee-slide__btn">
+                ПІДТРИМАТИ ЗБІР
+              </button>
+              <button className="current-fee-slide__btn current-fee-slide__btn--information">
+                ДЕТАЛЬНІШЕ
+                <ArrowOutwardIcon className="current-fee-slide__btn-icon" />
+              </button>
             </div>
-          ))}
-        </Slider>
-      </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   )
 }

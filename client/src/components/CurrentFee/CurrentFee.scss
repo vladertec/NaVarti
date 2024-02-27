@@ -10,9 +10,6 @@
     font-weight: 500;
   }
 
-  &__container {
-  }
-
   .current-fee-slide {
     padding: 5%;
     @include flex-container;
@@ -23,6 +20,9 @@
       padding: 5%;
       overflow: hidden;
       background-color: $grey-color;
+      &:hover {
+        opacity: 88%;
+      }
     }
 
     &__logo {
@@ -55,6 +55,9 @@
       transition: background-color 0.3s;
       width: 100%;
       font-family: $font-montserrat;
+      &:hover {
+        background-color: $purple-color;
+      }
     }
 
     &__btn--information {
@@ -62,6 +65,10 @@
       @include flex-container;
       background-color: white;
       color: black;
+      &:hover {
+        background-color: $blue-color;
+        color: white;
+      }
     }
 
     &__btn-icon {

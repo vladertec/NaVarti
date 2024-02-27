@@ -88,7 +88,8 @@ const CurrentReport = () => {
                       <h2 className="report-card__name">{object.title}</h2>
                       <p className="report-card__text">{object.text}</p>
                       <button className="report-card__btn">
-                        ДЕТАЛЬНІШЕ <ArrowOutwardIcon className="report-card__btn-icon"/>
+                        ДЕТАЛЬНІШЕ
+                        <ArrowOutwardIcon className="report-card__btn-icon" />
                       </button>
                     </div>
                   </div>
@@ -110,7 +111,8 @@ const CurrentReport = () => {
                       <h2 className="report-card__name">{object.title}</h2>
                       <p className="report-card__text">{object.text}</p>
                       <button className="report-card__btn">
-                        ДЕТАЛЬНІШЕ <ArrowOutwardIcon className="report-card__btn-icon"/>
+                        ДЕТАЛЬНІШЕ{" "}
+                        <ArrowOutwardIcon className="report-card__btn-icon" />
                       </button>
                     </div>
                   </div>

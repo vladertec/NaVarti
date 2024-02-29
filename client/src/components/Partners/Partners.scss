@@ -32,4 +32,11 @@
       }
     }
   }
+
+  @include phone {
+    margin-top: 1%;
+    &__title {
+      font-size: 4.3vw;
+    }
+  }
 }

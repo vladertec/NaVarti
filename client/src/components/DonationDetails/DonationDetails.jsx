@@ -1,5 +1,5 @@
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward"
-import CheckIcon from '@mui/icons-material/Check';
+import CheckIcon from "@mui/icons-material/Check"
 import LinkIcon from "@mui/icons-material/Link"
 import React, { useState } from "react"
 
@@ -28,7 +28,17 @@ const DonationDetails = ({ details }) => {
               </p>
             </div>
             <div className="donation-container__information-container">
-              <p className="donation-container__number">{detail.account}</p>
+              <div className="donation-container__number">
+                {detail.account}
+                {copiedIndex === index ? (
+                  <CheckIcon className="donation-container__mobile-check-icon" />
+                ) : (
+                  <LinkIcon
+                    className="donation-container__mobile-copy-icon"
+                    onClick={() => handleCopy(detail.account, index)}
+                  />
+                )}
+              </div>
               <div className="donation-container__btn-container">
                 <button
                   className="donation-container__copy-btn"
@@ -36,7 +46,8 @@ const DonationDetails = ({ details }) => {
                 >
                   {copiedIndex === index ? (
                     <span className="donation-container__copied">
-                      Скопійовано <CheckIcon className="donation-container__copy-icon"/>
+                      Скопійовано
+                      <CheckIcon className="donation-container__copy-icon" />
                     </span>
                   ) : (
                     <p className="donation-container__copy">
@@ -46,7 +57,8 @@ const DonationDetails = ({ details }) => {
                   )}
                 </button>
                 <button className="donation-container__information-btn">
-                  Детальніше <ArrowOutwardIcon className="donation-container__copy-icon"/>
+                  Детальніше
+                  <ArrowOutwardIcon className="donation-container__copy-icon" />
                 </button>
               </div>
             </div>

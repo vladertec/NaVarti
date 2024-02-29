@@ -99,8 +99,13 @@ const Footer = () => {
         </div>
       </div>
       <RouterLink to="/login">
-        <p className="footer__policy">
+        <p className="footer__rights">
           © 2023-2024 «На Варті Життя». Всі права захищені.
+        </p>
+      </RouterLink>
+      <RouterLink to="/login">
+        <p className="footer__policy">
+          Публічна оферта та політика конфіденційності
         </p>
       </RouterLink>
     </footer>

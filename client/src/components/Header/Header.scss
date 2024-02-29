@@ -3,8 +3,7 @@
   display: flex;
   padding: 1.5% 15%;
   background-color: white;
-  color: black;
-  gap: 2%;
+  gap: 3%;
 
   .logo-container {
     width: 19%;
@@ -13,6 +12,10 @@
       max-width: 100%;
       height: auto;
     }
+  }
+
+  .mobile-info-container {
+    display: none;
   }
 
   .info-container {
@@ -60,6 +63,51 @@
           color: $blue-color;
         }
       }
+    }
+  }
+
+  @include phone {
+    padding: 4% 8%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+    .logo-container {
+      width: 25%;
+      &__logo-img {
+      }
+    }
+
+    .mobile-info-container {
+      width: 70%;
+      @include flex-container;
+
+      &__center {
+        @include flex-container;
+        width: 100%;
+        gap: 3%;
+      }
+
+      &__btn {
+        width: 76%;
+        @include flex-container;
+        font-size: 2vw;
+        padding: 3% 0;
+        border-radius: 30px;
+        border: none;
+        font-family: $font-vietnam;
+        font-size: 3.4vw;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+      }
+
+      &__menu-icon {
+        width: 20%;
+        font-size: 9vw;
+      }
+    }
+
+    .info-container {
+      display: none;
     }
   }
 }

@@ -129,7 +129,7 @@ const Home = () => {
   return (
     <div className="home">
       <MainTitle />
-      <CurrentFee  />
+      <CurrentFee />
       <OurTeam PositionItems={PositionItems} />
       <Volunteers RequestItems={RequestItems} />
       <Line />
@@ -138,9 +138,9 @@ const Home = () => {
       <MakeRequest RequestItems={RequestItems} />
       <Line />
       <TransferredThings items={inventoryItems} />
-      <Line />
+      <Line className="home__line" />
       <DonationDetails details={donationDetails} />
-      <Line />
+      <Line className="home__line" />
       <Gallery photos={photos} />
       <Question faq={faqData} />
       <Partners />

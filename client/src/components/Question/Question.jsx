@@ -12,12 +12,12 @@ const Question = ({ faq }) => {
       <div className="question__container">
         <h1 className="question__title">Відповіді</h1>
         <p className="question__text">
-          Перед тим як сфокусуватися на основних 4 напрямках ми встигли
-          передати: fdkhkfjndsg kdgfn dgskgb jfdg kdsfb fgd js gb
-          djbhfbfdshjgdfjh fdbg jsdg bdfjgb jfbnd lkvfskfjd ndfk kfdbg egfdk
-          kfgbkgdfsjl kgbekb ekg fk bkt bgbds fd gfdsiubfjkbn dfkg bigfdb kjb
-          dfks fdkgb ldsg gdfl sgfb fgfkjdsgdfg dfkb fdgfgdsk gkj gfdlkbfgd
-          gfdgf kgfbkfdgs dfgb fsdkfdbgdbkjfbgfd sf kgfdb gds gfs
+          Перед тим як сфокусуватися на основних 4 напрямках ми встигли Перед
+          тим як сфокусуватися на основних 4 напрямках ми встигли Перед тим як
+          сфокусуватися на основних 4 напрямках ми встигли Перед тим як
+          сфокусуватися на основних 4 напрямках ми встигли Перед тим як
+          сфокусуватися на основних 4 напрямках ми встигли Перед тим як
+          сфокусуватися на основних 4 напрямках ми встигли
         </p>
         {faq.map((item, index) => (
           <div className="question__item" key={index}>

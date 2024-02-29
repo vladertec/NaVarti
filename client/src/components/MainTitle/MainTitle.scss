@@ -1,7 +1,6 @@
 .title {
-  padding: 6% 0;
+  padding: 6% 15%;
   @include flex-container;
-  @include main-padding;
   background-image: url("../../../public/img/desktopBackground/mainTitle.jpeg");
   background-size: 100% auto;
   background-position: center top;
@@ -26,10 +25,11 @@
 
     &__text {
       margin: 7% 35% 0 0;
-      font-size: 1.3vw;
+      font-size: 1.2vw;
       @include flex-container;
       text-align: justify;
       line-height: 1.2;
+      font-weight: 450;
     }
 
     &__btn-container {
@@ -81,6 +81,66 @@
     &__img {
       max-width: 95%;
       height: auto;
+    }
+  }
+
+  @include phone {
+    padding: 13% 9%;
+    background-image: none;
+
+    &__container {
+      @include flex-container;
+      flex-direction: column;
+      padding: 7%;
+    }
+
+    .info-container {
+      width: 100%;
+      margin-top: 4%;
+      text-shadow: none;
+
+      &__title {
+        margin-top: 2%;
+        font-size: 4.7vw;
+      }
+
+      &__text {
+        margin: 8% 0 0 0;
+        font-size: 3.6vw;
+      }
+
+      &__btn-container {
+        flex-direction: column;
+        margin: 13% 0 1% 0;
+      }
+
+      &__btn {
+        width: 100%;
+        font-size: 4vw;
+        border-radius: 30px;
+        padding: 2.2% 0;
+      }
+
+      &__btn-icon {
+        margin-left: 3%;
+        font-size: 4.5vw !important;
+      }
+
+      &__btn--help {
+        margin-top: 6%;
+      }
+
+      &__img-container {
+        margin: 0;
+        width: 100%;
+        order: -1;
+      }
+
+      &__img {
+        max-width: 65%;
+        height: 30%;
+        border: 1px solid black;
+      }
     }
   }
 }

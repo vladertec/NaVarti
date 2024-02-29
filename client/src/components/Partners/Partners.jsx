@@ -23,6 +23,14 @@ const Partners = () => {
     cssEase: "linear",
     prevArrow: null,
     nextArrow: null,
+    responsive: [
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
   }
 
   return (

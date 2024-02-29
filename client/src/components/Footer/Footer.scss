@@ -65,6 +65,7 @@
     font-size: 1.3vw;
     padding: 3% 0;
     font-weight: bold;
+    text-align: justify;
     &:hover {
       color: $blue-color;
     }
@@ -95,10 +96,80 @@
     max-width: 100%;
     height: auto;
   }
-
-  &__policy {
+  &__rights {
     font-size: 1vw;
     text-align: center;
     padding-bottom: 1.5%;
+  }
+
+  &__policy {
+    display: none;
+  }
+
+  @include phone {
+    background-image: none;
+
+    &__main-container {
+      padding: 0 12% 3% 12%;
+    }
+    &__logo-container {
+      width: 30%;
+      order: 1;
+    }
+
+    &__logo-text {
+      margin-top: 4%;
+      display: none;
+    }
+
+    &__socials-container {
+      width: 10%;
+      order: 1;
+    }
+
+    &__socials-item {
+      padding: 10% 0;
+    }
+
+    &__social-icon {
+      font-size: 3.6vw !important;
+    }
+
+    &__info-container {
+      width: 35%;
+    }
+
+    &__info-title {
+      font-size: 2.4vw;
+      margin-top: 4%;
+      font-weight: 450;
+    }
+
+    &__info-text {
+      font-size: 2vw;
+      margin-top: 2%;
+      font-weight: 450;
+    }
+
+    &__menu-container {
+      display: none;
+    }
+
+    &__qr-container {
+      display: none;
+    }
+
+    &__rights {
+      margin-top: 1%;
+      font-size: 1.8vw;
+    }
+
+    &__policy {
+      display: block;
+      text-align: center;
+      margin: 0% 0 4% 0;
+      font-size: 1.8vw;
+      text-decoration: underline;
+    }
   }
 }

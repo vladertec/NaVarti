@@ -4,6 +4,7 @@ import { Link as RouterLink } from "react-router-dom"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import TelegramIcon from "@mui/icons-material/Telegram"
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded"
 
 const Header = () => {
   return (
@@ -15,6 +16,15 @@ const Header = () => {
           alt="Header logo"
         />
       </RouterLink>
+
+      <div className="header__mobile-info-wrapper mobile-info-container">
+        <div className="mobile-info-container__center">
+          <button className="mobile-info-container__btn">
+            ДОПОМОГТИ ФОНДУ
+          </button>
+          <MenuRoundedIcon className="mobile-info-container__menu-icon" />
+        </div>
+      </div>
 
       <div className="header__info-wrapper info-container">
         <div className="info-container__center">

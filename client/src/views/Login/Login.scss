@@ -85,5 +85,45 @@
   &__error-message {
     margin: 4% 0;
     color: red;
+    font-size: 2vw;
+  }
+
+  @include phone {
+    &__text {
+      margin-top: 15%;
+      font-size: 4vw;
+      font-weight: 600;
+    }
+
+    &__login-container {
+      max-width: 60%;
+      margin: 10% 0;
+    }
+
+    &__img {
+      padding-top: 8%;
+      width: 45%;
+    }
+
+    &__input-name {
+      font-size: 2.7vw;
+    }
+
+    &__input {
+      width: 80%;
+      font-size: 3vw;
+      padding: 2% 2%;
+    }
+
+    &__btn {
+      margin-bottom: 3%;
+      font-size: 2.5vw;
+      padding: 3% 0;
+    }
+
+    &__error-message {
+      margin: 3% 0;
+      font-size: 3.5vw;
+    }
   }
 }

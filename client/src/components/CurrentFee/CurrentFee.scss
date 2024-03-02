@@ -91,4 +91,94 @@
       }
     }
   }
+
+  @include phone {
+    padding: 5% 0 3% 0;
+
+    &__title {
+      margin-bottom: 5%;
+      font-size: 4vw;
+      font-weight: 550;
+    }
+
+    // .current-fee-slide {
+    //   padding: 5%;
+    //   @include flex-container;
+    //   gap: 20%;
+
+    //   &__card {
+    //     border-radius: 2vw;
+    //     padding: 5%;
+    //     overflow: hidden;
+    //     background-color: $grey-color;
+    //     &:hover {
+    //       opacity: 88%;
+    //     }
+    //   }
+
+    //   &__logo {
+    //     max-width: 100%;
+    //     height: auto;
+    //   }
+
+    //   &__title {
+    //     margin-top: 5%;
+    //     font-size: 2vw;
+    //     font-weight: 500;
+    //   }
+
+    //   &__text {
+    //     margin-top: 6%;
+    //     font-size: 1.4vw;
+    //     align-items: justify;
+    //   }
+
+    //   &__btn {
+    //     margin-top: 5%;
+    //     border-radius: 30px;
+    //     padding: 2.5% 4%;
+    //     cursor: pointer;
+    //     font-weight: 600;
+    //     border: none;
+    //     font-size: 1vw;
+    //     background-color: black;
+    //     color: white;
+    //     transition: background-color 0.3s;
+    //     width: 100%;
+    //     font-family: $font-montserrat;
+    //     &:hover {
+    //       background-color: $purple-color;
+    //     }
+    //   }
+
+    //   &__btn--information {
+    //     margin-top: 3%;
+    //     @include flex-container;
+    //     background-color: white;
+    //     color: black;
+    //     &:hover {
+    //       background-color: $blue-color;
+    //       color: white;
+    //     }
+    //   }
+
+    //   &__btn-icon {
+    //     font-size: 1.4vw;
+    //     margin-left: 6%;
+    //   }
+    // }
+
+    .slick-dots {
+      padding: 0;
+      li {
+        padding: 2.5%;
+        button {
+          &::before {
+            margin-top: 5%;
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+  }
 }

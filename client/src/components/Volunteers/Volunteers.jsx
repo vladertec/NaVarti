@@ -14,8 +14,8 @@ const Volunteers = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    prevArrow: null,
-    nextArrow: null,
+    prevArrow: "", // оставляем пустыми
+    nextArrow: "",
   }
 
   const RequestItems = [
@@ -55,6 +55,7 @@ const Volunteers = () => {
     <div className="volunteer-carousel">
       <p className="volunteer-carousel__title">Волонтери</p>
       <div className="volunteer-carousel__container">
+        <p className="volunteer-carousel__mobile-title">Волонтери</p>
         <Slider {...settings}>
           {RequestItems.map((slide, index) => (
             <div key={index} className="volunteer-slide">

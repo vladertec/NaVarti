@@ -16,6 +16,14 @@ const CurrentFee = () => {
     cssEase: "linear",
     prevArrow: null,
     nextArrow: null,
+    responsive: [
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   }
 
   const RequestItems = [

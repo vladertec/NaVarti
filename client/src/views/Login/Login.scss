@@ -64,7 +64,7 @@
   &__btn {
     border-radius: 5px;
     font-family: $font-montserrat;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -83,7 +83,7 @@
   }
 
   &__error-message {
-    margin: 4% 0;
+    margin-bottom: 3%;
     color: red;
     font-size: 2vw;
   }

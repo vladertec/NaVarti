@@ -5,6 +5,7 @@ import TelegramIcon from "@mui/icons-material/Telegram"
 import { Link as ScrollLink } from "react-scroll"
 import { Link as RouterLink } from "react-router-dom"
 import { useNavigate } from "react-router"
+import TikTokIcon from "../../ulits/svg/TikTokIcon"
 
 const Footer = () => {
   return (
@@ -35,10 +36,10 @@ const Footer = () => {
             <FacebookIcon className="footer__social-icon" />
           </a>
           <a
-            className="footer__socials-item"
+            className="footer__socials-item  footer__tiktok-icon"
             href="https://www.facebook.com/profile.php?id=61554088658276"
           >
-            <TelegramIcon className="footer__social-icon" />
+            <TikTokIcon />
           </a>
           <a
             className="footer__socials-item"

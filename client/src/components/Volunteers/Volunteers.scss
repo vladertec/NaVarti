@@ -50,7 +50,7 @@
 
   .slick-dots {
     position: static;
-    padding: 1.5%;
+    padding: 1%;
     li {
       margin: 0;
       padding: 2%;
@@ -90,7 +90,7 @@
   }
 
   @include phone {
-    padding: 10% 18%;
+    padding: 6% 18%;
 
     &__title {
       display: none;

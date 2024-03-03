@@ -134,13 +134,19 @@ const Home = () => {
       <Volunteers RequestItems={RequestItems} />
       <Line />
       <CurrentReport />
-      <Line />
+      <div className="home__line">
+        <Line />
+      </div>
       <MakeRequest RequestItems={RequestItems} />
       <Line />
       <TransferredThings items={inventoryItems} />
-      <Line className="home__line" />
+      <div className="home__line">
+        <Line />
+      </div>
       <DonationDetails details={donationDetails} />
-      <Line className="home__line" />
+      <div className="home__line">
+        <Line />
+      </div>
       <Gallery photos={photos} />
       <Question faq={faqData} />
       <Partners />

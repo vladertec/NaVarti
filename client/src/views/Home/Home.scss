@@ -1,5 +1,7 @@
-@include phone {
-  .home__line {
-    display: none;
+.home {
+  @include phone {
+    &__line {
+      display: none;
+    }
   }
 }

@@ -6,6 +6,8 @@ import FacebookIcon from "@mui/icons-material/Facebook"
 import TelegramIcon from "@mui/icons-material/Telegram"
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded"
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded"
+import TikTokIcon from "../../ulits/svg/TikTokIcon"
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -152,10 +154,10 @@ const Header = () => {
               <FacebookIcon className="social-container__social-icon" />
             </a>
             <a
-              className="social-container__socials-item"
+              className="social-container__socials-item social-container__tiktok-icon"
               href="https://www.facebook.com/profile.php?id=61554088658276"
             >
-              <TelegramIcon className="social-container__social-icon" />
+              <TikTokIcon />
             </a>
             <a
               className="social-container__socials-item"

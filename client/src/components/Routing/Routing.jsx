@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 import Home from "../../views/Home/Home"
 import Error from "../../views/Error/Error"
@@ -14,45 +14,51 @@ import EditTransferredThings from "../../views/EditTransferredThings/EditTransfe
 import EditMakeRequest from "../../views/EditMakeRequest/EditMakeRequest"
 
 const Routing = () => {
-  const isAdminLoggedIn = localStorage.getItem("accessToken")
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/registration" element={<Registration />} />
       <Route path="/login" element={<Login />} />
-      {isAdminLoggedIn ? (
-        <>
-          <Route path="/login/adminPage" element={<AdminPage />} />
-          <Route path="/login/adminPage/ourTeam" element={<EditOurTeam />} />
-          <Route path="/login/adminPage/question" element={<EditQuestion />} />
-          <Route
-            path="/login/adminPage/donationDetails"
-            element={<EditDonationDetails />}
-          />
-          <Route
-            path="/login/adminPage/currentReport"
-            element={<EditCurrentReport />}
-          />
-          <Route
-            path="/login/adminPage/currentFee"
-            element={<EditCurrentFee />}
-          />
-          <Route
-            path="/login/adminPage/transferredThings"
-            element={<EditTransferredThings />}
-          />
-          <Route
-            path="/login/adminPage/makeRequest"
-            element={<EditMakeRequest />}
-          />
-        </>
-      ) : (
-        <Route path="/login" element={<Login />} />
-      )}
+      <Route
+        path="/login/adminPage"
+        element={<ProtectedRoute component={AdminPage} />}
+      />
+      <Route
+        path="/login/adminPage/ourTeam"
+        element={<ProtectedRoute component={EditOurTeam} />}
+      />
+      <Route
+        path="/login/adminPage/question"
+        element={<ProtectedRoute component={EditQuestion} />}
+      />
+      <Route
+        path="/login/adminPage/donationDetails"
+        element={<ProtectedRoute component={EditDonationDetails} />}
+      />
+      <Route
+        path="/login/adminPage/currentReport"
+        element={<ProtectedRoute component={EditCurrentReport} />}
+      />
+      <Route
+        path="/login/adminPage/currentFee"
+        element={<ProtectedRoute component={EditCurrentFee} />}
+      />
+      <Route
+        path="/login/adminPage/transferredThings"
+        element={<ProtectedRoute component={EditTransferredThings} />}
+      />
+      <Route
+        path="/login/adminPage/makeRequest"
+        element={<ProtectedRoute component={EditMakeRequest} />}
+      />
       <Route path="*" element={<Error />} />
     </Routes>
   )
+}
+
+const ProtectedRoute = ({ component: Component }) => {
+  const accessToken = localStorage.getItem("accessToken")
+  return accessToken ? <Component /> : <Navigate to="/login" />
 }
 
 export default Routing

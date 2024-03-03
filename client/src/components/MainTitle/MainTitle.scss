@@ -79,13 +79,14 @@
     }
 
     &__img {
+      width: 100%;
       max-width: 95%;
       height: auto;
     }
   }
 
   @include phone {
-    padding: 13% 9%;
+    padding: 13% 10%;
     background-image: none;
 
     &__container {

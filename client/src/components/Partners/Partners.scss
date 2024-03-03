@@ -34,7 +34,7 @@
   }
 
   @include phone {
-    margin-top: 1%;
+    padding: 1% 0 3% 0;
     &__title {
       font-size: 4.3vw;
     }

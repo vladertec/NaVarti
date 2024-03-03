@@ -17,6 +17,7 @@
   }
 
   &__logo-img {
+    width: 100%;
     max-width: 100%;
     height: auto;
   }
@@ -40,7 +41,7 @@
   }
 
   &__socials-item {
-    padding: 7% 0;
+    padding: 12% 0;
     cursor: pointer;
     display: inline-block;
   }
@@ -49,6 +50,14 @@
     font-size: 2.7vw !important;
     &:hover {
       color: $blue-color;
+    }
+  }
+
+  &__tiktok-icon {
+    width: 60%;
+    height: auto;
+    &:hover {
+      fill: $blue-color;
     }
   }
 
@@ -93,6 +102,7 @@
   }
 
   &__qr-code {
+    width: 100%;
     max-width: 100%;
     height: auto;
   }
@@ -135,6 +145,10 @@
       font-size: 3.6vw !important;
     }
 
+    &__tiktok-icon {
+      width: 45%;
+    }
+
     &__info-container {
       width: 35%;
     }
@@ -160,14 +174,14 @@
     }
 
     &__rights {
-      margin-top: 1%;
+      margin-top: 3%;
       font-size: 1.8vw;
     }
 
     &__policy {
       display: block;
       text-align: center;
-      margin: 0% 0 4% 0;
+      margin: 0% 0 3% 0;
       font-size: 1.8vw;
       text-decoration: underline;
     }

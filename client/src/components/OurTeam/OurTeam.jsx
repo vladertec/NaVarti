@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 const OurTeam = ({ PositionItems }) => {
-  const isMobile = window.innerWidth <= 750 // Определение мобильного устройства
+  const isMobile = window.innerWidth <= 750 
 
   const sliderSettings = {
     dots: true,

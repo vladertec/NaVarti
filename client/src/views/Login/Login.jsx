@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import CustomErrorMessage from "../../components/CustomErrorMessage/CustomErrorMessage"
 import { loginUser } from "../../api/userStatus"
@@ -7,6 +7,14 @@ const Login = () => {
   const navigate = useNavigate()
   const [login, setLogin] = useState({ username: "", password: "" })
   const [error, setError] = useState({ statusError: false, message: "" })
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken")
+    window.scrollTo(0, 0)
+    if (accessToken) {
+      navigate("/login/adminPage")
+    }
+  }, [navigate])
 
   const loginClick = async (event) => {
     event.preventDefault()

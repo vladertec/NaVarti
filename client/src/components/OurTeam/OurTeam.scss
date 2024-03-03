@@ -18,6 +18,7 @@
     justify-content: center;
     border-radius: 20px;
     background-color: $grey-color;
+
     &__slider {
       display: none;
     }
@@ -31,6 +32,7 @@
     }
 
     &__card-img {
+      width: 100%;
       max-width: 100%;
       height: auto;
     }
@@ -97,7 +99,8 @@
     .slick-dots {
       padding: 0;
       li {
-        padding: 2.5%;
+        margin: 0.5%;
+        padding: 1%;
         button {
           &::before {
             margin-top: 40%;

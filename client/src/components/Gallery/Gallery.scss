@@ -38,24 +38,25 @@
 
   &__img {
     width: 100%;
+    max-width: 100%;
     height: auto;
   }
 
   @include phone {
     background-image: none;
-    padding: 8% 15% 0 15%; 
+    padding: 8% 15% 0 15%;
     grid-gap: 2%;
-    grid-template-areas: 
-      ". a a e e e" 
-      ". a a e e e" 
+    grid-template-areas:
+      ". a a e e e"
+      ". a a e e e"
       ". a a f f ."
       ". a a f f ."
       "b b b f f ."
       "b b b f f .";
-      
+
     &__third-photo,
     &__fourth-photo {
-      display: none; 
+      display: none;
     }
 
     &__img {

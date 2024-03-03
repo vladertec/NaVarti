@@ -1,34 +1,12 @@
-import React, { useState, useEffect } from "react"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import Routing from "../Routing/Routing"
 import ScrollToTop from "react-scroll-to-top"
 
 function WebsiteBody() {
-  const [hideHeader, setHideHeader] = useState(false)
-
-  useEffect(() => {
-    let lastScrollY = window.scrollY
-
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setHideHeader(true)
-      } else {
-        setHideHeader(false)
-      }
-      lastScrollY = window.scrollY
-    }
-
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
   return (
     <div className="website-body">
-      <Header hidden={hideHeader} />
+      <Header />
       <div className="website-body__content">
         <Routing />
       </div>
@@ -39,12 +17,8 @@ function WebsiteBody() {
         style={{
           backgroundColor: "rgb(73, 155, 193)",
           borderRadius: "10px",
-          width: "5vw",
-          height: "5vw",
-          minWidth: "40px", 
-          minHeight: "40px", 
-          maxWidth: "100px", 
-          maxHeight: "100px", 
+          width: "6vw",
+          height: "7vh",
         }}
       />
     </div>

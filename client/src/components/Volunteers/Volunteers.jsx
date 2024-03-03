@@ -14,7 +14,7 @@ const Volunteers = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    prevArrow: "", // оставляем пустыми
+    prevArrow: "",
     nextArrow: "",
   }
 

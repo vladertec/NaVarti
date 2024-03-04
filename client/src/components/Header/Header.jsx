@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <RouterLink to="/home" className="header__logo-wrapper logo-container">
+      <RouterLink to="/NaVarti" className="header__logo-wrapper logo-container">
         <img
           className="logo-container__logo-img"
           src="./img/logoWeb.jpg"

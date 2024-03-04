@@ -24,7 +24,7 @@ const Header = () => {
       <RouterLink to="/" className="header__logo-wrapper logo-container">
         <img
           className="logo-container__logo-img"
-          src="/img/logoWeb.jpg"
+          src="./img/logoWeb.jpg"
           alt="Header logo"
         />
       </RouterLink>

@@ -28,32 +28,32 @@ const CurrentFee = () => {
 
   const RequestItems = [
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1",
     },

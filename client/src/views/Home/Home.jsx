@@ -14,17 +14,17 @@ import Volunteers from "../../components/Volunteers/Volunteers"
 const Home = () => {
   const slideItems = [
     {
-      image: "/img/logo.jpg",
+      image: "./img/logo.jpg",
       altText: "Description of Image 1",
       caption: "Caption for Image 1",
     },
     {
-      image: "/img/logo.jpg",
+      image: "./img/logo.jpg",
       altText: "Description of Image 2",
       caption: "Caption for Image 2",
     },
     {
-      image: "/img/logo.jpg",
+      image: "./img/logo.jpg",
       altText: "Description of Image 3",
       caption: "Caption for Image 3",
     },
@@ -75,19 +75,19 @@ const Home = () => {
 
   const PositionItems = [
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       position: "Boss",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 кст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       position: "Boss",
       text: "Текст 1Текст1 Текст1Текст 1Текст1 Текст1Текс т1Текст1Т екст1Текст1Текст1 Текст1Текст1Т екст1Текст1Т екст1Текст1Тек ст1Текст1Текст1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       position: "Boss",
       text: "Текст 1Текст1 Текст1Текст 1Текст1 Текст1Текс т1Текст1Т екст1Текст1Текст1 Текст1Текст1Т екст1Текст1Т екст1Текст1Тек ст1Текст1Текст1",
@@ -96,22 +96,22 @@ const Home = () => {
 
   const RequestItems = [
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
     },

@@ -11,16 +11,7 @@ function WebsiteBody() {
         <Routing />
       </div>
       <Footer />
-      <ScrollToTop
-        className="website-body__scroll-top"
-        smooth
-        style={{
-          backgroundColor: "rgb(73, 155, 193)",
-          borderRadius: "10px",
-          width: "6vw",
-          height: "7vh",
-        }}
-      />
+      {/* <ScrollToTop className="website-body__scroll-top" smooth /> */}
     </div>
   )
 }

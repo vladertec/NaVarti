@@ -82,4 +82,8 @@
     font-size: 1.5vw !important;
     margin-left: 3%;
   }
+
+  @include phone {
+    display: none;
+  }
 }

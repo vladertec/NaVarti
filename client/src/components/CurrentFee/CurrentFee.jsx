@@ -20,7 +20,7 @@ const CurrentFee = () => {
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 2.35,
+          slidesToShow: 2.45,
         },
       },
     ],
@@ -30,7 +30,7 @@ const CurrentFee = () => {
     {
       photoUrl: "/img/logo.jpg",
       title: "Підзаголовок",
-      text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh",
+      text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
     },
     {
       photoUrl: "/img/logo.jpg",

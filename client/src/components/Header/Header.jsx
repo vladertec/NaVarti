@@ -8,7 +8,6 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded"
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded"
 import TikTokIcon from "../../ulits/svg/TikTokIcon"
 
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 

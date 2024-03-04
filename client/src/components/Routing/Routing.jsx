@@ -16,7 +16,7 @@ import EditMakeRequest from "../../views/EditMakeRequest/EditMakeRequest"
 const Routing = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/NaVarti" element={<Home />} />
       <Route path="/registration" element={<Registration />} />
       <Route path="/login" element={<Login />} />
       <Route

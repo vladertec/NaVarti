@@ -12,7 +12,6 @@ import Partners from "../../components/Partners/Partners"
 import Volunteers from "../../components/Volunteers/Volunteers"
 
 const Home = () => {
-
   const donationDetails = [
     {
       description: "Гривня 🇺🇦",

@@ -27,6 +27,7 @@ const DonationDetails = ({ details }) => {
                 {detail.description}
               </p>
             </div>
+
             <div className="donation-container__information-container">
               <div className="donation-container__number">
                 {detail.account}
@@ -39,6 +40,7 @@ const DonationDetails = ({ details }) => {
                   />
                 )}
               </div>
+
               <div className="donation-container__btn-container">
                 <button
                   className="donation-container__copy-btn"

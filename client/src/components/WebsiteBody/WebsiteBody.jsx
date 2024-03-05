@@ -12,7 +12,15 @@ function WebsiteBody() {
         <Routing />
       </div>
       <Footer />
-      <ScrollUp showUnder={160} className="website-body__scroll-top">
+      <ScrollUp
+        showUnder={160}
+        easing="easeInOutQuint"
+        duration={2000}
+        style={{
+          bottom: 60,
+          right: 45,
+        }}
+      >
         <ArrowUpwardRoundedIcon className="website-body__scroll-top-icon" />
       </ScrollUp>
     </div>

@@ -4,8 +4,6 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 const OurTeam = ({ PositionItems }) => {
-  const isMobile = window.innerWidth <= 750 
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -15,7 +13,6 @@ const OurTeam = ({ PositionItems }) => {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-      arrows: !isMobile,
     prevArrow: null,
     nextArrow: null,
   }
@@ -24,7 +21,21 @@ const OurTeam = ({ PositionItems }) => {
     <div className="our-team">
       <p className="our-team__title">Наша команда</p>
       <div className="our-team__card-container team-card">
-        {/* {isMobile ? (
+        <div className="team-card__desktop-list-card">
+          {PositionItems.map((item, index) => (
+            <div className="team-card__card" key={index}>
+              <img
+                className="team-card__card-img"
+                src={item.photoUrl}
+                alt={item.photoUrl}
+              />
+              <h2 className="team-card__card-name">{item.title}</h2>
+              <p className="team-card__card-position">{item.position}</p>
+              <p className="team-card__card-text">{item.text}</p>
+            </div>
+          ))}
+        </div>
+        <div className="team-card__mobile-slider">
           <Slider {...sliderSettings}>
             {PositionItems.map((item, index) => (
               <div className="team-card__card" key={index}>
@@ -39,22 +50,7 @@ const OurTeam = ({ PositionItems }) => {
               </div>
             ))}
           </Slider>
-        ) : ( */}
-            {
-              PositionItems.map((item, index) => (
-                <div className="team-card__card" key={index}>
-                  <img
-                    className="team-card__card-img"
-                    src={item.photoUrl}
-                    alt={item.photoUrl}
-                  />
-                  <h2 className="team-card__card-name">{item.title}</h2>
-                  <p className="team-card__card-position">{item.position}</p>
-                  <p className="team-card__card-text">{item.text}</p>
-                </div>
-              ))
-            }
-        {/* )} */}
+        </div>
       </div>
     </div>
   )

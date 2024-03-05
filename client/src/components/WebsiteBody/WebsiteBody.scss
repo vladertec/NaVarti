@@ -20,8 +20,8 @@
   @include phone {
     background-image: url("../../../public/img/mobileBackground/mainTitle.png");
 
-    &__scroll-top {
-      display: none;
+    &__scroll-top-icon {
+      display: none !important;
     }
   }
 }

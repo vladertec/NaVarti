@@ -12,14 +12,20 @@
   }
 
   .team-card {
-    margin-top: 8%;
-    display: flex;
-    padding: 2% 2%;
-    justify-content: center;
-    border-radius: $radius-border;
     background-color: $grey-color;
+    &__desktop-list-card {
+      margin-top: 8%;
+      display: flex;
+      padding: 2% 2%;
+      justify-content: center;
+      border-radius: $radius-border;
+    }
 
     &__slider {
+      display: none;
+    }
+
+    &__mobile-slider {
       display: none;
     }
 
@@ -70,6 +76,14 @@
       margin-top: 20%;
       border-radius: $mobile-radius-border;
 
+      &__desktop-list-card {
+        display: none;
+      }
+
+      &__mobile-slider {
+        display: block;
+      }
+
       &__card {
         padding: 8% 8%;
       }
@@ -95,6 +109,10 @@
         font-size: 2.5vw;
         margin-top: 5%;
       }
+    }
+
+    .slick-prev, .slick-next {
+      display: none !important;
     }
 
     .slick-dots {

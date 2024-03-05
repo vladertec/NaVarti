@@ -46,59 +46,92 @@ const Header = () => {
             onClick={toggleMenu}
           />
         </div>
-        <div className={`menu-items ${menuOpen ? "open" : ""}`}>
+
+        <div className={`mobile-sidebar-menu ${menuOpen ? "open" : ""}`}>
           {menuOpen && (
             <CloseRoundedIcon
-              className="menu-items__close-icon"
+              className="mobile-sidebar-menu__close-icon"
               onClick={closeMenu}
             />
           )}
-          <ul>
-            <li>
+          <ul className="mobile-sidebar-menu__unordered-list">
+            <li className="mobile-sidebar-menu__list">
               <ScrollLink
                 to="donation-details"
                 spy={true}
                 smooth={true}
-                className="mobile-info-container__nav-item"
+                className="mobile-sidebar-menu__nav-item"
                 onClick={closeMenu}
               >
                 РЕКВІЗИТИ
               </ScrollLink>
             </li>
-            <li>
+            <li className="mobile-sidebar-menu__list">
               <ScrollLink
                 to="current-report"
                 spy={true}
                 smooth={true}
-                className="mobile-info-container__nav-item"
+                className="mobile-sidebar-menu__nav-item"
                 onClick={closeMenu}
               >
                 ЗВІТИ
               </ScrollLink>
             </li>
-            <li>
+            <li className="mobile-sidebar-menu__list">
               <ScrollLink
                 to="footer"
                 spy={true}
                 smooth={true}
-                className="mobile-info-container__nav-item"
+                className="mobile-sidebar-menu__nav-item"
                 onClick={closeMenu}
               >
                 КОНТАКТИ
               </ScrollLink>
             </li>
-            <li>
+            <li className="mobile-sidebar-menu__list">
               <ScrollLink
                 to="question"
                 spy={true}
                 smooth={true}
-                className="mobile-info-container__nav-item"
+                className="mobile-sidebar-menu__nav-item"
                 onClick={closeMenu}
               >
                 ВІДПОВІДІ
               </ScrollLink>
             </li>
           </ul>
+          <div className="mobile-sidebar-menu__info-container">
+            <p className="mobile-sidebar-menu__number">+380900000000</p>
+            <p className="mobile-sidebar-menu__email">
+              Тут буде почта @gmail.com
+            </p>
+            <div className="mobile-sidebar-menu__icon-container">
+              <a
+                className="mobile-sidebar-menu__socials-item"
+                href="https://www.instagram.com/na_varty_zyttya?igsh=MWF5OWNyNzI2ZTk0eg=="
+              >
+                <InstagramIcon className="mobile-sidebar-menu__social-icon" />
+              </a>
+              <a
+                className="mobile-sidebar-menu__socials-item"
+                href="https://www.facebook.com/profile.php?id=61554088658276"
+              >
+                <FacebookIcon className="mobile-sidebar-menu__social-icon" />
+              </a>
+              <a
+                className="mobile-sidebar-menu__socials-item mobile-sidebar-menu__socials-item--tiktok-icon"
+                href="https://www.facebook.com/profile.php?id=61554088658276"
+              >
+                <TikTokIcon />
+              </a>
+              <a
+                className="mobile-sidebar-menu__socials-item"
+                href="https://www.facebook.com/profile.php?id=61554088658276"
+              >
+                <TelegramIcon className="mobile-sidebar-menu__social-icon" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

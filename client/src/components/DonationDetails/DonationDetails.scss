@@ -124,18 +124,21 @@
         &__information-container {
           @include flex-container;
           justify-content: space-between;
+          width: 100%;
+          gap: 1%;
         }
 
         &__number {
-          font-size: 2.2vw;
+          font-size: 2.3vw;
           padding: 1.2% 3.5%;
           font-weight: 500;
           @include flex-container;
           border-radius: $mobile-radius-border;
+          width: 66%;
         }
 
         &__btn-container {
-          margin-left: 1%;
+          width: 33%;
         }
 
         &__mobile-check-icon {
@@ -146,7 +149,7 @@
 
         &__mobile-copy-icon {
           display: block;
-          margin-left: 3%;
+          margin-left: 2%;
           font-size: 4vw;
           &:hover {
             color: $blue-color;
@@ -159,8 +162,7 @@
 
         &__information-btn {
           border-radius: $mobile-radius-border;
-          margin-left: 4%;
-          padding: 5% 16%;
+          padding: 5% 15%;
           font-size: 2.5vw;
           font-weight: 500;
         }

@@ -1,6 +1,5 @@
 .make-request {
-  padding: 5% 0 3% 0;
-  @include main-padding;
+  padding: 5% 15% 3% 15%;
   @include flex-container;
   flex-direction: column;
   font-family: $font-montserrat;
@@ -10,7 +9,7 @@
 
   &__container {
     background-color: $grey-color;
-    border-radius: 20px;
+    border-radius: $radius-border;
   }
 
   &__title {
@@ -60,11 +59,11 @@
   }
 
   &__btn {
-    margin-top: 5%;
+    margin-top: 6%;
     width: 100%;
     font-size: 1.7vw;
-    padding: 2% 0;
-    border-radius: 15px;
+    padding: 2.5% 0;
+    border-radius: $radius-border;
     font-family: $font-vietnam;
     @include flex-container;
     font-size: 1.1vw;

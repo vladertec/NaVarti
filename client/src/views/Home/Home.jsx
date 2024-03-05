@@ -12,23 +12,6 @@ import Partners from "../../components/Partners/Partners"
 import Volunteers from "../../components/Volunteers/Volunteers"
 
 const Home = () => {
-  const slideItems = [
-    {
-      image: "./img/logo.jpg",
-      altText: "Description of Image 1",
-      caption: "Caption for Image 1",
-    },
-    {
-      image: "./img/logo.jpg",
-      altText: "Description of Image 2",
-      caption: "Caption for Image 2",
-    },
-    {
-      image: "./img/logo.jpg",
-      altText: "Description of Image 3",
-      caption: "Caption for Image 3",
-    },
-  ]
 
   const donationDetails = [
     {

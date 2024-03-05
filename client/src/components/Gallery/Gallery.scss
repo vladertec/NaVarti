@@ -1,13 +1,13 @@
 .gallery {
-  padding: 8% 10% 5% 10%;
+  padding: 8% 15% 6% 15%;
   display: grid;
-  grid-gap: 2%;
   grid-template-areas:
-    "a a b b b c c f f"
-    "a a d d e e e f f";
+    "a b c"
+    "d e f";
   background-image: url("../../../public/img/desktopBackground/gallery.png");
   background-size: 100% auto;
   background-position: center top -30px;
+  gap: 2%;
 
   &__container {
     @include flex-container;
@@ -44,20 +44,12 @@
 
   @include phone {
     background-image: none;
-    padding: 8% 15% 0 15%;
-    grid-gap: 2%;
+    padding: 8% 15% 8% 15%;
+    grid-gap: 1%;
     grid-template-areas:
-      ". a a e e e"
-      ". a a e e e"
-      ". a a f f ."
-      ". a a f f ."
-      "b b b f f ."
-      "b b b f f .";
-
-    &__third-photo,
-    &__fourth-photo {
-      display: none;
-    }
+      "a b"
+      "c d"
+      "e f";
 
     &__img {
       width: 100%;

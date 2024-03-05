@@ -1,7 +1,8 @@
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import Routing from "../Routing/Routing"
-import ScrollToTop from "react-scroll-to-top"
+import ScrollUp from "react-scroll-up"
+import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded"
 
 function WebsiteBody() {
   return (
@@ -11,7 +12,9 @@ function WebsiteBody() {
         <Routing />
       </div>
       <Footer />
-      {/* <ScrollToTop className="website-body__scroll-top" smooth /> */}
+      <ScrollUp showUnder={160} className="website-body__scroll-top">
+        <ArrowUpwardRoundedIcon className="website-body__scroll-top-icon" />
+      </ScrollUp>
     </div>
   )
 }

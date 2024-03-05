@@ -16,7 +16,7 @@
     display: flex;
     padding: 2% 2%;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: $radius-border;
     background-color: $grey-color;
 
     &__slider {
@@ -68,6 +68,7 @@
     .team-card {
       flex-direction: column;
       margin-top: 20%;
+      border-radius: $mobile-radius-border;
 
       &__card {
         padding: 8% 8%;

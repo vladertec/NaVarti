@@ -63,16 +63,6 @@ const CurrentReport = () => {
 
   const pageCount = Math.ceil(sortedObjects.length / itemsPerPage)
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % pageCount)
-  }
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? pageCount - 1 : prevIndex - 1
-    )
-  }
-
   return (
     <div className="current-report">
       <p className="current-report__title">Звіти</p>

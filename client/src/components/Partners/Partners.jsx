@@ -5,11 +5,11 @@ import "slick-carousel/slick/slick-theme.css"
 
 const Partners = () => {
   const slides = [
-    "/img/logoWeb.jpg",
-    "/img/logoWeb.jpg",
-    "/img/logoWeb.jpg",
-    "/img/logoWeb.jpg",
-    "/img/qr-code.png",
+    "./img/logoWeb.jpg",
+    "./img/logoWeb.jpg",
+    "./img/logoWeb.jpg",
+    "./img/logoWeb.jpg",
+    "./img/qr-code.png",
   ]
 
   const settings = {

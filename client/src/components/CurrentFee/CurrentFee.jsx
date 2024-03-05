@@ -20,7 +20,7 @@ const CurrentFee = () => {
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 2.45,
+          slidesToShow: 2,
         },
       },
     ],

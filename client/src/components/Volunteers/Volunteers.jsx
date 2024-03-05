@@ -20,32 +20,32 @@ const Volunteers = () => {
 
   const RequestItems = [
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1",
     },
     {
-      photoUrl: "/img/logo.jpg",
+      photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1",
     },

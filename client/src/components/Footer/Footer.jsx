@@ -4,7 +4,6 @@ import FacebookIcon from "@mui/icons-material/Facebook"
 import TelegramIcon from "@mui/icons-material/Telegram"
 import { Link as ScrollLink } from "react-scroll"
 import { Link as RouterLink } from "react-router-dom"
-import { useNavigate } from "react-router"
 import TikTokIcon from "../../ulits/svg/TikTokIcon"
 
 const Footer = () => {
@@ -17,7 +16,7 @@ const Footer = () => {
             src="./img/logo.jpg"
             alt="footer-logo"
           />
-          <a className="footer__logo-text">
+          <a className="footer__logo-text" href="#">
             Публічна оферта та політика конфіденційності
           </a>
         </div>

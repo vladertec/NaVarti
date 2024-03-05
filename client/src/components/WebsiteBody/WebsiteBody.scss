@@ -5,19 +5,21 @@
   width: 100%;
   background-color: white;
 
-
   &__content {
     flex: 1;
   }
 
-  &__scroll-top {
-    background-color: rgb(73, 155, 193) !important;
-    width: 5% !important; // Ширина кнопки как 10% от ширины экрана
-    height: 5% !important;
+  &__scroll-top-icon {
+    color: rgb(73, 155, 193) !important;
+    font-size: 3.7vw !important;
+    &:hover {
+      color: rgb(54, 117, 147) !important;
+    }
   }
 
   @include phone {
     background-image: url("../../../public/img/mobileBackground/mainTitle.png");
+
     &__scroll-top {
       display: none;
     }

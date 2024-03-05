@@ -1,43 +1,70 @@
 .error {
   @include flex-container;
   flex-direction: row;
-  height: 20%;
+  padding: 2% 15% 0 10%;
 
   &__message-container {
+    width: 50%;
     @include flex-container;
     flex-direction: column;
-    width: 25%;
   }
 
   &__message {
-    font-weight: bold;
-    font-size: 1.8vw;
+    font-weight: 600;
+    font-size: 1.7vw;
     font-family: $font-montserrat;
     margin-bottom: 10%;
   }
 
   &__btn {
     font-family: $font-montserrat;
-    padding: 5%;
     color: white;
     cursor: pointer;
-    font-size: 1.7vw;
-    font-weight: bold;
+    font-size: 1.5vw;
+    font-weight: 600;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     background: #3566a9;
-
+    padding: 3.5% 6%;
     &:hover {
       background: #263e61;
     }
   }
 
+  &__img-container {
+    width: 50%;
+  }
+
   &__img {
-    max-width: 60%;
+    width: 90%;
+    max-width: 100%;
     height: auto;
   }
 
   @include phone {
+    padding: 15% 5% 0 5%;
     flex-direction: column;
+
+    &__message-container {
+      width: 100%;
+      @include flex-container;
+      flex-direction: column;
+    }
+
+    &__message {
+      font-weight: bold;
+      font-size: 3vw;
+      margin-bottom: 10%;
+    }
+
+    &__btn {
+      font-size: 2.8vw;
+      padding: 3% 10%;
+      font-weight: 600;
+    }
+
+    &__img-container {
+      width: 100%;
+    }
   }
 }

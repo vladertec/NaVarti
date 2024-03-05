@@ -25,7 +25,7 @@ const MainTitle = () => {
           <img
             src="./img/logoBackground.png"
             className="info-container__img"
-            alt="Title image"
+            alt="Title illustration"
           />
         </div>
       </div>

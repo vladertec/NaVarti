@@ -17,7 +17,7 @@
 
   &__container {
     background-color: $grey-color;
-    border-radius: 30px;
+    border-radius: $radius-border;
   }
 
   .volunteer-slide {
@@ -69,8 +69,8 @@
       margin-top: 4%;
       border: none;
       width: 38%;
-      padding: 0.8% 0;
-      border-radius: 15px;
+      padding: 0.9% 0;
+      border-radius: $radius-border;
       font-family: $font-vietnam;
       font-size: 1.1vw;
       cursor: pointer;
@@ -90,7 +90,7 @@
   }
 
   @include phone {
-    padding: 6% 18%;
+    padding: 6% 16%;
 
     &__title {
       display: none;
@@ -98,10 +98,14 @@
 
     &__mobile-title {
       display: block;
-      padding: 3% 0;
+      padding: 4% 0;
       text-align: center;
       font-size: 3vw;
       font-weight: 500;
+    }
+
+    &__container {
+      border-radius: $mobile-radius-border;
     }
 
     .volunteer-card {
@@ -138,9 +142,6 @@
       top: 20 !important;
     }
 
-    .slick-next {
-    }
-
     .slick-prev:before,
     .slick-next:before {
       color: black;
@@ -162,6 +163,7 @@
         padding: 1.5% 0;
         font-size: 3vw;
         font-weight: 550;
+        border-radius: $mobile-radius-border;
       }
 
       &__btn-icon {

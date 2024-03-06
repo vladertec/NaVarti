@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NaVarti/static/css/main.a58b3c34.css",
-    "main.js": "/NaVarti/static/js/main.2cd8cf15.js",
+    "main.css": "/NaVarti/static/css/main.ec63acbc.css",
+    "main.js": "/NaVarti/static/js/main.4f358574.js",
     "static/media/currentReport.png": "/NaVarti/static/media/currentReport.0321f2eeb5f7d5f4b29f.png",
     "static/media/footer.png": "/NaVarti/static/media/footer.0bb26b0bd4dc356d0a3e.png",
     "static/media/makeRequest.png": "/NaVarti/static/media/makeRequest.ca80281ec5f8e801a0ed.png",
@@ -16,11 +16,11 @@
     "static/media/slick.ttf": "/NaVarti/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/NaVarti/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/NaVarti/index.html",
-    "main.a58b3c34.css.map": "/NaVarti/static/css/main.a58b3c34.css.map",
-    "main.2cd8cf15.js.map": "/NaVarti/static/js/main.2cd8cf15.js.map"
+    "main.ec63acbc.css.map": "/NaVarti/static/css/main.ec63acbc.css.map",
+    "main.4f358574.js.map": "/NaVarti/static/js/main.4f358574.js.map"
   },
   "entrypoints": [
-    "static/css/main.a58b3c34.css",
-    "static/js/main.2cd8cf15.js"
+    "static/css/main.ec63acbc.css",
+    "static/js/main.4f358574.js"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/NaVarti/static/css/main.1358caaf.css",
+    "main.css": "/NaVarti/static/css/main.8d52e08d.css",
     "main.js": "/NaVarti/static/js/main.a8a35ad8.js",
     "static/media/currentReport.png": "/NaVarti/static/media/currentReport.0321f2eeb5f7d5f4b29f.png",
     "static/media/footer.png": "/NaVarti/static/media/footer.0bb26b0bd4dc356d0a3e.png",
@@ -16,11 +16,11 @@
     "static/media/slick.ttf": "/NaVarti/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/NaVarti/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/NaVarti/index.html",
-    "main.1358caaf.css.map": "/NaVarti/static/css/main.1358caaf.css.map",
+    "main.8d52e08d.css.map": "/NaVarti/static/css/main.8d52e08d.css.map",
     "main.a8a35ad8.js.map": "/NaVarti/static/js/main.a8a35ad8.js.map"
   },
   "entrypoints": [
-    "static/css/main.1358caaf.css",
+    "static/css/main.8d52e08d.css",
     "static/js/main.a8a35ad8.js"
   ]
 }

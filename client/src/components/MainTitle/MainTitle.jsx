@@ -1,6 +1,10 @@
 import TollIcon from "@mui/icons-material/Toll"
+import { Link as ScrollLink } from "react-scroll"
 
 const MainTitle = () => {
+  const handleDonateClick = () => {
+    window.location.href = "https://send.monobank.ua/jar/3iDPWEskZm"
+  }
   return (
     <div className="title">
       <div className="title__container">
@@ -12,12 +16,20 @@ const MainTitle = () => {
           </p>
 
           <div className="info-container__btn-container">
-            <button className="info-container__btn info-container__btn--donate">
+            <button
+              className="info-container__btn info-container__btn--donate"
+              onClick={handleDonateClick}
+            >
               ЗРОБИТИ ВНЕСОК <TollIcon className="info-container__btn-icon" />
             </button>
-            <button className="info-container__btn info-container__btn--help">
+            <ScrollLink
+              to="make-request"
+              spy={true}
+              smooth={true}
+              className="info-container__btn info-container__btn--help"
+            >
               ЗАПИТ ПРО ДОПОМОГУ
-            </button>
+            </ScrollLink>
           </div>
         </div>
 

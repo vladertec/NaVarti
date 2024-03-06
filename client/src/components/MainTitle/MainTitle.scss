@@ -67,6 +67,7 @@
     &__btn--help {
       background-color: white;
       color: black;
+      text-shadow: none;
       &:hover {
         padding: 1.3% 0;
         border: 1px solid black;
@@ -131,8 +132,9 @@
 
       &__btn--help {
         margin-top: 6%;
+        padding: 2.4% 0;
         &:hover {
-          padding: 1.8% 0;
+          padding: 2% 0;
         }
       }
 

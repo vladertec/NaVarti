@@ -16,13 +16,14 @@
     @include flex-container;
     flex-direction: column;
     @include main-padding;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
   }
 
   &__slide {
     padding: 2% 0;
     text-align: center;
     color: black;
+    transition: transform 2s ease;
   }
 
   &__card {
@@ -47,6 +48,7 @@
         background-color: $grey-color;
         padding: 5% 7%;
         border-radius: $radius-border;
+        line-height: 1.2;
       }
 
       &__name {

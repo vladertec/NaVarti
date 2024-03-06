@@ -72,6 +72,7 @@
       flex: 1;
       margin-top: 6%;
       font-size: 1.4vw;
+      line-height: 1.2;
       align-items: justify;
       display: -webkit-box;
       -webkit-line-clamp: 4;
@@ -82,7 +83,7 @@
     }
 
     &__btn {
-      margin-top: 5%;
+      margin-top: 6%;
       border-radius: $radius-border;
       padding: 2.5% 4%;
       cursor: pointer;

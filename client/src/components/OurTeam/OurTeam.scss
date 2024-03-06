@@ -59,6 +59,7 @@
       font-size: 1.4vw;
       margin-top: 10%;
       text-align: justify;
+      line-height: 1.2;
     }
   }
 
@@ -111,7 +112,8 @@
       }
     }
 
-    .slick-prev, .slick-next {
+    .slick-prev,
+    .slick-next {
       display: none !important;
     }
 

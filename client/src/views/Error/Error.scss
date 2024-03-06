@@ -42,7 +42,7 @@
   }
 
   @include phone {
-    padding: 15% 5% 0 5%;
+    padding: 15% 5% 25% 5%;
     flex-direction: column;
 
     &__message-container {

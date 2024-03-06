@@ -28,7 +28,7 @@
       font-size: 1.2vw;
       @include flex-container;
       text-align: justify;
-      line-height: 1.2;
+      line-height: 1.4;
       font-weight: 450;
     }
 
@@ -109,7 +109,7 @@
 
       &__text {
         margin: 8% 0 0 0;
-        font-size: 3.6vw;
+        font-size: 3.5vw;
       }
 
       &__btn-container {

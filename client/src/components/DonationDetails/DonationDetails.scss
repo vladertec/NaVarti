@@ -54,7 +54,7 @@
         padding: 2% 3%;
         cursor: pointer;
         font-size: 1.5vw;
-        font-weight: bold;
+        font-weight: 550;
         transition: background-color 0.3s;
         color: black;
       }
@@ -65,7 +65,7 @@
 
       &__copy-icon {
         font-size: 2vw;
-        margin-left: 1%;
+        margin-left: 2%;
       }
 
       &__mobile-check-icon {
@@ -81,7 +81,7 @@
         border-radius: $radius-border;
         padding: 1% 4%;
         cursor: pointer;
-        font-weight: bold;
+        font-weight: 550;
         border: none;
         font-size: 1.5vw;
         @include flex-container;

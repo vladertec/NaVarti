@@ -90,7 +90,7 @@
   }
 
   @include phone {
-    padding: 6% 16%;
+    padding: 9% 16% 4% 16%;
 
     &__title {
       display: none;
@@ -100,7 +100,7 @@
       display: block;
       padding: 4% 0;
       text-align: center;
-      font-size: 3vw;
+      font-size: 3.2vw;
       font-weight: 500;
     }
 
@@ -157,12 +157,12 @@
 
     .volunteer-btn-wrapper {
       &__btn {
-        margin-top: 15%;
+        margin-top: 17%;
         border: none;
-        width: 73%;
-        padding: 1.5% 0;
-        font-size: 3vw;
-        font-weight: 550;
+        width: 75%;
+        padding: 2% 0;
+        font-size: 3.2vw;
+        font-weight: 520;
         border-radius: $mobile-radius-border;
       }
 

@@ -7,6 +7,9 @@
   background-size: 100% auto;
   background-position: center top;
 
+  &__mobile-title {
+    display: none;
+  }
   &__container {
     background-color: $grey-color;
     border-radius: $radius-border;
@@ -46,12 +49,6 @@
     font-weight: bold;
   }
 
-  &__card-position {
-    font-size: 1.5vw;
-    margin-top: 5%;
-    font-weight: bold;
-  }
-
   &__card-text {
     font-size: 1.4vw;
     margin-top: 10%;
@@ -83,7 +80,78 @@
     margin-left: 3%;
   }
 
-  @include phone {
+  &__mobile-slider {
     display: none;
+  }
+
+  @include phone {
+    background-image: none;
+    display: block;
+    padding: 5% 14% 0.1% 14%;
+
+    &__mobile-title {
+      display: block;
+      margin-top: 4%;
+      font-size: 4vw;
+      font-weight: 550;
+      text-align: center;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__container {
+      border-radius: $mobile-radius-border;
+      padding-bottom: 3%;
+    }
+
+    &__card-container {
+      display: none;
+    }
+
+    &__card {
+      padding: 5% 13%;
+    }
+
+    &__card-name {
+      font-size: 3vw;
+      margin-top: 6%;
+      font-weight: 600;
+    }
+
+    &__card-text {
+      font-size: 2.2vw;
+      margin-top: 6%;
+      line-height: 1.2;
+    }
+
+    &__btn {
+      font-size: 2vw;
+      padding: 3% 0;
+      font-size: 2.3vw;
+      border-radius: $mobile-radius-border;
+    }
+
+    &__mobile-slider {
+      display: block;
+      margin-top: 7%;
+    }
+
+    .slick-next {
+      right: 16.5%;
+    }
+
+    .slick-prev {
+      left: 14.3%;
+    }
+
+    .slick-prev:before {
+      color: black;
+    }
+
+    .slick-next:before {
+      color: black;
+    }
   }
 }

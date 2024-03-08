@@ -124,12 +124,12 @@
   }
 
   @include phone {
-    padding: 5% 0 3% 0;
+    padding: 7% 0 3% 0;
     background-image: none;
 
     &__title {
-      font-size: 3.8vw;
-      font-weight: 600;
+      font-size: 4vw;
+      font-weight: 550;
     }
 
     &__slider-container {

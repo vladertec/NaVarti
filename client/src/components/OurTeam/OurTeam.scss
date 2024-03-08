@@ -64,7 +64,7 @@
   }
 
   @include phone {
-    padding: 8% 27% 8% 27%;
+    padding: 1% 27% 8% 27%;
     background-image: none;
 
     &__title {
@@ -74,7 +74,7 @@
 
     .team-card {
       flex-direction: column;
-      margin-top: 20%;
+      margin-top: 12%;
       border-radius: $mobile-radius-border;
 
       &__desktop-list-card {

@@ -18,6 +18,10 @@ const Volunteers = () => {
     nextArrow: "",
   }
 
+  const handleDonateClick = () => {
+    window.location.href = "https://send.monobank.ua/jar/3iDPWEskZm"
+  }
+
   const RequestItems = [
     {
       photoUrl: "./img/logo.jpg",
@@ -73,7 +77,10 @@ const Volunteers = () => {
         </Slider>
       </div>
       <div className="volunteer-carousel__btn-container volunteer-btn-wrapper">
-        <button className="volunteer-btn-wrapper__btn">
+        <button
+          className="volunteer-btn-wrapper__btn"
+          onClick={handleDonateClick}
+        >
           ЗРОБИТИ ВНЕСОК{" "}
           <TollIcon className="volunteer-btn-wrapper__btn-icon" />
         </button>

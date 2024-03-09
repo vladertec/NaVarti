@@ -93,9 +93,22 @@
         }
       }
 
+      &__information-btn--close {
+        padding: 1% 12.3%;
+      }
+
       &__copied {
         font-weight: bold;
         @include flex-container;
+      }
+
+      &__additional-info-container {
+        margin-top: 4%;
+        text-align: center;
+      }
+
+      &__additional-text {
+        font-size: 3vw;
       }
     }
   }
@@ -167,6 +180,10 @@
           padding: 5% 14%;
           font-size: 2.5vw;
           font-weight: 500;
+        }
+
+        &__information-btn--close {
+          padding: 5% 26.5%;
         }
 
         &__copy-icon {

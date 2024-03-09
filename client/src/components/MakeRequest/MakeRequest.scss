@@ -88,6 +88,7 @@
     background-image: none;
     display: block;
     padding: 5% 14% 0.1% 14%;
+    position: relative;
 
     &__mobile-title {
       display: block;
@@ -133,25 +134,54 @@
       border-radius: $mobile-radius-border;
     }
 
+    &__btn-icon {
+      font-size: 2.4vw !important;
+      margin-left: 5%;
+    }
+
     &__mobile-slider {
       display: block;
       margin-top: 7%;
     }
 
     .slick-next {
+      display: none;
       right: 16.5%;
     }
 
     .slick-prev {
+      display: none;
       left: 14.3%;
     }
 
     .slick-prev:before {
+      display: none;
       color: black;
     }
 
     .slick-next:before {
+      display: none;
       color: black;
+    }
+
+    &__arrow-next-icon-container {
+      position: absolute;
+      top: 49%;
+      right: 14%;
+    }
+
+    &__arrow-prev-icon-container {
+      position: absolute;
+      top: 49%;
+      left: 11.5%;
+    }
+
+    &__icon-prev {
+      font-size: 2vw;
+    }
+
+    &__icon-next {
+      font-size: 2vw;
     }
   }
 }

@@ -3,6 +3,24 @@ import Slider from "react-slick"
 import ModeEditIcon from "@mui/icons-material/ModeEdit"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded"
+import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded"
+
+const NextArrow = ({ onClick }) => {
+  return (
+    <div onClick={onClick} className="make-request__arrow-next-icon-container ">
+      <NavigateNextRoundedIcon className="make-request__icon-next" />
+    </div>
+  )
+}
+
+const PrevArrow = ({ onClick }) => {
+  return (
+    <div onClick={onClick} className="make-request__arrow-prev-icon-container ">
+      <NavigateBeforeRoundedIcon className="make-request__icon-prev" />
+    </div>
+  )
+}
 
 const MakeRequest = ({ RequestItems }) => {
   const sliderSettings = {
@@ -12,6 +30,8 @@ const MakeRequest = ({ RequestItems }) => {
     slidesToShow: 1.68,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   }
 
   return (

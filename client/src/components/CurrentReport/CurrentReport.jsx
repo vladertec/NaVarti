@@ -87,7 +87,6 @@ const CurrentReport = () => {
                 <div className="current-report__card report-card">
                   <div className="report-card__info-container">
                     <div className="report-card__text-container">
-        
                       <h2 className="report-card__name">{object.title}</h2>
                       <p className="report-card__mobile-text">{object.text}</p>
                       {expandedIndexes.includes(index) ? (
@@ -127,12 +126,12 @@ const CurrentReport = () => {
                   </div>
                   <div className="report-card__info-container">
                     <div className="report-card__text-container">
-                        <h2 className="report-card__name">{object.title}</h2>
-                        <p className="report-card__mobile-text">{object.text}</p>
+                      <h2 className="report-card__name">{object.title}</h2>
+                      <p className="report-card__mobile-text">{object.text}</p>
                       {expandedIndexes.includes(index) ? (
                         <p className="report-card__text">{object.text}</p>
                       ) : (
-                        <p className="report-card__text-splice">
+                        <p className="report-card__text">
                           {`${object.text.slice(0, 220)}...`}
                         </p>
                       )}

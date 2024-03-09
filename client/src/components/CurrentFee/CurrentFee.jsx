@@ -31,31 +31,37 @@ const CurrentFee = () => {
       photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
+      link: "https://send.monobank.ua/jar/3iDPWEskZm",
     },
     {
       photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
+      link: "https://send.monobank.ua/jar/3iDPWEskZm",
     },
     {
       photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
+      link: "https://send.monobank.ua/jar/3iDPWEskZm",
     },
     {
       photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
+      link: "https://send.monobank.ua/jar/3iDPWEskZm",
     },
     {
       photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
+      link: "https://send.monobank.ua/jar/3iDPWEskZm",
     },
     {
       photoUrl: "./img/logo.jpg",
       title: "Підзаголовок",
       text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
+      link: "https://send.monobank.ua/jar/3iDPWEskZm",
     },
   ]
 
@@ -73,7 +79,10 @@ const CurrentFee = () => {
               />
               <p className="current-fee-slide__title">{slide.title}</p>
               <p className="current-fee-slide__text">{slide.text}</p>
-              <button className="current-fee-slide__btn">
+              <button
+                className="current-fee-slide__btn"
+                onClick={() => (window.location.href = slide.link)}
+              >
                 ПІДТРИМАТИ ЗБІР
               </button>
               <button className="current-fee-slide__btn current-fee-slide__btn--information">

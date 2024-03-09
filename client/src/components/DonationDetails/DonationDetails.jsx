@@ -1,16 +1,25 @@
+import React, { useState } from "react"
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward"
 import CheckIcon from "@mui/icons-material/Check"
 import LinkIcon from "@mui/icons-material/Link"
-import React, { useState } from "react"
 
 const DonationDetails = ({ details }) => {
   const [copiedIndex, setCopiedIndex] = useState(null)
+  const [showDetails, setShowDetails] = useState(
+    Array(details.length).fill(false)
+  )
 
   const handleCopy = (text, index) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopiedIndex(index)
       setTimeout(() => setCopiedIndex(null), 5000)
     })
+  }
+
+  const toggleDetails = (index) => {
+    const updatedShowDetails = [...showDetails]
+    updatedShowDetails[index] = !updatedShowDetails[index]
+    setShowDetails(updatedShowDetails)
   }
 
   return (
@@ -58,12 +67,32 @@ const DonationDetails = ({ details }) => {
                     </p>
                   )}
                 </button>
-                <button className="donation-container__information-btn">
-                  Детальніше
-                  <ArrowOutwardIcon className="donation-container__copy-icon" />
-                </button>
+                {!showDetails[index] ? (
+                  <button
+                    className="donation-container__information-btn"
+                    onClick={() => toggleDetails(index)}
+                  >
+                    Детальніше
+                    <ArrowOutwardIcon className="donation-container__copy-icon" />
+                  </button>
+                ) : (
+                  <button
+                    className="donation-container__information-btn donation-container__information-btn--close"
+                    onClick={() => toggleDetails(index)}
+                  >
+                    Згорнути
+                  </button>
+                )}
               </div>
             </div>
+
+            {showDetails[index] && (
+              <div className="donation-container__additional-info-container">
+                <p className="donation-container__additional-text">
+                   Тут додаткова інфа
+                </p>
+              </div>
+            )}
           </div>
         ))}
       </div>

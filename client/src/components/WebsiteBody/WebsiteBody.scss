@@ -19,6 +19,7 @@
 
   @include phone {
     background-image: url("../../../public/img/mobileBackground/mainTitle.png");
+    overflow-y: hidden;
 
     &__scroll-top-icon {
       display: none !important;

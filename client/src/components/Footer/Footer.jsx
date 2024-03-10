@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer__logo-container">
           <img
             className="footer__logo-img"
-            src="/img/logo.jpg"
+            src="./img/logo.jpg"
             alt="footer-logo"
           />
           <a className="footer__logo-text" href="#">

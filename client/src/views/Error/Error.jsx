@@ -9,7 +9,7 @@ const Error = () => {
       </div>
       <div className="error__message-container">
         <p className="error__message">Ooops! Page not found...</p>
-        <button className="error__btn" onClick={() => navigate("/NaVarti")}>
+        <button className="error__btn" onClick={() => navigate("/home")}>
           Homepage
         </button>
       </div>

@@ -12,11 +12,13 @@ import {
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Введіть назву звіту"),
   quantity: Yup.number().required("Введіть номер порядку карточки звіту"),
+  unit: Yup.string()
 })
 
 const initialValues = {
   name: "",
   quantity: "",
+  unit: ""
 }
 
 const EditTransferredThings = () => {
@@ -83,7 +85,7 @@ const EditTransferredThings = () => {
               className="team-form__input"
             />
             <ErrorMessage
-              name="title"
+              name="name"
               component="div"
               className="team-form__error"
             />
@@ -102,6 +104,24 @@ const EditTransferredThings = () => {
             />
             <ErrorMessage
               name="quantity"
+              component="div"
+              className="team-form__error"
+            />
+          </div>
+
+          <div className="team-form__group">
+            <label htmlFor="unit" className="team-form__label">
+              Одиниця вимірювання (скорочено)
+            </label>
+            <Field
+              type="text"
+              id="unit"
+              name="unit"
+              placeholder="Одиниця вимірювання"
+              className="team-form__input"
+            />
+            <ErrorMessage
+              name="unit"
               component="div"
               className="team-form__error"
             />

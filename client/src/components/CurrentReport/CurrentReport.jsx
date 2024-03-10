@@ -75,6 +75,11 @@ const CurrentReport = () => {
     }
   }
 
+  
+  if (objects.length === 0) {
+    return null
+  }
+
   return (
     <div className="current-report">
       <p className="current-report__title">Звіти</p>

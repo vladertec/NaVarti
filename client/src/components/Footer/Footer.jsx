@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer__logo-container">
           <img
             className="footer__logo-img"
-            src="./img/logo.jpg"
+            src="/img/logo.jpg"
             alt="footer-logo"
           />
           <a className="footer__logo-text" href="#">
@@ -93,7 +93,7 @@ const Footer = () => {
         <div className="footer__qr-container">
           <img
             className="footer__qr-code"
-            src="./img/qr-code.png"
+            src="/img/qr-code.png"
             alt="qr-code"
           />
         </div>

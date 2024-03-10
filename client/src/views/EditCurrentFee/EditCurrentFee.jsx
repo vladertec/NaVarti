@@ -11,9 +11,11 @@ import {
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required("Введіть імʼя"),
-  positionNumber: Yup.string().required("Введіть посаду"),
+  positionNumber: Yup.number().required("Введіть посаду"),
   description: Yup.string().required("Введіть опис"),
   photoUrl: Yup.string().required("Введіть посилання на фото"),
+  // .url("Введите коректне посилання"),
+  link: Yup.string().required("Введіть посилання на фото"),
   // .url("Введите коректне посилання"),
 })
 
@@ -22,6 +24,7 @@ const initialValues = {
   title: "",
   positionNumber: "",
   description: "",
+  link: "",
 }
 
 const EditCurrentFee = () => {
@@ -86,6 +89,24 @@ const EditCurrentFee = () => {
             />
             <ErrorMessage
               name="photoUrl"
+              component="div"
+              className="team-form__error"
+            />
+          </div>
+
+          <div className="team-form__group">
+            <label htmlFor="link" className="team-form__label">
+              Посилання на банку
+            </label>
+            <Field
+              type="text"
+              id="link"
+              name="link"
+              placeholder="Посилання на банку"
+              className="team-form__input"
+            />
+            <ErrorMessage
+              name="link"
               component="div"
               className="team-form__error"
             />

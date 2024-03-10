@@ -17,6 +17,10 @@ const OurTeam = ({ PositionItems }) => {
     nextArrow: null,
   }
 
+  if (PositionItems.length === 0) {
+    return null
+  }
+
   return (
     <div className="our-team">
       <p className="our-team__title">Наша команда</p>

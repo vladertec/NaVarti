@@ -58,6 +58,10 @@ const TransferredThings = ({ items }) => {
     }
   }, [showNumbers, items])
 
+  if (items.length === 0) {
+    return null
+  }
+
   return (
     <div className="transferred-things" ref={itemsRef}>
       <h2 className="transferred-things__title">Вже передали</h2>
@@ -75,7 +79,7 @@ const TransferredThings = ({ items }) => {
             <span className="items-container__item-name">{item.name}</span>
             {showNumbers && (
               <span className="items-container__item-quantity">
-                {counters[index]} шт.
+                {counters[index]} {item.unit}
               </span>
             )}
           </div>

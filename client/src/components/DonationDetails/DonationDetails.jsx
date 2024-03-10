@@ -22,6 +22,10 @@ const DonationDetails = ({ details }) => {
     setShowDetails(updatedShowDetails)
   }
 
+  if (details.length === 0) {
+    return null
+  }
+
   return (
     <div className="donation-details">
       <p className="donation-details__title">Реквізити фонду</p>

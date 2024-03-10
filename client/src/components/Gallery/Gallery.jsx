@@ -1,4 +1,9 @@
 const Gallery = () => {
+
+  // if (details.length === 0) {
+  //   return null
+  // }
+
   return (
     <div className="gallery">
       <div className="gallery__first-photo">

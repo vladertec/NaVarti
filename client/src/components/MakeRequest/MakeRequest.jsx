@@ -46,6 +46,10 @@ const MakeRequest = ({ RequestItems }) => {
     prevArrow: <PrevArrow />,
   }
 
+  if (RequestItems.length === 0) {
+    return null
+  }
+
   return (
     <div className="make-request">
       <p className="make-request__mobile-title">Зробити запит</p>

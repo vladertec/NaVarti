@@ -33,6 +33,10 @@ const Partners = () => {
     ],
   }
 
+  if (slides.length === 0) {
+    return null
+  }
+
   return (
     <div className="partners-carousel">
       <p className="partners-carousel__title">Наші партнери</p>

@@ -55,6 +55,10 @@ const Volunteers = () => {
     },
   ]
 
+  if (RequestItems.length === 0) {
+    return null
+  }
+
   return (
     <div className="volunteer-carousel">
       <p className="volunteer-carousel__title">Волонтери</p>

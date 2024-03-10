@@ -51,18 +51,18 @@ const Home = () => {
   ]
 
   const inventoryItems = [
-    { name: "Генератори", quantity: 24 },
-    { name: "Генератори", quantity: 24 },
-    { name: "Аптечка", quantity: 70 },
-    { name: "Аптечка", quantity: 70 },
-    { name: "Генератори", quantity: 24 },
-    { name: "Генератори", quantity: 24 },
-    { name: "Аптечка", quantity: 70 },
-    { name: "Аптечка", quantity: 70 },
-    { name: "Генератори", quantity: 24 },
-    { name: "Генератори", quantity: 24 },
-    { name: "Аптечка", quantity: 70 },
-    { name: "Аптечка", quantity: 70 },
+    { name: "Генератори", quantity: 24, unit: "шт." },
+    { name: "Генератори", quantity: 24, unit: "шт." },
+    { name: "Аптечка", quantity: 70, unit: "шт." },
+    { name: "Аптечка", quantity: 70, unit: "шт." },
+    { name: "Генератори", quantity: 24, unit: "шт." },
+    { name: "Генератори", quantity: 24, unit: "шт." },
+    { name: "Аптечка", quantity: 70, unit: "шт." },
+    { name: "Аптечка", quantity: 70, unit: "шт." },
+    { name: "Генератори", quantity: 24, unit: "шт." },
+    { name: "Генератори", quantity: 24, unit: "шт." },
+    { name: "Аптечка", quantity: 70, unit: "шт." },
+    { name: "Аптечка", quantity: 70, unit: "" },
   ]
 
   const PositionItems = [

@@ -104,8 +104,8 @@
       text-shadow: none;
 
       &__title {
-        margin-top: 2%;
-        font-size: 4.7vw;
+        font-size: 4.9vw;
+        font-family: $font-namu;
       }
 
       &__text {
@@ -120,9 +120,10 @@
 
       &__btn {
         width: 100%;
-        font-size: 4vw;
+        font-size: 3.8vw;
         border-radius: $mobile-radius-border;
         padding: 2.2% 0;
+        font-family: $font-namu;
       }
 
       &__btn-icon {

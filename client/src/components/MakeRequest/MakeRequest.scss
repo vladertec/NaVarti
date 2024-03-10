@@ -96,6 +96,7 @@
       font-size: 4vw;
       font-weight: 550;
       text-align: center;
+      font-family: $font-namu;
     }
 
     &__title {
@@ -167,16 +168,18 @@
     &__arrow-next-icon-container {
       position: absolute;
       top: 49%;
-      right: 14%;
+      right: 15%;
     }
 
     &__arrow-prev-icon-container {
       position: absolute;
       top: 49%;
-      left: 11.5%;
+      left: 12%;
+      z-index: 1;
     }
 
     &__icon-prev {
+      visibility: visible;
       font-size: 2vw;
     }
 

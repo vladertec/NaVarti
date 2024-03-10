@@ -64,12 +64,13 @@
   }
 
   @include phone {
-    padding: 1% 27% 8% 27%;
+    padding: 7% 27% 8% 27%;
     background-image: none;
 
     &__title {
-      font-size: 4vw;
+      font-size: 4.5vw;
       font-weight: 500;
+      font-family: $font-namu;
     }
 
     .team-card {
@@ -130,17 +131,5 @@
         }
       }
     }
-
-    // .slick-dots {
-    //   padding: 0;
-    //   li {
-    //     button {
-    //       &::before {
-    //         margin-top: 40%;
-    //         font-size: 3.5vw;
-    //       }
-    //     }
-    //   }
-    // }
   }
 }

@@ -130,6 +130,7 @@
     &__title {
       font-size: 4vw;
       font-weight: 550;
+      font-family: $font-namu;
     }
 
     &__slider-container {
@@ -143,11 +144,15 @@
 
     &__card {
       padding: 5% 5%;
-      gap: 5%;
+      gap: 4%;
       background-color: $grey-color;
       border-radius: $mobile-radius-border;
 
       .report-card {
+        &__img-container {
+          width: 60%;
+        }
+
         &__img {
           width: 100%;
           max-width: 100%;
@@ -166,8 +171,9 @@
 
         &__name {
           margin-top: 3%;
-          font-size: 3vw;
+          font-size: 3.8vw;
           font-weight: 600;
+          font-family: $font-namu;
         }
 
         &__text {
@@ -180,7 +186,7 @@
 
         &__mobile-text {
           display: block;
-          font-size: 2vw;
+          font-size: 2.3vw;
           margin-top: 6%;
           text-align: justify;
         }

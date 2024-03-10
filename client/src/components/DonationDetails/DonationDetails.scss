@@ -114,11 +114,12 @@
   }
 
   @include phone {
-    padding: 15% 10% 6% 10%;
+    padding: 13% 10% 6% 10%;
 
     &__title {
-      font-size: 3.7vw;
+      font-size: 3.9vw;
       font-weight: 500;
+      font-family: "NAMU-1750", sans-serif;
     }
 
     &__container {

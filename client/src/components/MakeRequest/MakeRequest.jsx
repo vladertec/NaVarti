@@ -8,7 +8,13 @@ import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded"
 
 const NextArrow = ({ onClick }) => {
   return (
-    <div onClick={onClick} className="make-request__arrow-next-icon-container ">
+    <div
+      onClick={() => {
+        console.log("Prev clicked")
+        onClick()
+      }}
+      className="make-request__arrow-next-icon-container "
+    >
       <NavigateNextRoundedIcon className="make-request__icon-next" />
     </div>
   )
@@ -16,7 +22,13 @@ const NextArrow = ({ onClick }) => {
 
 const PrevArrow = ({ onClick }) => {
   return (
-    <div onClick={onClick} className="make-request__arrow-prev-icon-container ">
+    <div
+      onClick={() => {
+        console.log("Prev clicked")
+        onClick()
+      }}
+      className="make-request__arrow-prev-icon-container "
+    >
       <NavigateBeforeRoundedIcon className="make-request__icon-prev" />
     </div>
   )

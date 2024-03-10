@@ -36,7 +36,8 @@
   @include phone {
     padding: 1% 0 3% 0;
     &__title {
-      font-size: 4.3vw;
+      font-size: 4.2vw;
+      font-family: $font-namu;
     }
   }
 }

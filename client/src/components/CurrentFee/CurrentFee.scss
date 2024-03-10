@@ -134,12 +134,13 @@
   }
 
   @include phone {
-    padding: 5% 1% 3% 1%;
+    padding: 3% 1% 3% 1%;
 
     &__title {
       margin-bottom: 5%;
-      font-size: 4vw;
+      font-size: 4.5vw;
       font-weight: 550;
+      font-family: $font-namu;
     }
 
     .current-fee-slide {
@@ -166,8 +167,9 @@
         margin-top: 8%;
         padding: 3% 4%;
         font-weight: 600;
-        font-size: 2.3vw;
+        font-size: 2.4vw;
         border-radius: $mobile-radius-border;
+        font-family: $font-namu;
       }
 
       &__btn--information {

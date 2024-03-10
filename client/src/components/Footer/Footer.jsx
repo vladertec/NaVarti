@@ -93,7 +93,7 @@ const Footer = () => {
         <div className="footer__qr-container">
           <img
             className="footer__qr-code"
-            src="/img/qr-code.png"
+            src="./img/qr-code.png"
             alt="qr-code"
           />
         </div>

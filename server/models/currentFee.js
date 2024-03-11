@@ -6,6 +6,7 @@ const currentFeeSchema = new mongoose.Schema(
     title: String,
     description: String,
     positionNumber: Number,
+    link: String,
   },
   { versionKey: false }
 )

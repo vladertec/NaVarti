@@ -45,7 +45,7 @@ const CurrentFee = () => {
       link: "https://send.monobank.ua/jar/3iDPWEskZm",
     },
   ]
-  
+
   if (RequestItems.length === 0) {
     return null
   }
@@ -54,10 +54,10 @@ const CurrentFee = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: Math.min(RequestItems.length, 4),
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 90000000,
     cssEase: "linear",
     prevArrow: null,
     nextArrow: null,

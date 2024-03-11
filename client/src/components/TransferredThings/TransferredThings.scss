@@ -7,8 +7,9 @@
 
   &__title {
     text-align: center;
-    font-size: 2.4vw;
+    font-size: 2.5vw;
     font-weight: 600;
+    font-family: $font-namu;
   }
 
   &__description {
@@ -32,7 +33,7 @@
       align-items: center;
       font-weight: bold;
       background-color: #1db2be;
-      padding: 2% 4%;
+      padding: 2% 7%;
       border-radius: $radius-border;
       &:hover {
         background-color: $mint-color;
@@ -41,8 +42,9 @@
 
     &__item-name {
       font-size: 1.5vw;
-      font-weight: 700;
+      font-weight: 600;
       font-style: italic;
+      font-family: $font-montserrat;
     }
 
     &__item-quantity {
@@ -50,7 +52,7 @@
       font-weight: 700;
       color: white;
       padding: 2% 2%;
-      animation: fadeIn 1.5s forwards; /* Добавляем анимацию */
+      animation: fadeIn 1.5s forwards;
     }
 
     @keyframes fadeIn {
@@ -70,7 +72,6 @@
     &__title {
       font-size: 4vw;
       font-weight: 550;
-      font-family: $font-namu;
     }
 
     &__description {

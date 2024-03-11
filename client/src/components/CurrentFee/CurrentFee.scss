@@ -1,19 +1,17 @@
 .current-fee-carousel {
-  padding: 2% 0 3% 0;
+  padding: 3% 0;
   font-family: $font-montserrat;
   overflow-x: hidden;
 
   &__title {
     margin-bottom: 4%;
     text-align: center;
-    font-size: 2.2vw;
+    font-size: 2.4vw;
     font-weight: 500;
+    font-family: $font-namu;
   }
 
-  .slick-next:before {
-    display: none;
-  }
-
+  .slick-next:before,
   .slick-prev:before {
     display: none;
   }
@@ -74,40 +72,34 @@
       font-size: 1.4vw;
       line-height: 1.2;
       align-items: justify;
-      // display: -webkit-box;
-      // -webkit-line-clamp: 3;
-      // -webkit-box-orient: vertical;
-      // overflow: hidden;
-      // text-overflow: ellipsis;
-      // white-space: normal;
     }
 
     &__btn {
-      margin-top: 6%;
+      margin-top: 7%;
       border-radius: $radius-border;
-      padding: 2.5% 4%;
+      padding: 2% 4%;
       cursor: pointer;
-      font-weight: 600;
+      font-weight: 500;
       border: none;
-      font-size: 1vw;
+      font-size: 1.2vw;
       background-color: black;
       color: white;
       transition: background-color 0.3s;
       width: 100%;
-      font-family: $font-montserrat;
+      font-family: $font-vietnam;
       &:hover {
         background-color: $purple-color;
       }
     }
 
     &__btn--information {
-      margin-top: 3%;
+      margin-top: 4%;
       @include flex-container;
       background-color: white;
       color: black;
       &:hover {
         background-color: white;
-        padding: 2.1% 4%;
+        padding: 1.6% 4%;
         border: 1px solid black;
       }
     }
@@ -140,7 +132,6 @@
       margin-bottom: 5%;
       font-size: 4.5vw;
       font-weight: 550;
-      font-family: $font-namu;
     }
 
     .current-fee-slide {
@@ -164,15 +155,14 @@
       }
 
       &__btn {
-        padding: 3% 4%;
-        font-weight: 600;
-        font-size: 2.4vw;
+        padding: 3.5% 4%;
+        font-weight: 500;
+        font-size: 2.6vw;
         border-radius: $mobile-radius-border;
-        font-family: $font-namu;
       }
 
       &__btn--information {
-        margin-top: 4%;
+        margin-top: 5%;
         &:hover {
           padding: 2.4% 4%;
         }

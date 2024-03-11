@@ -4,6 +4,7 @@ const transferredThingsSchema = new mongoose.Schema(
   {
     name: String,
     quantity: Number,
+    unit: String,
   },
   { versionKey: false }
 )

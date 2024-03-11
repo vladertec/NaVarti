@@ -106,8 +106,8 @@ const CurrentReport = () => {
                         onClick={() => toggleExpand(index)}
                       >
                         {expandedIndexes.includes(index)
-                          ? "Згорнути"
-                          : "Детальніше"}
+                          ? "ЗГОРНУТИ"
+                          : "ДЕТАЛЬНІШЕ"}
                         <ArrowOutwardIcon className="report-card__btn-icon" />
                       </button>
                     </div>
@@ -145,8 +145,8 @@ const CurrentReport = () => {
                         onClick={() => toggleExpand(index)}
                       >
                         {expandedIndexes.includes(index)
-                          ? "Згорнути"
-                          : "Детальніше"}
+                          ? "ЗГОРНУТИ"
+                          : "ДЕТАЛЬНІШЕ"}
                         <ArrowOutwardIcon className="report-card__btn-icon" />
                       </button>
                     </div>

@@ -10,7 +10,6 @@ const NextArrow = ({ onClick }) => {
   return (
     <div
       onClick={() => {
-        console.log("Prev clicked")
         onClick()
       }}
       className="make-request__arrow-next-icon-container "
@@ -24,7 +23,6 @@ const PrevArrow = ({ onClick }) => {
   return (
     <div
       onClick={() => {
-        console.log("Prev clicked")
         onClick()
       }}
       className="make-request__arrow-prev-icon-container "
@@ -39,7 +37,7 @@ const MakeRequest = ({ RequestItems }) => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1.68,
+    slidesToShow: 1.67,
     slidesToScroll: 1,
     adaptiveHeight: true,
     nextArrow: <NextArrow />,
@@ -69,7 +67,7 @@ const MakeRequest = ({ RequestItems }) => {
                 className="make-request__btn"
                 onClick={() => (window.location.href = item.link)}
               >
-                Заповнити форму
+                ЗАПОВНИТИ ФОРМУ
                 <ModeEditIcon className="make-request__btn-icon" />
               </button>
             </div>
@@ -90,8 +88,7 @@ const MakeRequest = ({ RequestItems }) => {
                   className="make-request__btn"
                   onClick={() => (window.location.href = item.link)}
                 >
-                  Заповнити форму
-                  <ModeEditIcon className="make-request__btn-icon" />
+                  ЗАПОВНИТИ ФОРМУ
                 </button>
               </div>
             ))}

@@ -6,9 +6,10 @@
   background-position: center top;
 
   &__title {
-    font-size: 2.3vw;
+    font-size: 2.4vw;
     font-weight: 600;
     text-align: center;
+    font-family: $font-namu;
   }
 
   &__slider-container {
@@ -76,7 +77,6 @@
         width: 40%;
         float: right;
         margin-top: 8%;
-        font-size: 1.8vw;
         padding: 1.5% 0;
         border-radius: $radius-border;
         border: none;
@@ -111,7 +111,7 @@
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 0.8vw;
     cursor: pointer;
 
     &:hover {

@@ -65,10 +65,10 @@ const DonationDetails = ({ details }) => {
                       <CheckIcon className="donation-container__copy-icon" />
                     </span>
                   ) : (
-                    <p className="donation-container__copy">
+                    <span className="donation-container__copy">
                       Скопіювати
                       <LinkIcon className="donation-container__copy-icon" />
-                    </p>
+                    </span>
                   )}
                 </button>
                 {!showDetails[index] ? (
@@ -93,7 +93,7 @@ const DonationDetails = ({ details }) => {
             {showDetails[index] && (
               <div className="donation-container__additional-info-container">
                 <p className="donation-container__additional-text">
-                   Тут додаткова інфа
+                  Тут додаткова інфа
                 </p>
               </div>
             )}

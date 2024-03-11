@@ -3,6 +3,34 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import TollIcon from "@mui/icons-material/Toll"
+import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded"
+import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded"
+
+const NextArrow = ({ onClick }) => {
+  return (
+    <div
+      onClick={() => {
+        onClick()
+      }}
+      className="volunteer-carousel__arrow-next-icon-container "
+    >
+      <NavigateNextRoundedIcon className="volunteer-carousel__icon-next" />
+    </div>
+  )
+}
+
+const PrevArrow = ({ onClick }) => {
+  return (
+    <div
+      onClick={() => {
+        onClick()
+      }}
+      className="volunteer-carousel__arrow-prev-icon-container "
+    >
+      <NavigateBeforeRoundedIcon className="volunteer-carousel__icon-prev" />
+    </div>
+  )
+}
 
 const Volunteers = () => {
   const settings = {
@@ -12,10 +40,10 @@ const Volunteers = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 90000000,
     cssEase: "linear",
-    prevArrow: "",
-    nextArrow: "",
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   }
 
   const handleDonateClick = () => {

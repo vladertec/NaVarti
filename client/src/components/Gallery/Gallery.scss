@@ -1,5 +1,5 @@
 .gallery {
-  padding: 8% 15% 6% 15%;
+  padding: 9% 15% 6% 15%;
   display: grid;
   grid-template-areas:
     "a b c"
@@ -44,7 +44,7 @@
 
   @include phone {
     background-image: none;
-    padding: 8% 15% 8% 15%;
+    padding: 10% 15% 8% 15%;
     grid-gap: 1%;
     grid-template-areas:
       "a b"

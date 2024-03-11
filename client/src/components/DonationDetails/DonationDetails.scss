@@ -6,12 +6,12 @@
   &__title {
     font-size: 2.4vw;
     font-weight: 500;
-    font-family: $font-nunito;
+    font-family: $font-namu;
     text-align: center;
   }
 
   &__container {
-    margin-top: 8%;
+    margin-top: 7%;
     padding: 3% 4%;
     background-color: $grey-color;
     border-radius: $radius-border;
@@ -54,13 +54,25 @@
         padding: 2% 3%;
         cursor: pointer;
         font-size: 1.5vw;
-        font-weight: 550;
         transition: background-color 0.3s;
+        color: black;
+        &:hover {
+          background-color: rgb(214, 212, 212);
+        }
+      }
+
+      &__copied {
+        font-weight: 600;
+        @include flex-container;
+        font-family: $font-vietnam;
         color: black;
       }
 
       &__copy {
         @include flex-container;
+        color: black;
+        font-weight: 600;
+        font-family: $font-vietnam;
       }
 
       &__copy-icon {
@@ -81,7 +93,7 @@
         border-radius: $radius-border;
         padding: 1% 4%;
         cursor: pointer;
-        font-weight: 550;
+        font-weight: 600;
         border: none;
         font-size: 1.5vw;
         @include flex-container;
@@ -97,11 +109,6 @@
         padding: 1% 12.3%;
       }
 
-      &__copied {
-        font-weight: bold;
-        @include flex-container;
-      }
-
       &__additional-info-container {
         margin-top: 4%;
         text-align: center;
@@ -114,12 +121,11 @@
   }
 
   @include phone {
-    padding: 13% 10% 6% 10%;
+    padding: 13% 10% 10% 10%;
 
     &__title {
       font-size: 3.9vw;
       font-weight: 500;
-      font-family: "NAMU-1750", sans-serif;
     }
 
     &__container {
@@ -178,13 +184,14 @@
 
         &__information-btn {
           border-radius: $mobile-radius-border;
-          padding: 5% 14%;
-          font-size: 2.5vw;
+          padding: 5% 12%;
+          font-family: $font-vietnam;
+          font-size: 2.6vw;
           font-weight: 500;
         }
 
         &__information-btn--close {
-          padding: 5% 26.5%;
+          padding: 5% 24%;
         }
 
         &__copy-icon {

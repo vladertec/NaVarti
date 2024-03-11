@@ -35,14 +35,13 @@
     &__btn-container {
       margin: 20% 0 5% 0;
       display: flex;
-      gap: 5%;
+      gap: 2%;
     }
 
     &__btn {
       @include flex-container;
       margin-top: 2%;
       width: 70%;
-      font-size: 1.7vw;
       padding: 1.5% 0;
       border-radius: $radius-border;
       border: none;
@@ -88,7 +87,7 @@
   }
 
   @include phone {
-    padding: 13% 10%;
+    padding: 13% 10% 13% 10%;
     background-image: none;
 
     &__container {
@@ -122,8 +121,7 @@
         width: 100%;
         font-size: 3.8vw;
         border-radius: $mobile-radius-border;
-        padding: 2.2% 0;
-        font-family: $font-namu;
+        padding: 2.3% 0;
       }
 
       &__btn-icon {
@@ -132,11 +130,8 @@
       }
 
       &__btn--help {
-        margin-top: 6%;
-        padding: 2.4% 0;
-        &:hover {
-          padding: 2% 0;
-        }
+        margin-top: 5%;
+        padding: 2.9% 0;
       }
 
       &__img-container {

@@ -2,8 +2,8 @@ import mongoose from "mongoose"
 import TransferredThings from "../models/transferredThings.js"
 
 const addOne = async (req, res) => {
-  const { name, quantity } = req.body
-  const transferredThing = await TransferredThings.create({ name, quantity })
+  const { name, quantity, unit } = req.body
+  const transferredThing = await TransferredThings.create({ name, quantity, unit })
   res.json(transferredThing)
 }
 

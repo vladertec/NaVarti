@@ -11,7 +11,7 @@ const OurTeam = ({ PositionItems }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 90000000,
     cssEase: "linear",
     prevArrow: null,
     nextArrow: null,

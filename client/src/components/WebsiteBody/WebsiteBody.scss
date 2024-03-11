@@ -21,6 +21,11 @@
     background-image: url("../../../public/img/mobileBackground/mainTitle.png");
     overflow-y: hidden;
 
+    // &__header {
+    //   position: fixed;
+    //   z-index: 1000;
+    // }
+
     &__scroll-top-icon {
       display: none !important;
     }

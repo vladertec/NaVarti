@@ -20,6 +20,7 @@
     font-size: 2.4vw;
     font-weight: 600;
     text-align: center;
+    font-family: $font-namu;
   }
 
   &__card-container {
@@ -44,9 +45,9 @@
   }
 
   &__card-name {
-    font-size: 1.6vw;
-    margin-top: 10%;
-    font-weight: bold;
+    font-size: 2vw;
+    margin-top: 9%;
+    font-weight: 500;
   }
 
   &__card-text {
@@ -59,7 +60,6 @@
   &__btn {
     margin-top: 6%;
     width: 100%;
-    font-size: 1.7vw;
     padding: 2.5% 0;
     border-radius: $radius-border;
     font-family: $font-vietnam;
@@ -76,7 +76,7 @@
   }
 
   &__btn-icon {
-    font-size: 1.5vw !important;
+    font-size: 1.4vw !important;
     margin-left: 3%;
   }
 
@@ -126,14 +126,20 @@
       font-size: 2.2vw;
       margin-top: 6%;
       line-height: 1.2;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
     }
 
     &__btn {
-      font-size: 2vw;
-      padding: 3% 0 4% 0;
-      font-size: 2.3vw;
+      padding: 4% 0 4% 0;
+      font-size: 2.4vw;
       border-radius: $mobile-radius-border;
-      font-family: $font-namu;
+      font-family: $font-vietnam;
+      font-weight: 500;
     }
 
     &__btn-icon {
@@ -146,14 +152,12 @@
       margin-top: 7%;
     }
 
-    .slick-next {
-      display: none;
-      right: 16.5%;
+    .slick-list {
     }
 
+    .slick-next,
     .slick-prev {
       display: none;
-      left: 14.3%;
     }
 
     .slick-prev:before {
@@ -169,23 +173,14 @@
     &__arrow-next-icon-container {
       position: absolute;
       top: 49%;
-      right: 15%;
+      left: 100%;
     }
 
     &__arrow-prev-icon-container {
       position: absolute;
       top: 49%;
-      left: 12%;
+      right: 100%;
       z-index: 1;
-    }
-
-    &__icon-prev {
-      visibility: visible;
-      font-size: 2vw;
-    }
-
-    &__icon-next {
-      font-size: 2vw;
     }
   }
 }

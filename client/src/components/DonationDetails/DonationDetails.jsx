@@ -93,7 +93,26 @@ const DonationDetails = ({ details }) => {
             {showDetails[index] && (
               <div className="donation-container__additional-info-container">
                 <p className="donation-container__additional-text">
-                  Тут додаткова інфа
+                  {detail.description}
+                </p>
+                <p className="donation-container__additional-text">
+                  Назва підприємства/company Name:
+                </p>
+                <p className="donation-container__additional-text">
+                  БО БФ НА ВАРТІ ЖИТТЯ
+                </p>
+                <p className="donation-container__additional-text">
+                  Код одержувача: 45258405
+                </p>
+                <p className="donation-container__additional-text">
+                  IBAN Code: {detail.account}{" "}
+                </p>
+                <p className="donation-container__additional-text">
+                  Назва банку/Name of the bank:
+                </p>
+                <p className="donation-container__additional-text">
+                  JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001,
+                  UKRAINE
                 </p>
               </div>
             )}

@@ -69,15 +69,14 @@
     border: none;
     background-color: black;
     color: white;
-    font-weight: bold;
     &:hover {
       background-color: $purple-color;
     }
   }
 
   &__btn-icon {
-    font-size: 1.4vw !important;
-    margin-left: 3%;
+    font-size: 1.3vw !important;
+    margin-left: 2%;
   }
 
   &__mobile-slider {

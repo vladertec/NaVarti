@@ -111,11 +111,14 @@
 
       &__additional-info-container {
         margin-top: 4%;
-        text-align: center;
+        text-align: justify;
+        padding: 0 3%;
       }
 
       &__additional-text {
-        font-size: 3vw;
+        font-size: 1.5vw;
+        margin-top: 1%;
+        font-weight: 500;
       }
     }
   }
@@ -197,6 +200,15 @@
         &__copy-icon {
           font-size: 2.9vw;
           margin-left: 3%;
+        }
+
+        &__additional-info-container {
+          margin-top: 4%;
+        }
+
+        &__additional-text {
+          font-size: 1.9vw;
+          margin-top: 2%;
         }
       }
     }

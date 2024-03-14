@@ -57,6 +57,7 @@
       width: 100%;
       max-width: 100%;
       height: auto;
+      border-radius: $photo-radius-border;
     }
 
     &__title {
@@ -67,11 +68,18 @@
     }
 
     &__text {
-      flex: 1;
-      margin-top: 6%;
       font-size: 1.4vw;
       line-height: 1.2;
-      align-items: justify;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-top: 6%;
+      transition: -webkit-line-clamp 0.5s ease;
+    }
+
+    &__text.expanded {
+      -webkit-line-clamp: unset;
     }
 
     &__btn {
@@ -141,6 +149,10 @@
       &__card {
         padding: 6%;
         border-radius: $mobile-radius-border;
+      }
+
+      &__logo {
+        border-radius: $mobile-photo-radius-border;
       }
 
       &__title {

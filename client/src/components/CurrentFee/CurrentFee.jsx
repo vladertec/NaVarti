@@ -4,58 +4,19 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward"
 
-const CurrentFee = () => {
+const CurrentFee = ({ currentFeeItems }) => {
   const [expandedIndex, setExpandedIndex] = useState(-1)
 
-  const RequestItems = [
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh  fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh  fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
-      link: "https://send.monobank.ua/jar/3iDPWEskZm",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh  fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
-      link: "https://send.monobank.ua/jar/3iDPWEskZm",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
-      link: "https://send.monobank.ua/jar/3iDPWEskZm",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
-      link: "https://send.monobank.ua/jar/3iDPWEskZm",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh  fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh  fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
-      link: "https://send.monobank.ua/jar/3iDPWEskZm",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1 Текс тfd1 Текс тfd1 Текстfd1 Текстf d1Текстf d1Текс тfd1 Тек стfd1 Текст fd1 Текст fd1 Текст fd1 dfjh ст fd1 dfjh ст fd1 dfjh ст fd1 dfjh",
-      link: "https://send.monobank.ua/jar/3iDPWEskZm",
-    },
-  ]
-
-  if (RequestItems.length === 0) {
+  if (currentFeeItems.length === 0) {
     return null
   }
 
   const settings = {
-    dots: true,
+    dots: currentFeeItems.length > 4,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     autoplay: true,
     autoplaySpeed: 90000000,
     cssEase: "linear",
@@ -65,21 +26,23 @@ const CurrentFee = () => {
       {
         breakpoint: 750,
         settings: {
+          dots: currentFeeItems.length > 2,
           slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
   }
 
   const handleExpand = (index) => {
-    setExpandedIndex(index)
+    setExpandedIndex(expandedIndex === index ? -1 : index)
   }
 
   return (
     <div className="current-fee-carousel">
       <p className="current-fee-carousel__title">Актуальні збори</p>
       <Slider {...settings}>
-        {RequestItems.map((slide, index) => (
+        {currentFeeItems.map((slide, index) => (
           <div key={index} className="current-fee-slide">
             <div className="current-fee-slide__card">
               <img
@@ -88,10 +51,12 @@ const CurrentFee = () => {
                 className="current-fee-slide__logo"
               />
               <p className="current-fee-slide__title">{slide.title}</p>
-              <p className="current-fee-slide__text">
-                {expandedIndex === index
-                  ? slide.text
-                  : slide.text.slice(0, 100) + "..."}
+              <p
+                className={`current-fee-slide__text ${
+                  expandedIndex === index ? "expanded" : ""
+                }`}
+              >
+                {slide.text}
               </p>
               <button
                 className="current-fee-slide__btn"
@@ -99,15 +64,13 @@ const CurrentFee = () => {
               >
                 ПІДТРИМАТИ ЗБІР
               </button>
-              {expandedIndex !== index && (
-                <button
-                  className="current-fee-slide__btn current-fee-slide__btn--information"
-                  onClick={() => handleExpand(index)}
-                >
-                  ДЕТАЛЬНІШЕ
-                  <ArrowOutwardIcon className="current-fee-slide__btn-icon" />
-                </button>
-              )}
+              <button
+                className="current-fee-slide__btn current-fee-slide__btn--information"
+                onClick={() => handleExpand(index)}
+              >
+                {expandedIndex === index ? "Згорнути" : "Детальніше"}
+                <ArrowOutwardIcon className="current-fee-slide__btn-icon" />
+              </button>
             </div>
           </div>
         ))}

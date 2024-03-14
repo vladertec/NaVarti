@@ -1,9 +1,9 @@
 .our-team {
   padding: 2% 15% 3% 15%;
   font-family: $font-montserrat;
-  background-image: url("../../../public/img/desktopBackground/ourTeam.png");
-  background-size: 100% auto;
-  background-position: center top -30px;
+  // background-image: url("../../../public/img/desktopBackground/ourTeam.png");
+  // background-size: 100% auto;
+  // background-position: center top -30px;
 
   &__title {
     text-align: center;
@@ -14,6 +14,7 @@
 
   .team-card {
     background-color: $grey-color;
+    border-radius: $radius-border;
     &__desktop-list-card {
       margin-top: 8%;
       display: flex;
@@ -34,7 +35,7 @@
       width: 33%;
       padding: 2% 3%;
       &:hover {
-        opacity: 88%;
+        opacity: 93%;
       }
     }
 
@@ -42,6 +43,7 @@
       width: 100%;
       max-width: 100%;
       height: auto;
+      border-radius: $photo-radius-border;
     }
 
     &__card-name {
@@ -93,6 +95,7 @@
       &__card-img {
         max-width: 100%;
         height: auto;
+        border-radius: $mobile-photo-radius-border;
       }
 
       &__card-name {

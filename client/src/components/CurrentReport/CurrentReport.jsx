@@ -1,64 +1,13 @@
 import React, { useState } from "react"
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward"
 
-const CurrentReport = () => {
+const CurrentReport = ({ currentReportItems }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [expandedIndexes, setExpandedIndexes] = useState([])
 
-  const objects = [
-    {
-      positionNumber: 1,
-      title: "Підзаголовок",
-      text: "1Т екст1Тек ст1Тек ст1Текст1 Текст1 Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 1Т екст1Тек ст1Тек ст1Текст1 Текст1 Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т  1Т екст1Тек ст1Тек ст1Текст1 Текст1 Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т  ст1 Текст1 Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Тек",
-      photoUrl: "./img/logo.jpg",
-    },
-    {
-      positionNumber: 2,
-      title: "Підзаголовок",
-      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      photoUrl: "./img/logo.jpg",
-    },
-    {
-      positionNumber: 3,
-      title: "Підзаголовок",
-      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 ",
-      photoUrl: "./img/logo.jpg",
-    },
-    {
-      positionNumber: 4,
-      title: "Текст1текст",
-      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      photoUrl: "./img/logo.jpg",
-    },
-    {
-      positionNumber: 5,
-      title: "підзаголовок",
-      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      photoUrl: "./img/logo.jpg",
-    },
-    {
-      positionNumber: 6,
-      title: "підзаголовок",
-      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      photoUrl: "./img/logo.jpg",
-    },
-    {
-      positionNumber: 7,
-      title: "підзаголовок",
-      text: "Текст 1Текст1 Текст1 ТТекс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      photoUrl: "./img/logo.jpg",
-    },
-    {
-      positionNumber: 8,
-      title: "підзаголовок",
-      text: "Текст 1Текст1 Текст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Твровараовпва1 ст1 Текст 1Текст1 Текст1 Текс т1Текст1Т екст1Текс т1Текст1 Текст1 Текст1Т екст1Те кст1Т екст1Тек ст1Тек ст1Текст1 Текст1",
-      photoUrl: "./img/logo.jpg",
-    },
-  ]
-
   const itemsPerPage = 3
 
-  const sortedObjects = objects.sort(
+  const sortedObjects = currentReportItems.sort(
     (a, b) => a.positionNumber - b.positionNumber
   )
 
@@ -75,8 +24,7 @@ const CurrentReport = () => {
     }
   }
 
-  
-  if (objects.length === 0) {
+  if (currentReportItems.length === 0) {
     return null
   }
 
@@ -92,15 +40,16 @@ const CurrentReport = () => {
                 <div className="current-report__card report-card">
                   <div className="report-card__info-container">
                     <div className="report-card__text-container">
-                      <h2 className="report-card__name">{object.title}</h2>
+                      <p className="report-card__date">{object.date}</p>
+                      <p className="report-card__name">{object.title}</p>
                       <p className="report-card__mobile-text">{object.text}</p>
-                      {expandedIndexes.includes(index) ? (
-                        <p className="report-card__text">{object.text}</p>
-                      ) : (
-                        <p className="report-card__text">
-                          {`${object.text.slice(0, 220)}...`}
-                        </p>
-                      )}
+                      <p
+                        className={`report-card__text ${
+                          expandedIndexes.includes(index) ? "expanded" : ""
+                        }`}
+                      >
+                        {object.text}
+                      </p>
                       <button
                         className="report-card__btn"
                         onClick={() => toggleExpand(index)}
@@ -116,7 +65,7 @@ const CurrentReport = () => {
                     <img
                       className="report-card__img"
                       src={object.photoUrl}
-                      alt={object.photoUrl}
+                      alt={`Report ${index + 1}`}
                     />
                   </div>
                 </div>
@@ -126,20 +75,21 @@ const CurrentReport = () => {
                     <img
                       className="report-card__img"
                       src={object.photoUrl}
-                      alt={object.photoUrl}
+                      alt={`Report ${index + 1}`}
                     />
                   </div>
                   <div className="report-card__info-container">
                     <div className="report-card__text-container">
-                      <h2 className="report-card__name">{object.title}</h2>
+                      <p className="report-card__date">{object.date}</p>
+                      <p className="report-card__name">{object.title}</p>
                       <p className="report-card__mobile-text">{object.text}</p>
-                      {expandedIndexes.includes(index) ? (
-                        <p className="report-card__text">{object.text}</p>
-                      ) : (
-                        <p className="report-card__text">
-                          {`${object.text.slice(0, 220)}...`}
-                        </p>
-                      )}
+                      <p
+                        className={`report-card__text ${
+                          expandedIndexes.includes(index) ? "expanded" : ""
+                        }`}
+                      >
+                        {object.text}
+                      </p>
                       <button
                         className="report-card__btn"
                         onClick={() => toggleExpand(index)}

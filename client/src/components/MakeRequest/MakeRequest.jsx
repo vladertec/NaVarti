@@ -32,7 +32,7 @@ const PrevArrow = ({ onClick }) => {
   )
 }
 
-const MakeRequest = ({ RequestItems }) => {
+const MakeRequest = ({ requestItems }) => {
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -44,7 +44,7 @@ const MakeRequest = ({ RequestItems }) => {
     prevArrow: <PrevArrow />,
   }
 
-  if (RequestItems.length === 0) {
+  if (requestItems.length === 0) {
     return null
   }
 
@@ -54,12 +54,12 @@ const MakeRequest = ({ RequestItems }) => {
       <div className="make-request__container">
         <p className="make-request__title">Зробити запит</p>
         <div className="make-request__card-container">
-          {RequestItems.map((item, index) => (
+          {requestItems.map((item, index) => (
             <div className="make-request__card" key={index}>
               <img
                 className="make-request__card-img"
                 src={item.photoUrl}
-                alt={item.title}
+                alt={`Request ${index + 1}`}
               />
               <h2 className="make-request__card-name">{item.title}</h2>
               <p className="make-request__card-text">{item.text}</p>
@@ -75,12 +75,12 @@ const MakeRequest = ({ RequestItems }) => {
         </div>
         <div className="make-request__mobile-slider">
           <Slider {...sliderSettings}>
-            {RequestItems.map((item, index) => (
+            {requestItems.map((item, index) => (
               <div className="make-request__card" key={index}>
                 <img
                   className="make-request__card-img"
                   src={item.photoUrl}
-                  alt={item.title}
+                  alt={`Request ${index + 1}`}
                 />
                 <h2 className="make-request__card-name">{item.title}</h2>
                 <p className="make-request__card-text">{item.text}</p>

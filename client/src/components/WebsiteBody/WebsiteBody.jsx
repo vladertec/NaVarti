@@ -7,8 +7,7 @@ import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded"
 function WebsiteBody() {
   return (
     <div className="website-body">
-        <Header />
-
+      <Header />
       <div className="website-body__content">
         <Routing />
       </div>

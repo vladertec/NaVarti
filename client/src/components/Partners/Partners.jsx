@@ -3,15 +3,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-const Partners = () => {
-  const slides = [
-    "./img/logoWeb.jpg",
-    "./img/logoWeb.jpg",
-    "./img/logoWeb.jpg",
-    "./img/logoWeb.jpg",
-    "./img/qr-code.png",
-  ]
-
+const Partners = ({ partnerItems }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -33,7 +25,7 @@ const Partners = () => {
     ],
   }
 
-  if (slides.length === 0) {
+  if (partnerItems.length === 0) {
     return null
   }
 
@@ -41,12 +33,12 @@ const Partners = () => {
     <div className="partners-carousel">
       <p className="partners-carousel__title">Наші партнери</p>
       <Slider {...settings}>
-        {slides.map((slide, index) => (
+        {partnerItems.map((slide, index) => (
           <div key={index} className="partner-slide">
             <div className="partner-card">
               <img
-                src={slide}
-                alt={`Partner Logo ${index}`}
+                src={slide.photoUrl}
+                alt={`Partner logo ${index + 1}`}
                 className="partner-logo"
               />
             </div>

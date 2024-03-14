@@ -30,17 +30,19 @@
   &__card {
     display: flex;
     width: 100%;
-    gap: 8%;
+    gap: 6%;
 
     .report-card {
       &__img-container {
-        width: 36%;
+        width: 41%;
+        @include flex-container;
       }
       &__img {
         width: 100%;
         max-width: 100%;
         height: auto;
         transition: transform 0.5s ease;
+        border-radius: $photo-radius-border;
       }
 
       &__info-container {
@@ -56,8 +58,14 @@
         line-height: 1.2;
       }
 
+      &__date {
+        text-align: start;
+        font-size: 1.2vw;
+      }
+
       &__name {
-        font-size: 1.7vw;
+        margin-top: 2%;
+        font-size: 1.5vw;
         font-weight: bold;
         text-align: start;
       }
@@ -69,7 +77,17 @@
       &__text {
         font-size: 1.4vw;
         margin-top: 4%;
+        line-height: 1.2;
         text-align: justify;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: -webkit-line-clamp 0.5s ease;
+      }
+
+      &__text.expanded {
+        -webkit-line-clamp: unset;
       }
 
       &__btn {
@@ -151,12 +169,14 @@
       .report-card {
         &__img-container {
           width: 60%;
+          @include flex-container;
         }
 
         &__img {
           width: 100%;
           max-width: 100%;
           height: auto;
+          border-radius: $mobile-photo-radius-border;
         }
 
         &__info-container {
@@ -168,10 +188,13 @@
           border-radius: 0;
           background-color: transparent;
         }
+        &__date {
+          font-size: 1.7vw;
+        }
 
         &__name {
           margin-top: 3%;
-          font-size: 3.8vw;
+          font-size: 2.7vw;
           font-weight: 600;
           font-family: $font-namu;
         }
@@ -180,13 +203,18 @@
           display: none;
         }
 
-        &__text-splice {
+        &__text.expanded {
           display: none;
+        }
+
+        &__text.expanded {
+          display: block;
+          -webkit-line-clamp: unset;
         }
 
         &__mobile-text {
           display: block;
-          font-size: 2.3vw;
+          font-size: 2.2vw;
           margin-top: 6%;
           text-align: justify;
         }
@@ -204,6 +232,7 @@
     &__dot {
       height: 3.2vw;
       width: 3.2vw;
+      margin: 0 1.2vw;
     }
   }
 }

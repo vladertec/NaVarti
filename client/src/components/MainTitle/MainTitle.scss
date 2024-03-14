@@ -22,6 +22,7 @@
     margin-top: 9%;
     font-size: 2.5vw;
     font-weight: 500;
+    width: 55%;
 
     &__text {
       margin: 7% 35% 0 0;
@@ -83,11 +84,12 @@
       width: 100%;
       max-width: 95%;
       height: auto;
+      border-radius: $photo-radius-border;
     }
   }
 
   @include phone {
-    padding: 13% 10% 13% 10%;
+    padding: 15% 10% 13% 10%;
     background-image: none;
 
     &__container {
@@ -99,7 +101,7 @@
 
     .info-container {
       width: 100%;
-      margin-top: 4%;
+      margin-top: 6%;
       text-shadow: none;
 
       &__title {
@@ -114,7 +116,7 @@
 
       &__btn-container {
         flex-direction: column;
-        margin: 13% 0 1% 0;
+        margin: 10% 0 1% 0;
       }
 
       &__btn {
@@ -141,8 +143,10 @@
       }
 
       &__img {
-        max-width: 65%;
-        height: 30%;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: $mobile-photo-radius-border;
       }
     }
   }

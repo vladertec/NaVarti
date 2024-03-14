@@ -35,7 +35,7 @@ const MainTitle = () => {
 
         <div className="info-container__img-container">
           <img
-            src="./img/logoBackground.png"
+            src="./img/content/mainTitle/mainTitle.jpg"
             className="info-container__img"
             alt="Title illustration"
           />

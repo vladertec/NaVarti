@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const Question = ({ faq }) => {
+const Question = ({ questionItems }) => {
   const [activeIndex, setActiveIndex] = useState(null)
 
   const handleToggle = (index) => {
@@ -19,7 +19,7 @@ const Question = ({ faq }) => {
           сфокусуватися на основних 4 напрямках ми встигли Перед тим як
           сфокусуватися на основних 4 напрямках ми встигли
         </p>
-        {faq.map((item, index) => (
+        {questionItems.map((item, index) => (
           <div className="question__item" key={index}>
             <button
               className="question__question-btn"

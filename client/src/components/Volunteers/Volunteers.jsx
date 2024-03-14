@@ -32,13 +32,13 @@ const PrevArrow = ({ onClick }) => {
   )
 }
 
-const Volunteers = () => {
+const Volunteers = ({ volunteerPositionItems }) => {
   const settings = {
-    dots: true,
+    dots: volunteerPositionItems.length > 4,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     autoplay: true,
     autoplaySpeed: 90000000,
     cssEase: "linear",
@@ -50,40 +50,7 @@ const Volunteers = () => {
     window.location.href = "https://send.monobank.ua/jar/3iDPWEskZm"
   }
 
-  const RequestItems = [
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1",
-    },
-    {
-      photoUrl: "./img/logo.jpg",
-      title: "Підзаголовок",
-      text: "Текстfd1",
-    },
-  ]
-
-  if (RequestItems.length === 0) {
+  if (volunteerPositionItems.length === 0) {
     return null
   }
 
@@ -93,12 +60,12 @@ const Volunteers = () => {
       <div className="volunteer-carousel__container">
         <p className="volunteer-carousel__mobile-title">Волонтери</p>
         <Slider {...settings}>
-          {RequestItems.map((slide, index) => (
+          {volunteerPositionItems.map((slide, index) => (
             <div key={index} className="volunteer-slide">
               <div className="volunteer-card">
                 <img
                   src={slide.photoUrl}
-                  alt={`Volunteer Logo ${index}`}
+                  alt={`Volunteer member ${index + 1}`}
                   className="volunteer-logo"
                 />
                 <p className="volunteer-title">{slide.title}</p>

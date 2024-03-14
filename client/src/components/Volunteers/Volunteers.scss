@@ -26,6 +26,9 @@
     padding: 10%;
     @include flex-container;
     gap: 20%;
+    &:hover {
+      opacity: 93%;
+    }
   }
 
   .volunteer-card {
@@ -35,6 +38,7 @@
     .volunteer-logo {
       max-width: 100%;
       height: auto;
+      border-radius: $photo-radius-border;
     }
 
     .volunteer-title {
@@ -126,6 +130,7 @@
       .volunteer-logo {
         max-width: 100%;
         height: auto;
+        border-radius: $photo-radius-border;
       }
 
       .volunteer-title {

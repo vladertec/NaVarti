@@ -3,10 +3,10 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward"
 import CheckIcon from "@mui/icons-material/Check"
 import LinkIcon from "@mui/icons-material/Link"
 
-const DonationDetails = ({ details }) => {
+const DonationDetails = ({ donationDetailsItems }) => {
   const [copiedIndex, setCopiedIndex] = useState(null)
   const [showDetails, setShowDetails] = useState(
-    Array(details.length).fill(false)
+    Array(donationDetailsItems.length).fill(false)
   )
 
   const handleCopy = (text, index) => {
@@ -22,7 +22,7 @@ const DonationDetails = ({ details }) => {
     setShowDetails(updatedShowDetails)
   }
 
-  if (details.length === 0) {
+  if (donationDetailsItems.length === 0) {
     return null
   }
 
@@ -30,7 +30,7 @@ const DonationDetails = ({ details }) => {
     <div className="donation-details">
       <p className="donation-details__title">Реквізити фонду</p>
       <div className="donation-details__container">
-        {details.map((detail, index) => (
+        {donationDetailsItems.map((detail, index) => (
           <div
             key={index}
             className="donation-details__item donation-container"
@@ -99,20 +99,21 @@ const DonationDetails = ({ details }) => {
                   Назва підприємства/company Name:
                 </p>
                 <p className="donation-container__additional-text">
-                  БО БФ НА ВАРТІ ЖИТТЯ
+                  {detail.companyName}
                 </p>
+                {detail.recipientCode && (
+                  <p className="donation-container__additional-text">
+                    Код одержувача: {detail.recipientCode}
+                  </p>
+                )}
                 <p className="donation-container__additional-text">
-                  Код одержувача: 45258405
-                </p>
-                <p className="donation-container__additional-text">
-                  IBAN Code: {detail.account}{" "}
+                  IBAN Code: {detail.account}
                 </p>
                 <p className="donation-container__additional-text">
                   Назва банку/Name of the bank:
                 </p>
                 <p className="donation-container__additional-text">
-                  JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001,
-                  UKRAINE
+                  {detail.bankName}
                 </p>
               </div>
             )}

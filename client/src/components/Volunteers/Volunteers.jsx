@@ -40,7 +40,7 @@ const Volunteers = ({ volunteerPositionItems }) => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 90000000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,

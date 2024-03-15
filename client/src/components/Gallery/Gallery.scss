@@ -1,5 +1,5 @@
 .gallery {
-  padding: 9% 15% 6% 15%;
+  padding: 11% 15% 6% 15%;
   display: grid;
   grid-template-areas:
     "a b c"
@@ -13,33 +13,12 @@
     @include flex-container;
   }
 
-  &__first-photo {
-    grid-area: a;
-  }
-
-  &__second-photo {
-    grid-area: b;
-  }
-
-  &__third-photo {
-    grid-area: c;
-  }
-
-  &__fourth-photo {
-    grid-area: d;
-  }
-
-  &__fifth-photo {
-    grid-area: e;
-  }
-  &__sixth-photo {
-    grid-area: f;
-  }
-
   &__img {
     width: 100%;
     max-width: 100%;
     height: auto;
+    border-radius: $photo-radius-border;
+    border: 3px solid rgb(72, 118, 186);
   }
 
   @include phone {
@@ -54,6 +33,8 @@
     &__img {
       width: 100%;
       height: auto;
+      border-radius: $mobile-photo-radius-border;
+      border: 1px solid rgb(72, 118, 186);
     }
   }
 }

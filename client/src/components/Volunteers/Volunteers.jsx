@@ -38,7 +38,7 @@ const Volunteers = ({ volunteerPositionItems }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 90000000,
     cssEase: "linear",

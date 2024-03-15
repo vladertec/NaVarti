@@ -5,7 +5,7 @@ const Error = () => {
   return (
     <div className="error">
       <div className="error__img-container">
-        <img className="error__img" alt="error" src="./img/error.png" />
+        <img className="error__img" alt="error" src="./img/error/error.png" />
       </div>
       <div className="error__message-container">
         <p className="error__message">Ooops! Page not found...</p>

@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer__logo-container">
           <img
             className="footer__logo-img"
-            src="./img/logo.jpg"
+            src="./img/footerHeader/logo.jpg"
             alt="footer-logo"
           />
           <a className="footer__logo-text" href="#">
@@ -36,13 +36,13 @@ const Footer = () => {
           </a>
           <a
             className="footer__socials-item  footer__tiktok-icon"
-            href="https://www.facebook.com/profile.php?id=61554088658276"
+            href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
           >
             <TikTokIcon />
           </a>
           <a
             className="footer__socials-item"
-            href="https://www.facebook.com/profile.php?id=61554088658276"
+            href="https://t.me/na_varty_zhyttya"
           >
             <TelegramIcon className="footer__social-icon" />
           </a>
@@ -50,11 +50,11 @@ const Footer = () => {
         <div className="footer__info-container">
           <p className="footer__info-title">Контакти:</p>
           <p className="footer__info-text">пн-пт 10:00-19:00</p>
-          <p className="footer__info-text">+380900000000</p>
+          <p className="footer__info-text">+380673890823</p>
           <p className="footer__info-text">
-            dfgdgfdg sjhbfsdjb sdhf sdhfv sdhgfvs sdhgfv sdhgfv hsdvf
+            Україна, 08200, Київська обл., місто Ірпінь, вул. Глазового Павла 84
           </p>
-          <p className="footer__info-text">sarnavsk2001@gmail.com</p>
+          <p className="footer__info-text">bfnavartyzyttya@gmail.com</p>
         </div>
         <div className="footer__menu-container">
           <ScrollLink
@@ -93,7 +93,7 @@ const Footer = () => {
         <div className="footer__qr-container">
           <img
             className="footer__qr-code"
-            src="./img/qr-code.png"
+            src="./img/footerHeader/qr-code.png"
             alt="qr-code"
           />
         </div>

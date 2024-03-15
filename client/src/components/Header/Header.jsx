@@ -24,7 +24,7 @@ const Header = () => {
       <RouterLink to="/home" className="header__logo-wrapper logo-container">
         <img
           className="logo-container__logo-img"
-          src="./img/logoWeb.jpg" 
+          src="./img/footerHeader/logoWeb.jpg"
           alt="Header logo"
         />
       </RouterLink>
@@ -101,9 +101,9 @@ const Header = () => {
             </li>
           </ul>
           <div className="mobile-sidebar-menu__info-container">
-            <p className="mobile-sidebar-menu__number">+380900000000</p>
+            <p className="mobile-sidebar-menu__number">+380673890823</p>
             <p className="mobile-sidebar-menu__email">
-              Тут буде почта @gmail.com
+              bfnavartyzyttya@gmail.com
             </p>
             <div className="mobile-sidebar-menu__icon-container">
               <a
@@ -120,13 +120,13 @@ const Header = () => {
               </a>
               <a
                 className="mobile-sidebar-menu__socials-item mobile-sidebar-menu__socials-item--tiktok-icon"
-                href="https://www.facebook.com/profile.php?id=61554088658276"
+                href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
               >
                 <TikTokIcon />
               </a>
               <a
                 className="mobile-sidebar-menu__socials-item"
-                href="https://www.facebook.com/profile.php?id=61554088658276"
+                href="https://t.me/na_varty_zhyttya"
               >
                 <TelegramIcon className="mobile-sidebar-menu__social-icon" />
               </a>
@@ -187,13 +187,13 @@ const Header = () => {
             </a>
             <a
               className="social-container__socials-item social-container__tiktok-icon"
-              href="https://www.facebook.com/profile.php?id=61554088658276"
+              href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
             >
               <TikTokIcon />
             </a>
             <a
               className="social-container__socials-item"
-              href="https://www.facebook.com/profile.php?id=61554088658276"
+              href="https://t.me/na_varty_zhyttya"
             >
               <TelegramIcon className="social-container__social-icon" />
             </a>

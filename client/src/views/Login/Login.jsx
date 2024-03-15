@@ -42,7 +42,7 @@ const Login = () => {
       <div className="login__login-container">
         <img
           className="login__img"
-          src="./img/logo.jpg"
+          src="./img/footerHeader/logo.jpg"
           alt="Business view - Reports"
         />
         <div>

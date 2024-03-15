@@ -47,7 +47,7 @@ const CurrentFee = ({ currentFeeItems }) => {
             <div className="current-fee-slide__card">
               <img
                 src={slide.photoUrl}
-                alt={`Current fee Logo ${index}`}
+                alt={`Current fee Logo ${index + 1}`}
                 className="current-fee-slide__logo"
               />
               <p className="current-fee-slide__title">{slide.title}</p>

@@ -19,6 +19,9 @@
     height: auto;
     border-radius: $photo-radius-border;
     border: 3px solid rgb(72, 118, 186);
+    &:hover {
+      opacity: 93%;
+    }
   }
 
   @include phone {

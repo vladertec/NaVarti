@@ -18,7 +18,7 @@
     max-width: 100%;
     height: auto;
     border-radius: $photo-radius-border;
-    border: 3px solid rgb(72, 118, 186);
+    border: 0.2vw solid rgb(72, 118, 186);
     &:hover {
       opacity: 93%;
     }
@@ -37,7 +37,7 @@
       width: 100%;
       height: auto;
       border-radius: $mobile-photo-radius-border;
-      border: 1px solid rgb(72, 118, 186);
+      border: 0.5vw solid rgb(72, 118, 186);
     }
   }
 }

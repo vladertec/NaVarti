@@ -68,17 +68,17 @@ const Home = () => {
 
   const volunteerPositionItems = [
     {
-      photoUrl: "./img/content/volunteer/alexandra.jpg",
+      photoUrl: "./img/content/volunteer/alexandra.png",
       title: "Олександра",
       text: "Фандрайзер",
     },
     {
-      photoUrl: "./img/content/volunteer/viktor.jpg",
+      photoUrl: "./img/content/volunteer/viktor.png",
       title: "Віктор",
       text: "Водій",
     },
     {
-      photoUrl: "./img/content/volunteer/german.jpg",
+      photoUrl: "./img/content/volunteer/german.png",
       title: "Герман",
       text: "Волонтер",
     },

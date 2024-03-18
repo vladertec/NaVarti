@@ -3,7 +3,6 @@ import InstagramIcon from "@mui/icons-material/Instagram"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import TelegramIcon from "@mui/icons-material/Telegram"
 import { Link as ScrollLink } from "react-scroll"
-import { Link as RouterLink } from "react-router-dom"
 import TikTokIcon from "../../ulits/svg/TikTokIcon"
 
 const Footer = () => {

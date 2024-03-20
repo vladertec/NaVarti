@@ -68,7 +68,7 @@ const CurrentFee = ({ currentFeeItems }) => {
                 className="current-fee-slide__btn current-fee-slide__btn--information"
                 onClick={() => handleExpand(index)}
               >
-                {expandedIndex === index ? "Згорнути" : "Детальніше"}
+                {expandedIndex === index ? "ЗГОРНУТИ" : "ДЕТАЛЬНІШЕ"}
                 <ArrowOutwardIcon className="current-fee-slide__btn-icon" />
               </button>
             </div>

@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import { Link as ScrollLink } from "react-scroll"
 import { Link as RouterLink } from "react-router-dom"
-import InstagramIcon from "@mui/icons-material/Instagram"
-import FacebookIcon from "@mui/icons-material/Facebook"
-import TelegramIcon from "@mui/icons-material/Telegram"
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded"
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded"
 import TikTokIcon from "../../ulits/svg/TikTokIcon"
+import FacebookIcon from "../../ulits/svg/FacebookIcon"
+import InstagramIcon from "../../ulits/svg/InstagramIcon"
+import TelegramIcon from "../../ulits/svg/TelegramIcon"
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -119,7 +119,7 @@ const Header = () => {
                 <FacebookIcon className="mobile-sidebar-menu__social-icon" />
               </a>
               <a
-                className="mobile-sidebar-menu__socials-item mobile-sidebar-menu__socials-item--tiktok-icon"
+                className="mobile-sidebar-menu__socials-item"
                 href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
               >
                 <TikTokIcon />

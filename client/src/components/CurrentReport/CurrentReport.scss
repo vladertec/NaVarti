@@ -1,9 +1,10 @@
 .current-report {
-  padding: 8% 0 3% 0;
+  padding: 8% 12% 3% 12%;
   font-family: $font-montserrat;
   background-image: url("../../../public/img/desktopBackground/currentReport.png");
   background-size: 100% auto;
   background-position: center top;
+  overflow-x: hidden;
 
   &__title {
     font-size: 2.4vw;
@@ -29,14 +30,15 @@
 
   &__card {
     display: flex;
+    padding: 2% 0;
     width: 100%;
-    gap: 6%;
+    gap: 4%;
 
     .report-card {
       &__img-container {
-        width: 41%;
-        @include flex-container;
+        width: 39.5%;
       }
+
       &__img {
         width: 100%;
         max-width: 100%;
@@ -117,32 +119,30 @@
     }
   }
 
-  &__controls {
-    display: flex;
-    align-items: center;
-    margin-top: 5%;
-  }
-
-  &__dot {
-    height: 1.2vw;
-    width: 1.2vw;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 0.8vw;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #999;
+  .slick-dots {
+    position: static;
+    li {
+      margin: -0.2%;
+      padding: 0 2%;
+      button {
+        &::before {
+          font-size: 1.5vw;
+        }
+      }
     }
   }
 
-  &__dot.active {
-    background-color: #333;
+  .slick-next:before,
+  .slick-prev:before {
+    display: none;
+  }
+
+  .slick-prev {
+    display: none;
   }
 
   @include phone {
-    padding: 7% 0 3% 0;
+    padding: 10% 12% 3% 12%;
     background-image: none;
 
     &__title {
@@ -157,11 +157,12 @@
     }
 
     &__slide {
-      padding: 2% 0;
+      padding: 2% 0 3% 0;
     }
 
     &__card {
-      padding: 5% 5%;
+      padding: 4% 5%;
+      margin-top: 5%;
       gap: 4%;
       background-color: $grey-color;
       border-radius: $mobile-radius-border;
@@ -189,7 +190,7 @@
           background-color: transparent;
         }
         &__date {
-          font-size: 1.7vw;
+          font-size: 1.8vw;
         }
 
         &__name {
@@ -225,14 +226,15 @@
       }
     }
 
-    &__controls {
-      margin-top: 30px;
-    }
-
-    &__dot {
-      height: 3.2vw;
-      width: 3.2vw;
-      margin: 0 1.2vw;
+    .slick-dots {
+      li {
+        margin: 0.5%;
+        button {
+          &::before {
+            font-size: 4vw;
+          }
+        }
+      }
     }
   }
 }

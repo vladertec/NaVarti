@@ -49,18 +49,7 @@
     padding: 20% 0;
     cursor: pointer;
     display: inline-block;
-  }
-
-  &__social-icon {
-    font-size: 2.7vw !important;
-    &:hover {
-      color: $blue-color;
-    }
-  }
-
-  &__tiktok-icon {
     width: 60%;
-    height: auto;
     &:hover {
       fill: $blue-color;
     }
@@ -87,16 +76,17 @@
 
   &__menu-container {
     width: 30%;
-    @include grid-container;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-row-gap: 100%;
+    @include flex-container;
+    flex-wrap: wrap;
+    padding-left: 2%;
   }
 
   &__nav-item {
-    font-size: 1.3vw;
+    width: 40%;
+    margin: 10% 0 0 10%;
+    font-size: 1.2vw;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 450;
     &:hover {
       color: $blue-color;
     }
@@ -128,8 +118,9 @@
     background-image: none;
 
     &__main-container {
-      padding: 0 12% 3% 12%;
+      padding: 5% 12% 3% 12%;
     }
+
     &__logo-container {
       width: 30%;
       order: 1;
@@ -146,15 +137,7 @@
     }
 
     &__socials-item {
-      padding: 10% 0;
-    }
-
-    &__social-icon {
-      font-size: 3.6vw !important;
-    }
-
-    &__tiktok-icon {
-      width: 45%;
+      padding: 13% 0;
     }
 
     &__info-container {

@@ -36,11 +36,12 @@
       }
 
       &__number {
-        font-size: 1.7vw;
+        font-size: 1.65vw;
         background-color: #cad3dc;
         padding: 1.3% 2%;
         border-radius: $radius-border;
         width: 57%;
+        font-family: $font-namu;
       }
 
       &__btn-container {
@@ -110,21 +111,22 @@
       }
 
       &__additional-info-container {
-        margin-top: 4%;
+        margin-top: 3%;
         text-align: justify;
         padding: 0 3%;
       }
 
       &__additional-text {
-        font-size: 1.5vw;
-        margin-top: 2%;
+        font-size: 1.57vw;
+        line-height: 1.3;
+        margin-top: 3%;
         font-weight: 500;
       }
     }
   }
 
   @include phone {
-    padding: 13% 10% 10% 10%;
+    padding: 15% 10% 10% 10%;
 
     &__title {
       font-size: 3.9vw;
@@ -154,7 +156,7 @@
         }
 
         &__number {
-          font-size: 2.3vw;
+          font-size: 2.25vw;
           padding: 1.2% 3.5%;
           font-weight: 500;
           @include flex-container;
@@ -202,12 +204,8 @@
           margin-left: 3%;
         }
 
-        &__additional-info-container {
-          margin-top: 4%;
-        }
-
         &__additional-text {
-          font-size: 1.9vw;
+          font-size: 2vw;
           margin-top: 2%;
         }
       }

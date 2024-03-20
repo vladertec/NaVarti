@@ -96,11 +96,14 @@ const DonationDetails = ({ donationDetailsItems }) => {
                   {detail.description}
                 </p>
                 <p className="donation-container__additional-text">
-                  Назва підприємства/company Name:
+                  Назва підприємства/company Name: {detail.companyName}
                 </p>
+
                 <p className="donation-container__additional-text">
-                  {detail.companyName}
+                  Призначення платежу/purpose of payment:{" "}
+                  {detail.paymentPurpose}
                 </p>
+
                 {detail.recipientCode && (
                   <p className="donation-container__additional-text">
                     Код одержувача: {detail.recipientCode}
@@ -110,10 +113,7 @@ const DonationDetails = ({ donationDetailsItems }) => {
                   IBAN Code: {detail.account}
                 </p>
                 <p className="donation-container__additional-text">
-                  Назва банку/Name of the bank:
-                </p>
-                <p className="donation-container__additional-text">
-                  {detail.bankName}
+                  Назва банку/Name of the bank: {detail.bankName}
                 </p>
               </div>
             )}

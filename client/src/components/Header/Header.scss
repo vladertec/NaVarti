@@ -35,7 +35,7 @@
       @include flex-container;
       justify-content: space-between;
       flex-direction: row;
-      width: 70%;
+      width: 75%;
     }
 
     &__nav-item {
@@ -51,25 +51,16 @@
     }
 
     .social-container {
-      width: 30%;
+      width: 25%;
       @include flex-container;
       justify-content: space-between;
       cursor: pointer;
 
       &__socials-item {
+        margin-top: 2%;
         cursor: pointer;
         display: inline-block;
-      }
-
-      &__social-icon {
-        font-size: 2.1vw;
-        &:hover {
-          color: $blue-color;
-        }
-      }
-
-      &__tiktok-icon {
-        width: 12%;
+        width: 14%;
         height: auto;
         &:hover {
           fill: $blue-color;
@@ -163,13 +154,13 @@
       }
 
       &__email {
-        margin-top: 8%;
+        margin-top: 10%;
         font-size: 4.2vw;
         font-weight: 500;
       }
 
       &__icon-container {
-        margin-top: 8%;
+        margin-top: 10%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -177,16 +168,7 @@
       }
 
       &__socials-item {
-        display: inline-block;
-      }
-
-      &__social-icon {
-        font-size: 8vw;
-      }
-
-      &__socials-item--tiktok-icon {
-        width: 10%;
-        height: auto;
+        width: 11%;
       }
     }
 

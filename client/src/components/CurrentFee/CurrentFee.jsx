@@ -60,7 +60,7 @@ const CurrentFee = ({ currentFeeItems }) => {
               </p>
               <button
                 className="current-fee-slide__btn"
-                onClick={() => (window.location.href = slide.link)}
+                onClick={() => window.open(slide.link, "_blank")}
               >
                 ПІДТРИМАТИ ЗБІР
               </button>

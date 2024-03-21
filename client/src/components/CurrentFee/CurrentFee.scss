@@ -2,6 +2,9 @@
   padding: 3% 0;
   font-family: $font-montserrat;
   overflow-x: hidden;
+  background-image: url("../../../public/img/desktopBackground/currentFee.jpg");
+  background-size: 100% auto;
+  background-position: center top -30px;
 
   &__title {
     margin-bottom: 4%;
@@ -135,6 +138,7 @@
 
   @include phone {
     padding: 6% 1% 3% 1%;
+    background-image: none;
 
     &__title {
       margin-bottom: 5%;

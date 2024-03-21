@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll"
 
 const MainTitle = () => {
   const handleDonateClick = () => {
-    window.location.href = "https://send.monobank.ua/jar/3iDPWEskZm"
+    window.open("https://send.monobank.ua/jar/3iDPWEskZm", "_blank")
   }
   return (
     <div className="title">

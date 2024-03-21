@@ -101,7 +101,9 @@ const Header = () => {
             </li>
           </ul>
           <div className="mobile-sidebar-menu__info-container">
-            <p className="mobile-sidebar-menu__number">+380673890823</p>
+            <a className="mobile-sidebar-menu__number" href="tel:+380673890823">
+              +380673890823
+            </a>
             <p className="mobile-sidebar-menu__email">
               bfnavartyzyttya@gmail.com
             </p>

@@ -54,7 +54,7 @@ const Home = () => {
     },
     {
       photoUrl: "./img/content/ourTeam/Vitaly.jpg",
-      title: "Віталій Нічіпорчук",
+      title: "Віталій Ничипорчук",
       position: "Засновник",
       text: "Засновник компанії BUDAIR активно підтримує військових, надаючи медикаменти та автомобілі з початку вторгнення. Також допомагає дітям військових, забезпечуючи підтримку на всіх етапах їхнього зростання, включаючи регулярні відвідини передової лінії фронту для особистої доставки необхідного.",
     },
@@ -78,14 +78,19 @@ const Home = () => {
       text: "Фандрайзер",
     },
     {
-      photoUrl: "./img/content/volunteer/viktor.png",
-      title: "Віктор",
-      text: "Водій",
+      photoUrl: "./img/content/volunteer/vachik.png",
+      title: "Вачік",
+      text: "Волонтер",
     },
     {
       photoUrl: "./img/content/volunteer/german.png",
       title: "Герман",
       text: "Волонтер",
+    },
+    {
+      photoUrl: "./img/content/volunteer/viktor.png",
+      title: "Віктор",
+      text: "Водій",
     },
   ]
 
@@ -146,7 +151,7 @@ const Home = () => {
     {
       photoUrl: "./img/footerHeader/logo.jpg",
       title: "Допомога для дітей",
-      text: "Якщо Вам потрібна допомога для вашої дитини, будь ласка, заповніть форму та очікуйте нашого відгуку.",
+      text: "Якщо Вам потрібна допомога для вашої дитини, будь ласка, заповніть дану форму та очікуйте нашого зворотного зв'язку.",
       link: "https://3vm4ue3e.forms.app/untitled-form",
     },
     {
@@ -168,7 +173,7 @@ const Home = () => {
     { name: "Мандаринів", quantity: 7, unit: "кг." },
     { name: "Пластикових нош", quantity: 20, unit: "шт." },
     { name: "Подарунки дітям", quantity: 28, unit: "шт." },
-    { name: "Противогазів", quantity: 53, unit: "шт." },
+    { name: "Протигазів", quantity: 53, unit: "шт." },
     { name: "Навігаторів", quantity: 4, unit: "шт." },
     { name: "Камер ніч. бачення", quantity: 28, unit: "шт." },
     { name: "Банок тушкованої", quantity: 300, unit: "шт." },

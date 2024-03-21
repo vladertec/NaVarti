@@ -20,7 +20,6 @@
   &__container {
     background-color: $grey-color;
     border-radius: $radius-border;
-    padding-bottom: 3%;
   }
 
   .volunteer-slide {
@@ -122,6 +121,7 @@
 
     &__container {
       border-radius: $mobile-radius-border;
+      padding-bottom: 3%;
     }
 
     .volunteer-card {

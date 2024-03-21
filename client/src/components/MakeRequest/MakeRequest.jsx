@@ -65,7 +65,7 @@ const MakeRequest = ({ requestItems }) => {
               <p className="make-request__card-text">{item.text}</p>
               <button
                 className="make-request__btn"
-                onClick={() => (window.location.href = item.link)}
+                onClick={() => window.open(item.link, "_blank")}
               >
                 ЗАПОВНИТИ ФОРМУ
                 <ModeEditIcon className="make-request__btn-icon" />
@@ -86,7 +86,7 @@ const MakeRequest = ({ requestItems }) => {
                 <p className="make-request__card-text">{item.text}</p>
                 <button
                   className="make-request__btn"
-                  onClick={() => (window.location.href = item.link)}
+                  onClick={() => window.open(item.link, "_blank")}
                 >
                   ЗАПОВНИТИ ФОРМУ
                 </button>

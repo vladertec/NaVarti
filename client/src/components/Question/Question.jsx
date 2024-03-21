@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Question = ({ questionItems }) => {
   const [activeIndex, setActiveIndex] = useState(null)
@@ -94,7 +95,7 @@ const Question = ({ questionItems }) => {
                   activeIndex === index ? "question__icon--active" : ""
                 }`}
               >
-                ^
+                <KeyboardArrowDownIcon               className="question__arrow-icon"/>
               </span>
             </button>
             <div

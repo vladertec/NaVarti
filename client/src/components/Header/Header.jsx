@@ -108,24 +108,28 @@ const Header = () => {
             <div className="mobile-sidebar-menu__icon-container">
               <a
                 className="mobile-sidebar-menu__socials-item"
+                target="_blank"
                 href="https://www.instagram.com/na_varty_zhyttya?igsh=MWc1MzdxbG8wczAxbg=="
               >
                 <InstagramIcon className="mobile-sidebar-menu__social-icon" />
               </a>
               <a
                 className="mobile-sidebar-menu__socials-item"
+                target="_blank"
                 href="https://www.facebook.com/profile.php?id=61554088658276"
               >
                 <FacebookIcon className="mobile-sidebar-menu__social-icon" />
               </a>
               <a
                 className="mobile-sidebar-menu__socials-item"
+                target="_blank"
                 href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
               >
                 <TikTokIcon />
               </a>
               <a
                 className="mobile-sidebar-menu__socials-item"
+                target="_blank"
                 href="https://t.me/na_varty_zhyttya"
               >
                 <TelegramIcon className="mobile-sidebar-menu__social-icon" />
@@ -175,24 +179,28 @@ const Header = () => {
           <div className="info-container__socials social-container">
             <a
               className="social-container__socials-item"
+              target="_blank"
               href="https://www.instagram.com/na_varty_zhyttya?igsh=MWc1MzdxbG8wczAxbg=="
             >
               <InstagramIcon className="social-container__social-icon" />
             </a>
             <a
               className="social-container__socials-item"
+              target="_blank"
               href="https://www.facebook.com/profile.php?id=61554088658276"
             >
               <FacebookIcon className="social-container__social-icon" />
             </a>
             <a
               className="social-container__socials-item social-container__tiktok-icon"
+              target="_blank"
               href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
             >
               <TikTokIcon />
             </a>
             <a
               className="social-container__socials-item"
+              target="_blank"
               href="https://t.me/na_varty_zhyttya"
             >
               <TelegramIcon className="social-container__social-icon" />

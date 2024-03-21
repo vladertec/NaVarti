@@ -3,16 +3,13 @@ import Slider from "react-slick"
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward"
 
 const CurrentReport = ({ currentReportItems }) => {
-  const [expandedIndexes, setExpandedIndexes] = useState([])
+  const [expandedIndex, setExpandedIndex] = useState(null)
 
   const toggleExpand = (index) => {
-    const expandedIndex = expandedIndexes.indexOf(index)
-    if (expandedIndex === -1) {
-      setExpandedIndexes([...expandedIndexes, index])
+    if (expandedIndex === index) {
+      setExpandedIndex(null)
     } else {
-      const newExpandedIndexes = [...expandedIndexes]
-      newExpandedIndexes.splice(expandedIndex, 1)
-      setExpandedIndexes(newExpandedIndexes)
+      setExpandedIndex(index) 
     }
   }
 
@@ -62,7 +59,7 @@ const CurrentReport = ({ currentReportItems }) => {
                         </p>
                         <p
                           className={`report-card__text ${
-                            expandedIndexes.includes(idx) ? "expanded" : ""
+                            expandedIndex === idx ? "expanded" : ""
                           }`}
                         >
                           {object.text}
@@ -71,9 +68,7 @@ const CurrentReport = ({ currentReportItems }) => {
                           className="report-card__btn"
                           onClick={() => toggleExpand(idx)}
                         >
-                          {expandedIndexes.includes(idx)
-                            ? "ЗГОРНУТИ"
-                            : "ДЕТАЛЬНІШЕ"}
+                          {expandedIndex === idx ? "ЗГОРНУТИ" : "ДЕТАЛЬНІШЕ"}
                           <ArrowOutwardIcon className="report-card__btn-icon" />
                         </button>
                       </div>
@@ -90,7 +85,7 @@ const CurrentReport = ({ currentReportItems }) => {
                         </p>
                         <p
                           className={`report-card__text ${
-                            expandedIndexes.includes(idx) ? "expanded" : ""
+                            expandedIndex === idx ? "expanded" : ""
                           }`}
                         >
                           {object.text}
@@ -99,9 +94,7 @@ const CurrentReport = ({ currentReportItems }) => {
                           className="report-card__btn"
                           onClick={() => toggleExpand(idx)}
                         >
-                          {expandedIndexes.includes(idx)
-                            ? "ЗГОРНУТИ"
-                            : "ДЕТАЛЬНІШЕ"}
+                          {expandedIndex === idx ? "ЗГОРНУТИ" : "ДЕТАЛЬНІШЕ"}
                           <ArrowOutwardIcon className="report-card__btn-icon" />
                         </button>
                       </div>

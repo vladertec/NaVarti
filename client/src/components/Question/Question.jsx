@@ -7,6 +7,70 @@ const Question = ({ questionItems }) => {
     setActiveIndex(activeIndex === index ? null : index)
   }
 
+  const handleLinkClick = (link) => {
+    if (link.includes("@")) {
+      window.location.href = `mailto:${link}`
+    } else if (link.match(/^\+?\d+$/)) {
+      window.location.href = `tel:${link.replace(/\D/g, "")}`
+    }
+  }
+
+  const formatContent = (text) => {
+    const content = []
+    let currentIndex = 0
+
+    // Регулярное выражение для поиска и почты, и номеров телефонов
+    const linkRegex =
+      /(\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b)|(\+?\d{10,})/g
+
+    let match
+    while ((match = linkRegex.exec(text)) !== null) {
+      // Добавляем текст до ссылки
+      const beforeText = text.substring(currentIndex, match.index)
+      content.push(beforeText)
+
+      // Определяем, является ли найденная ссылка почтой или телефонным номером
+      const link = match[0]
+      if (link.includes("@")) {
+        content.push(
+          <a
+            key={currentIndex}
+            className="footer__info-text"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault()
+              handleLinkClick(link)
+            }}
+          >
+            {link}
+          </a>
+        )
+      } else if (link.match(/^\+?\d+$/)) {
+        content.push(
+          <a
+            key={currentIndex}
+            className="footer__info-text"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault()
+              handleLinkClick(link)
+            }}
+          >
+            {link}
+          </a>
+        )
+      }
+
+      currentIndex = match.index + link.length
+    }
+
+    // Добавляем оставшийся текст после последней ссылки
+    const remainingText = text.substring(currentIndex)
+    content.push(remainingText)
+
+    return content
+  }
+
   return (
     <div className="question">
       <div className="question__container">
@@ -38,7 +102,7 @@ const Question = ({ questionItems }) => {
                 activeIndex === index ? "question__answer--active" : ""
               }`}
             >
-              {item.answer}
+              {formatContent(item.answer)}
             </div>
           </div>
         ))}

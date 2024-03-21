@@ -108,7 +108,7 @@ const Header = () => {
             <div className="mobile-sidebar-menu__icon-container">
               <a
                 className="mobile-sidebar-menu__socials-item"
-                href="https://www.instagram.com/na_varty_zyttya?igsh=MWF5OWNyNzI2ZTk0eg=="
+                href="https://www.instagram.com/na_varty_zhyttya?igsh=MWc1MzdxbG8wczAxbg=="
               >
                 <InstagramIcon className="mobile-sidebar-menu__social-icon" />
               </a>
@@ -175,7 +175,7 @@ const Header = () => {
           <div className="info-container__socials social-container">
             <a
               className="social-container__socials-item"
-              href="https://www.instagram.com/na_varty_zyttya?igsh=MWF5OWNyNzI2ZTk0eg=="
+              href="https://www.instagram.com/na_varty_zhyttya?igsh=MWc1MzdxbG8wczAxbg=="
             >
               <InstagramIcon className="social-container__social-icon" />
             </a>

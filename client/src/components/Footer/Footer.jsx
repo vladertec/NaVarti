@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="footer__socials-container">
           <a
             className="footer__socials-item"
-            href="https://www.instagram.com/na_varty_zyttya?igsh=MWF5OWNyNzI2ZTk0eg=="
+            href="https://www.instagram.com/na_varty_zhyttya?igsh=MWc1MzdxbG8wczAxbg=="
           >
             <InstagramIcon className="footer__social-icon" />
           </a>

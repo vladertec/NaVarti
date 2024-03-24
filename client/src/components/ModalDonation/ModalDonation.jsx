@@ -5,7 +5,8 @@ import LinkIcon from "@mui/icons-material/Link"
 
 const ModalDonation = ({ onClose }) => {
   const [isCopiedUkraine, setIsCopiedUkraine] = useState(false)
-  const [isCopiedAbroad, setIsCopiedAbroad] = useState(false)
+  const [isCopiedAbroadEuro, setIsCopiedAbroadEuro] = useState(false)
+  const [isCopiedAbroadDollar, setIsCopiedAbroadDollar] = useState(false)
   const [isCopiedCard, setIsCopiedCard] = useState(false)
   const [paymentMethod, setPaymentMethod] = useState(null)
 
@@ -26,51 +27,97 @@ const ModalDonation = ({ onClose }) => {
     if (paymentMethod === "ukraine") {
       return (
         <div className="additional-info">
-          <p>Назва підприємства/company Name: БО БФ "НА ВАРТІ ЖИТТЯ" </p>
-          <p>Призначення платежу/purpose of payment: Благодійний внесок</p>
-          <p>Код одержувача: 45258405</p>
-          <p>
-            IBAN Code: UA833052990000026002020128082
-            {isCopiedUkraine ? (
-              <CheckIcon className="card-number-container__check-icon" />
-            ) : (
-              <LinkIcon
-                className="card-number-container__copy-icon"
-                onClick={() =>
-                  handleCopyCardNumber(
-                    "UA833052990000026002020128082 ",
-                    setIsCopiedUkraine
-                  )
-                }
-              />
-            )}
+          <p className="additional-info__text">
+            Назва підприємства/company Name: БО БФ "НА ВАРТІ ЖИТТЯ"{" "}
           </p>
-          <p>Назва банку/Name of the bank: АТ КБ "ПриватБанк"</p>
+          <p className="additional-info__text">
+            Призначення платежу/purpose of payment: Благодійний внесок
+          </p>
+          <p className="additional-info__text">Код одержувача: 45258405</p>
+          <p className="additional-info__text-iban">
+            IBAN CODE:
+            <span className="additional-info__text-iban-number">
+              UA833052990000026002020128082
+            </span>
+            <span className="additional-info__icon-container">
+              {isCopiedUkraine ? (
+                <CheckIcon className="card-number-container__icon" />
+              ) : (
+                <LinkIcon
+                  className="card-number-container__icon"
+                  onClick={() =>
+                    handleCopyCardNumber(
+                      "UA833052990000026002020128082",
+                      setIsCopiedUkraine
+                    )
+                  }
+                />
+              )}
+            </span>
+          </p>
+          <p className="additional-info__bank-text">
+            Назва банку/Name of the bank: АТ КБ "ПриватБанк"
+          </p>
         </div>
       )
     } else if (paymentMethod === "abroad") {
       return (
         <div className="additional-info">
-          <p>БО БФ НА ВАРТІ ЖИТТЯ</p>
-          <p>Код одержувача: 45258405</p>
-          <p>
-            Рахунок отримувача у форматі відповідно до стандарту IBAN:
-            UA833052990000026002020128082
-            {isCopiedAbroad ? (
-              <CheckIcon className="card-number-container__check-icon" />
-            ) : (
-              <LinkIcon
-                className="card-number-container__copy-icon"
-                onClick={() =>
-                  handleCopyCardNumber(
-                    "UA833052990000026002020128082",
-                    setIsCopiedAbroad
-                  )
-                }
-              />
-            )}
+          <p className="additional-info__text">
+            Назва підприємства/company Name: BF "Na Varty Zhyttya"
           </p>
-          <p>Назва банку: АТ КБ «ПриватБанк»</p>
+          <p className="additional-info__text">
+            Призначення платежу/purpose of payment: Charitable contribution
+          </p>
+          <p className="additional-info__text">Код одержувача: 45258405</p>
+          <div className="additional-info__text-iban">
+            For Euro IBAN Code:
+            <span className="additional-info__text-iban-number">
+              UA223052990000026005040126016
+            </span>
+            <span className="additional-info__icon-container">
+              {isCopiedAbroadEuro ? (
+                <CheckIcon className="card-number-container__icon" />
+              ) : (
+                <LinkIcon
+                  className="card-number-container__icon"
+                  onClick={() =>
+                    handleCopyCardNumber(
+                      "UA223052990000026005040126016",
+                      setIsCopiedAbroadEuro
+                    )
+                  }
+                />
+              )}
+            </span>
+          </div>
+
+          <div className="additional-info__text-iban">
+            For Dollar IBAN Code:
+            <p className="additional-info__text-iban-number">
+              UA223052990000026002020124718
+            </p>
+            <div className="additional-info__icon-container">
+              {isCopiedAbroadDollar ? (
+                <CheckIcon className="additional-info__icon" />
+              ) : (
+                <LinkIcon
+                  className="additional-info__icon"
+                  onClick={() =>
+                    handleCopyCardNumber(
+                      "UA223052990000026002020124718",
+                      setIsCopiedAbroadDollar
+                    )
+                  }
+                />
+              )}
+            </div>
+          </div>
+
+          <p className="additional-info__bank-text">
+            Назва банку/Name of the bank: JSC CB "PRIVATBANK" 1D HRUSHEVSKOHO
+            STR., KYIV, UKRAINE
+          </p>
         </div>
       )
     }
@@ -115,7 +162,14 @@ const ModalDonation = ({ onClose }) => {
 
         <div className="btn-container__btn-mono-container">
           <p className="btn-container__prop-mono-title">Через банку Monobank</p>
-          <button className="btn-container__btn-mono">MONOBANK</button>
+          <button
+            className="btn-container__btn-mono"
+            onClick={() =>
+              window.open("https://send.monobank.ua/jar/3iDPWEskZm", "_blank")
+            }
+          >
+            MONOBANK
+          </button>
         </div>
       </div>
 
@@ -130,6 +184,8 @@ const ModalDonation = ({ onClose }) => {
         <div className="card-number-container__card-copy">
           <p className="card-number-container__copy-number">
             0000 0000 0000 0000
+          </p>
+          <div className="card-number-container__icon-container">
             {isCopiedCard ? (
               <CheckIcon className="card-number-container__icon" />
             ) : (
@@ -140,7 +196,7 @@ const ModalDonation = ({ onClose }) => {
                 }
               />
             )}
-          </p>
+          </div>
         </div>
       </div>
     </div>

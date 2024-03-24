@@ -108,22 +108,22 @@
   }
 
   .card-number-container {
-    padding: 6% 0 1.5% 0;
-
+    padding: 5% 0 1.5% 0;
     @include flex-container;
     flex-direction: column;
+
     &__title {
       font-family: $font-montserrat;
-      font-size: 1.5vw;
+      font-size: 1.4vw;
       font-weight: 500;
     }
 
     &__card-copy {
+      @include flex-container;
       border-radius: $radius-border;
-      padding: 0.3% 2%;
+      padding: 0.4% 2.5%;
       color: white;
       background-color: black;
-      @include flex-container;
       margin-top: 4%;
     }
 
@@ -135,10 +135,56 @@
       }
     }
 
+    &__icon-container {
+      @include flex-container;
+    }
+
     &__icon {
       cursor: pointer;
       font-size: 2.3vw;
-      margin-left: 2%;
-    } 
+      margin-left: 35%;
+    }
+  }
+}
+
+.additional-info {
+  margin-top: 3%;
+  font-family: $font-montserrat;
+
+  &__text {
+    margin-top: 2%;
+    font-size: 1.4vw;
+  }
+
+  &__text-iban {
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    font-size: 1.4vw;
+  }
+
+  &__text-iban-number {
+    margin-left: 0.5%;
+    padding-bottom: 0.1%;
+    font-weight: 500;
+    &:hover {
+      color: $blue-color;
+    }
+  }
+
+  &__icon {
+    font-size: 2.3vw !important;
+  }
+
+  &__icon-container {
+    margin-left: 0.5%;
+    font-size: 1.4vw;
+    cursor: pointer;
+    @include flex-container;
+  }
+
+  &__bank-text {
+    margin-top: 1%;
+    font-size: 1.4vw;
   }
 }

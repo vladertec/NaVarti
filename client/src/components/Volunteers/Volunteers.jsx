@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import TollIcon from "@mui/icons-material/Toll"
 import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded"
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded"
+import ModalDonation from "../ModalDonation/ModalDonation"
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -33,6 +34,16 @@ const PrevArrow = ({ onClick }) => {
 }
 
 const Volunteers = ({ volunteerPositionItems }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleDonateClick = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+  }
+
   const settings = {
     dots: volunteerPositionItems.length > 4,
     infinite: true,
@@ -46,16 +57,15 @@ const Volunteers = ({ volunteerPositionItems }) => {
     prevArrow: <PrevArrow />,
   }
 
-  const handleDonateClick = () => {
-    window.location.href = "https://send.monobank.ua/jar/3iDPWEskZm"
-  }
-
   if (volunteerPositionItems.length === 0) {
     return null
   }
 
   return (
     <div className="volunteer-carousel">
+      {isModalOpen && (
+        <div className="title__overlay" onClick={handleCloseModal}></div>
+      )}
       <p className="volunteer-carousel__title">Волонтери</p>
       <div className="volunteer-carousel__container">
         <p className="volunteer-carousel__mobile-title">Волонтери</p>
@@ -84,6 +94,7 @@ const Volunteers = ({ volunteerPositionItems }) => {
           <TollIcon className="volunteer-btn-wrapper__btn-icon" />
         </button>
       </div>
+      {isModalOpen && <ModalDonation onClose={handleCloseModal} />}
     </div>
   )
 }

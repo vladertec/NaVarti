@@ -1,12 +1,32 @@
+import React, { useEffect, useState } from "react"
 import TollIcon from "@mui/icons-material/Toll"
 import { Link as ScrollLink } from "react-scroll"
+import ModalDonation from "../ModalDonation/ModalDonation"
 
 const MainTitle = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   const handleDonateClick = () => {
-    window.open("https://send.monobank.ua/jar/3iDPWEskZm", "_blank")
+    setIsModalOpen(true)
   }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+  }
+
+  // useEffect(() => {
+  //   if (isModalOpen) {
+  //     document.body.style.overflow = "hidden"
+  //   } else {
+  //     document.body.style.overflow = "auto"
+  //   }
+  // }, [isModalOpen])
+
   return (
     <div className="title">
+      {isModalOpen && (
+        <div className="title__overlay" onClick={handleCloseModal}></div>
+      )}
       <div className="title__container">
         <div className="title__text-container info-container">
           <h6 className="info-container__title">БФ "НА ВАРТІ ЖИТТЯ"</h6>
@@ -41,6 +61,7 @@ const MainTitle = () => {
           />
         </div>
       </div>
+      {isModalOpen && <ModalDonation onClose={handleCloseModal} />}
     </div>
   )
 }

@@ -34,12 +34,20 @@ const ModalDonation = ({ onClose }) => {
             Призначення платежу/purpose of payment: Благодійний внесок
           </p>
           <p className="additional-info__text">Код одержувача: 45258405</p>
-          <p className="additional-info__text-iban">
+          <div
+            className="additional-info__text-iban"
+            onClick={() =>
+              handleCopyCardNumber(
+                "UA833052990000026002020128082",
+                setIsCopiedUkraine
+              )
+            }
+          >
             IBAN CODE:
-            <span className="additional-info__text-iban-number">
+            <p className="additional-info__text-iban-number">
               UA833052990000026002020128082
-            </span>
-            <span className="additional-info__icon-container">
+            </p>
+            <div className="additional-info__icon-container">
               {isCopiedUkraine ? (
                 <CheckIcon className="additional-info__icon" />
               ) : (
@@ -53,8 +61,8 @@ const ModalDonation = ({ onClose }) => {
                   }
                 />
               )}
-            </span>
-          </p>
+            </div>
+          </div>
           <p className="additional-info__bank-text">
             Назва банку/Name of the bank: АТ КБ "ПриватБанк"
           </p>
@@ -70,7 +78,15 @@ const ModalDonation = ({ onClose }) => {
             Призначення платежу/purpose of payment: Charitable contribution
           </p>
           <p className="additional-info__text">Код одержувача: 45258405</p>
-          <div className="additional-info__text-iban">
+          <div
+            className="additional-info__text-iban"
+            onClick={() =>
+              handleCopyCardNumber(
+                "UA223052990000026005040126016",
+                setIsCopiedAbroadEuro
+              )
+            }
+          >
             For Euro IBAN Code:
             <p className="additional-info__text-iban-number">
               UA223052990000026005040126016
@@ -92,7 +108,15 @@ const ModalDonation = ({ onClose }) => {
             </div>
           </div>
 
-          <div className="additional-info__text-iban">
+          <div
+            className="additional-info__text-iban"
+            onClick={() =>
+              handleCopyCardNumber(
+                "UA223052990000026002020124718",
+                setIsCopiedAbroadDollar
+              )
+            }
+          >
             For Dollar IBAN Code:
             <p className="additional-info__text-iban-number">
               UA223052990000026002020124718
@@ -130,6 +154,15 @@ const ModalDonation = ({ onClose }) => {
         <p className="header-container__header-title">
           Зробити внесок на фонд “На Варті Життя”
         </p>
+        <div className="header-container__header-mobile">
+          <p className="header-container__header-title-mobile">
+            Зробити внесок
+          </p>
+          <p className="header-container__header-title-mobile">
+            на фонд “На Варті Життя”
+          </p>
+        </div>
+
         <CloseRoundedIcon
           className="header-container__close-icon"
           onClick={onClose}
@@ -181,7 +214,12 @@ const ModalDonation = ({ onClose }) => {
         <p className="card-number-container__title">
           Або на офіційну карту БФ “На Варті Життя” (UAH)
         </p>
-        <div className="card-number-container__card-copy">
+        <div
+          className="card-number-container__card-copy"
+          onClick={() =>
+            handleCopyCardNumber("0000 0000 0000 0000", setIsCopiedCard)
+          }
+        >
           <p className="card-number-container__copy-number">
             0000 0000 0000 0000
           </p>

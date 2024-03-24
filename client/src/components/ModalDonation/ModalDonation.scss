@@ -12,11 +12,17 @@
   .header-container {
     @include flex-container;
     justify-content: space-between;
+
     &__header-title {
       font-size: 2.4vw;
       font-family: $font-namu;
       margin-top: 3%;
     }
+
+    &__header-mobile {
+      display: none;
+    }
+
     &__close-icon {
       cursor: pointer;
       width: 5%;
@@ -148,6 +154,127 @@
       margin-left: 45%;
     }
   }
+
+  @include phone {
+    padding: 5%;
+    width: 90%;
+    border-radius: $mobile-radius-border;
+
+    .header-container {
+      &__header-title {
+        display: none;
+      }
+
+      &__header-mobile {
+        display: block;
+      }
+
+      &__header-title-mobile {
+        font-size: 4vw;
+        font-family: $font-namu;
+        margin-top: 2%;
+      }
+
+      &__close-icon {
+        width: 10%;
+        height: 10%;
+      }
+    }
+
+    &__line {
+      margin: 3% 2.5% 0 0;
+    }
+
+    .btn-container {
+      padding-bottom: 2%;
+      flex-direction: column;
+
+      &__props {
+        margin-top: 5%;
+        @include flex-container;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+      }
+
+      &__prop-title {
+        font-size: 2.9vw;
+      }
+
+      &__prop-container {
+        margin-top: 3%;
+        @include flex-container;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      &__prop-btn {
+        margin-top: 4%;
+        border-radius: $mobile-radius-border;
+        padding: 2% 3%;
+        border: none;
+        font-size: 2.5vw;
+        width: 55%;
+        &:hover {
+          padding: 1.9% 2.9%;
+          border: 0.1vw solid black;
+        }
+      }
+
+      &__delimiter {
+        font-size: 3vw;
+        width: 100%;
+        order: 2;
+        margin-top: 5%;
+      }
+
+      &__btn-mono-container {
+        width: 100%;
+        order: 1;
+        margin-top: 4%;
+      }
+
+      &__prop-mono-title {
+        font-size: 3vw;
+      }
+
+      &__btn-mono {
+        margin-top: 6%;
+        border-radius: $mobile-radius-border;
+        padding: 2.5% 1%;
+        font-size: 2.5vw;
+        width: 50%;
+      }
+    }
+
+    .card-number-container {
+      padding: 8% 0 4% 0;
+
+      &__title {
+        font-size: 3.1vw;
+        padding: 0 20%;
+        text-align: center;
+      }
+
+      &__card-copy {
+        border-radius: $mobile-radius-border;
+        padding: 2% 10%;
+        margin-top: 6%;
+      }
+
+      &__copy-number {
+        font-size: 2.5vw;
+        &:hover {
+          color: white;
+        }
+      }
+
+      &__icon {
+        font-size: 4.4vw;
+        margin-left: 90%;
+      }
+    }
+  }
 }
 
 .additional-info {
@@ -183,11 +310,44 @@
     margin-left: 0.5%;
     font-size: 1.4vw;
     cursor: pointer;
-    @include flex-container;
   }
 
   &__bank-text {
     margin-top: 1%;
     font-size: 1.4vw;
+  }
+
+  @include phone {
+    margin-top: 4%;
+    padding-bottom: 2%;
+
+    &__text {
+      font-size: 2.3vw;
+    }
+
+    &__text-iban {
+      margin-top: 2%;
+      font-size: 2.3vw;
+    }
+
+    &__text-iban-number {
+      margin-left: 0.5%;
+      padding-bottom: 0.1%;
+    }
+
+    &__icon {
+      font-size: 3.4vw !important;
+    }
+
+    &__icon-container {
+      margin-left: 1%;
+    }
+
+    &__bank-text {
+      margin-top: 2%;
+      line-height: 1.3;
+      font-size: 2.3vw;
+      text-align: justify;
+    }
   }
 }

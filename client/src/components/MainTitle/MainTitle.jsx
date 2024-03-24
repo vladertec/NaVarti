@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import TollIcon from "@mui/icons-material/Toll"
 import { Link as ScrollLink } from "react-scroll"
 import ModalDonation from "../ModalDonation/ModalDonation"
@@ -13,14 +13,6 @@ const MainTitle = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false)
   }
-
-  // useEffect(() => {
-  //   if (isModalOpen) {
-  //     document.body.style.overflow = "hidden"
-  //   } else {
-  //     document.body.style.overflow = "auto"
-  //   }
-  // }, [isModalOpen])
 
   return (
     <div className="title">

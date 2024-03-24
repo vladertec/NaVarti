@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
 
 const Question = ({ questionItems }) => {
   const [activeIndex, setActiveIndex] = useState(null)
@@ -20,17 +20,14 @@ const Question = ({ questionItems }) => {
     const content = []
     let currentIndex = 0
 
-    // Регулярное выражение для поиска и почты, и номеров телефонов
     const linkRegex =
       /(\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b)|(\+?\d{10,})/g
 
     let match
     while ((match = linkRegex.exec(text)) !== null) {
-      // Добавляем текст до ссылки
       const beforeText = text.substring(currentIndex, match.index)
       content.push(beforeText)
 
-      // Определяем, является ли найденная ссылка почтой или телефонным номером
       const link = match[0]
       if (link.includes("@")) {
         content.push(
@@ -65,7 +62,6 @@ const Question = ({ questionItems }) => {
       currentIndex = match.index + link.length
     }
 
-    // Добавляем оставшийся текст после последней ссылки
     const remainingText = text.substring(currentIndex)
     content.push(remainingText)
 
@@ -95,7 +91,7 @@ const Question = ({ questionItems }) => {
                   activeIndex === index ? "question__icon--active" : ""
                 }`}
               >
-                <KeyboardArrowDownIcon               className="question__arrow-icon"/>
+                <KeyboardArrowDownIcon className="question__arrow-icon" />
               </span>
             </button>
             <div

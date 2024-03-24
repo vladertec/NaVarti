@@ -31,6 +31,7 @@ const Footer = () => {
           <a
             className="footer__socials-item"
             target="_blank"
+            rel="noreferrer"
             href="https://www.instagram.com/na_varty_zhyttya?igsh=MWc1MzdxbG8wczAxbg=="
           >
             <InstagramIcon className="footer__social-icon" />
@@ -38,6 +39,7 @@ const Footer = () => {
           <a
             className="footer__socials-item"
             target="_blank"
+            rel="noreferrer"
             href="https://www.facebook.com/profile.php?id=61554088658276"
           >
             <FacebookIcon className="footer__social-icon" />
@@ -45,6 +47,7 @@ const Footer = () => {
           <a
             className="footer__socials-item"
             target="_blank"
+            rel="noreferrer"
             href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
           >
             <TikTokIcon className="footer__social-icon" />
@@ -52,6 +55,7 @@ const Footer = () => {
           <a
             className="footer__socials-item"
             target="_blank"
+            rel="noreferrer"
             href="https://t.me/na_varty_zhyttya"
           >
             <TelegramIcon className="footer__social-icon" />
@@ -61,7 +65,6 @@ const Footer = () => {
           <p className="footer__info-title">Контакти:</p>
           <p className="footer__info-text">пн-пт 10:00-19:00</p>
           <a className="footer__info-text" href="tel:+380673890823">
-    
             +380673890823
           </a>
           <p className="footer__info-text">
@@ -110,7 +113,11 @@ const Footer = () => {
           </ScrollLink>
         </div>
         <div className="footer__qr-container">
-          <a target="_blank" href="https://send.monobank.ua/jar/3iDPWEskZm">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://send.monobank.ua/jar/3iDPWEskZm"
+          >
             <img
               className="footer__qr-code"
               src="./img/footerHeader/qr-code.png"

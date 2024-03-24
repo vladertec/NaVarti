@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Link as ScrollLink } from "react-scroll"
 import { Link as RouterLink } from "react-router-dom"
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded"
@@ -10,6 +10,14 @@ import TelegramIcon from "../../ulits/svg/TelegramIcon"
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }, [menuOpen])
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -111,6 +119,7 @@ const Header = () => {
               <a
                 className="mobile-sidebar-menu__socials-item"
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.instagram.com/na_varty_zhyttya?igsh=MWc1MzdxbG8wczAxbg=="
               >
                 <InstagramIcon className="mobile-sidebar-menu__social-icon" />
@@ -118,6 +127,7 @@ const Header = () => {
               <a
                 className="mobile-sidebar-menu__socials-item"
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.facebook.com/profile.php?id=61554088658276"
               >
                 <FacebookIcon className="mobile-sidebar-menu__social-icon" />
@@ -125,6 +135,7 @@ const Header = () => {
               <a
                 className="mobile-sidebar-menu__socials-item"
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
               >
                 <TikTokIcon />
@@ -132,6 +143,7 @@ const Header = () => {
               <a
                 className="mobile-sidebar-menu__socials-item"
                 target="_blank"
+                rel="noreferrer"
                 href="https://t.me/na_varty_zhyttya"
               >
                 <TelegramIcon className="mobile-sidebar-menu__social-icon" />
@@ -182,6 +194,7 @@ const Header = () => {
             <a
               className="social-container__socials-item"
               target="_blank"
+              rel="noreferrer"
               href="https://www.instagram.com/na_varty_zhyttya?igsh=MWc1MzdxbG8wczAxbg=="
             >
               <InstagramIcon className="social-container__social-icon" />
@@ -189,6 +202,7 @@ const Header = () => {
             <a
               className="social-container__socials-item"
               target="_blank"
+              rel="noreferrer"
               href="https://www.facebook.com/profile.php?id=61554088658276"
             >
               <FacebookIcon className="social-container__social-icon" />
@@ -196,6 +210,7 @@ const Header = () => {
             <a
               className="social-container__socials-item social-container__tiktok-icon"
               target="_blank"
+              rel="noreferrer"
               href="https://www.tiktok.com/@na_varty_zhyttya?_t=8kfjRnBP2GM&_r=1"
             >
               <TikTokIcon />
@@ -203,6 +218,7 @@ const Header = () => {
             <a
               className="social-container__socials-item"
               target="_blank"
+              rel="noreferrer"
               href="https://t.me/na_varty_zhyttya"
             >
               <TelegramIcon className="social-container__social-icon" />

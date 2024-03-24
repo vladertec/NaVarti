@@ -41,10 +41,10 @@ const ModalDonation = ({ onClose }) => {
             </span>
             <span className="additional-info__icon-container">
               {isCopiedUkraine ? (
-                <CheckIcon className="card-number-container__icon" />
+                <CheckIcon className="additional-info__icon" />
               ) : (
                 <LinkIcon
-                  className="card-number-container__icon"
+                  className="additional-info__icon"
                   onClick={() =>
                     handleCopyCardNumber(
                       "UA833052990000026002020128082",
@@ -72,15 +72,15 @@ const ModalDonation = ({ onClose }) => {
           <p className="additional-info__text">Код одержувача: 45258405</p>
           <div className="additional-info__text-iban">
             For Euro IBAN Code:
-            <span className="additional-info__text-iban-number">
+            <p className="additional-info__text-iban-number">
               UA223052990000026005040126016
-            </span>
-            <span className="additional-info__icon-container">
+            </p>
+            <div className="additional-info__icon-container">
               {isCopiedAbroadEuro ? (
-                <CheckIcon className="card-number-container__icon" />
+                <CheckIcon className="additional-info__icon" />
               ) : (
                 <LinkIcon
-                  className="card-number-container__icon"
+                  className="additional-info__icon"
                   onClick={() =>
                     handleCopyCardNumber(
                       "UA223052990000026005040126016",
@@ -89,7 +89,7 @@ const ModalDonation = ({ onClose }) => {
                   }
                 />
               )}
-            </span>
+            </div>
           </div>
 
           <div className="additional-info__text-iban">

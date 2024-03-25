@@ -217,11 +217,11 @@ const ModalDonation = ({ onClose }) => {
         <div
           className="card-number-container__card-copy"
           onClick={() =>
-            handleCopyCardNumber("0000 0000 0000 0000", setIsCopiedCard)
+            handleCopyCardNumber("5169 3351 0785 2150", setIsCopiedCard)
           }
         >
           <p className="card-number-container__copy-number">
-            0000 0000 0000 0000
+            5169 3351 0785 2150
           </p>
           <div className="card-number-container__icon-container">
             {isCopiedCard ? (
@@ -230,7 +230,7 @@ const ModalDonation = ({ onClose }) => {
               <LinkIcon
                 className="card-number-container__icon"
                 onClick={() =>
-                  handleCopyCardNumber("0000 0000 0000 0000", setIsCopiedCard)
+                  handleCopyCardNumber("5169 3351 0785 2150", setIsCopiedCard)
                 }
               />
             )}

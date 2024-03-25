@@ -42,6 +42,10 @@
         border-radius: $radius-border;
         width: 57%;
         font-family: $font-namu;
+        cursor: pointer;
+        &:hover {
+          color: $blue-color;
+        }
       }
 
       &__btn-container {

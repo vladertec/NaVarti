@@ -42,7 +42,10 @@ const DonationDetails = ({ donationDetailsItems }) => {
             </div>
 
             <div className="donation-container__information-container">
-              <div className="donation-container__number">
+              <div
+                className="donation-container__number"
+                onClick={() => handleCopy(detail.account, index)}
+              >
                 {detail.account}
                 {copiedIndex === index ? (
                   <CheckIcon className="donation-container__mobile-check-icon" />
